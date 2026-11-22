@@ -1,0 +1,6434 @@
+[
+  {
+    "id": "b01",
+    "name": "Cinnamon Coffee Protein Shake",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "brewed black coffee, cooled",
+        "qty": 1,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "coffee"
+      },
+      {
+        "name": "natural almond butter (no added sugar or oils)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "almond-butter"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "water or ice",
+        "qty": 0.5,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      }
+    ],
+    "steps": [
+      "Add the protein powder, cooled coffee, almond butter, cinnamon, and water or ice to a blender or shaker.",
+      "Blend or shake until smooth. Drink right away."
+    ],
+    "tags": [
+      "no-cook",
+      "shake",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 29,
+      "satFat": 1.8,
+      "sodium": 160
+    },
+    "leftovers": "Best made fresh. You can portion the powder, cinnamon, and a little almond butter the night before.",
+    "protein": "protein-powder"
+  },
+  {
+    "id": "b02",
+    "name": "Green Protein Shake",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 1,
+        "unit": "handful",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "natural peanut butter (unsalted, no added sugar)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "peanut-butter"
+      },
+      {
+        "name": "water",
+        "qty": 1,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ice",
+        "qty": 0.5,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      }
+    ],
+    "steps": [
+      "Pack the spinach into a blender with the water, protein powder, peanut butter, cinnamon, and ice.",
+      "Blend until the spinach disappears and the shake is smooth."
+    ],
+    "tags": [
+      "no-cook",
+      "shake",
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 30,
+      "satFat": 1.8,
+      "sodium": 180
+    },
+    "leftovers": "Blend fresh. Spinach and powder can be pre-portioned.",
+    "protein": "protein-powder"
+  },
+  {
+    "id": "b03",
+    "name": "Turkey & Spinach Breakfast Skillet",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "ground turkey (lean)",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet over medium heat. Cook the onion 2 minutes until it softens.",
+      "Add the turkey, garlic, smoked paprika, a pinch of salt, and pepper. Cook, breaking it up, until no pink remains, about 6\u20138 minutes.",
+      "Stir in the spinach and wilt 1 minute. Taste and add a little pepper or paprika rather than more salt if you want more flavor."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 36,
+      "satFat": 2.0,
+      "sodium": 280
+    },
+    "leftovers": "Keeps 2 days in the fridge. Reheat gently in a skillet with a splash of water.",
+    "protein": "turkey"
+  },
+  {
+    "id": "b04",
+    "name": "Salmon Breakfast Plate",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "cucumber, sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh dill (or 1/4 tsp dried)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 400\u00b0F. Place the salmon on a small pan, season with a pinch of salt, pepper, and lemon juice, and bake 10\u201312 minutes until it flakes. Skip this step if you already have leftover baked salmon.",
+      "Slice the avocado and cucumber. Plate with the salmon, a little more lemon, and dill."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 340,
+      "protein": 28,
+      "satFat": 3.5,
+      "sodium": 200
+    },
+    "leftovers": "This is one of the best uses for leftover baked salmon. Eat the avocado fresh.",
+    "protein": "salmon"
+  },
+  {
+    "id": "b05",
+    "name": "Chicken & Zucchini Morning Hash",
+    "category": "breakfast",
+    "prep": 8,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast, diced",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "zucchini, diced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "zucchini"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "bell pepper, diced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet over medium-high heat. Cook the chicken with a pinch of salt, pepper, and oregano until cooked through, about 6 minutes. Set aside if the pan is crowded.",
+      "Add the onion, pepper, and zucchini. Saut\u00e9 5\u20136 minutes until tender-crisp. Return the chicken, toss, and serve."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 35,
+      "satFat": 1.5,
+      "sodium": 250
+    },
+    "leftovers": "Keeps 2\u20133 days. Reheat in a skillet so the zucchini does not go soggy in the microwave.",
+    "protein": "chicken"
+  },
+  {
+    "id": "b06",
+    "name": "Mushroom-Kale Saut\u00e9 with Turkey",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 10,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "turkey breast, cut into strips",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "turkey-breast"
+      },
+      {
+        "name": "mushrooms, sliced",
+        "qty": 1,
+        "unit": "cup",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "kale, chopped, stems removed",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "kale"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet over medium heat. Cook the turkey with a pinch of salt, pepper, and thyme until cooked through, about 5\u20136 minutes.",
+      "Add the mushrooms and garlic. Cook 3 minutes until the mushrooms give off liquid.",
+      "Add the kale and toss until wilted, 1\u20132 minutes. Finish with lemon juice."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 240,
+      "protein": 32,
+      "satFat": 1.2,
+      "sodium": 240
+    },
+    "leftovers": "Good the next day. The kale softens more on reheating, which is fine.",
+    "protein": "turkey"
+  },
+  {
+    "id": "b07",
+    "name": "Garlic Shrimp, Avocado & Greens",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 8,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "mixed leafy greens",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "leafy-greens"
+      },
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Pat the shrimp dry. Warm the olive oil over medium heat and cook the garlic 20 seconds.",
+      "Add the shrimp, a pinch of salt, and pepper. Cook 1\u20132 minutes per side until just pink and opaque. Do not overcook.",
+      "Pile the greens and sliced avocado on a plate. Top with the shrimp, lemon juice, and parsley."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 320,
+      "protein": 32,
+      "satFat": 2.0,
+      "sodium": 420
+    },
+    "leftovers": "Cook the shrimp ahead and chill. Assemble with avocado just before eating. Shrimp is naturally higher in sodium; skip extra salt.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "b08",
+    "name": "Cauliflower Hash with Turkey",
+    "category": "breakfast",
+    "prep": 8,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "ground turkey (lean)",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "cauliflower, riced or finely chopped",
+        "qty": 1.5,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "bell pepper, diced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "ground cumin",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cumin"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a large skillet. Cook the turkey with cumin, paprika, a pinch of salt, and pepper until browned, about 6 minutes.",
+      "Add the onion, bell pepper, and cauliflower rice. Cook 5\u20136 minutes, stirring, until the cauliflower is tender and any liquid cooks off."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 36,
+      "satFat": 2.0,
+      "sodium": 280
+    },
+    "leftovers": "Excellent meal-prep breakfast. Makes a good double batch. Reheats well in a skillet.",
+    "protein": "turkey"
+  },
+  {
+    "id": "b09",
+    "name": "Pork Medallions with Asparagus",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 14,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "pork tenderloin, sliced into medallions",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "pork-tenderloin"
+      },
+      {
+        "name": "asparagus spears, trimmed",
+        "qty": 8,
+        "unit": "",
+        "section": "produce",
+        "key": "asparagus"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "dried rosemary",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "rosemary"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Season the pork with rosemary, a pinch of salt, and pepper.",
+      "Warm the olive oil in a skillet over medium-high heat. Cook the medallions 2\u20133 minutes per side until just cooked through (145\u00b0F). Transfer to a plate.",
+      "In the same pan, saut\u00e9 the asparagus and garlic 3\u20134 minutes until tender-crisp. Add lemon juice and serve with the pork."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 32,
+      "satFat": 2.0,
+      "sodium": 230
+    },
+    "leftovers": "A great use for leftover roasted pork tenderloin. Just warm the slices and saut\u00e9 fresh asparagus.",
+    "protein": "pork"
+  },
+  {
+    "id": "b10",
+    "name": "Broccoli & Chicken Morning Saut\u00e9",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast, thinly sliced",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 1.5,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "crushed red pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "crushed-red-pepper"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet over medium-high heat. Cook the chicken with a pinch of salt and pepper until cooked through, about 5\u20136 minutes. Set aside.",
+      "Add the broccoli and 2 tablespoons water. Cover 2\u20133 minutes to steam, then uncover, add garlic and crushed red pepper, and saut\u00e9 2 minutes.",
+      "Return the chicken, toss with lemon juice, and serve."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 240,
+      "protein": 35,
+      "satFat": 1.3,
+      "sodium": 240
+    },
+    "leftovers": "Works with leftover chicken. Reheat quickly so the broccoli stays bright.",
+    "protein": "chicken"
+  },
+  {
+    "id": "b11",
+    "name": "Smoky Turkey Patties with Peppers",
+    "category": "breakfast",
+    "prep": 8,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "ground turkey (lean)",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "onion powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "onion-powder"
+      },
+      {
+        "name": "mustard powder",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "mustard-powder"
+      },
+      {
+        "name": "salt",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Mix the turkey with smoked paprika, onion powder, mustard powder, salt, and pepper. Form 4 thin patties.",
+      "Warm 1 teaspoon olive oil in a skillet over medium heat. Cook the patties 4\u20135 minutes per side until cooked through. Transfer to a plate.",
+      "Add the remaining teaspoon of oil, then the peppers and onion. Saut\u00e9 5\u20136 minutes until soft and slightly browned. Serve 2 patties with half the peppers per plate."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 290,
+      "protein": 36,
+      "satFat": 2.0,
+      "sodium": 300
+    },
+    "leftovers": "Patties keep 3 days and freeze well. Reheat in a skillet or oven. This recipe makes 2 breakfasts.",
+    "protein": "turkey"
+  },
+  {
+    "id": "b12",
+    "name": "Trout & Wilted Spinach",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 10,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "rainbow trout fillet",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "trout"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh dill (or 1/4 tsp dried)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Season the trout with a pinch of salt, pepper, and dill.",
+      "Warm the olive oil in a skillet over medium heat. Cook the trout skin-side down (if it has skin) 3\u20134 minutes, flip, and cook 2\u20133 minutes more until it flakes.",
+      "Push the fish to the side or plate it. Add garlic and spinach to the pan and wilt 1 minute. Finish with lemon and serve beside the trout."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 28,
+      "satFat": 2.5,
+      "sodium": 200
+    },
+    "leftovers": "Best fresh, but leftover trout is also good cold with the spinach rewarmed.",
+    "protein": "trout"
+  },
+  {
+    "id": "b13",
+    "name": "Avocado Stuffed with Seasoned Turkey",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 8,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "ground turkey (lean)",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "cucumber, sliced, on the side",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "olive oil",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Cook the turkey in a small skillet with the olive oil, garlic powder, paprika, a pinch of salt, and pepper until cooked through, about 6\u20138 minutes.",
+      "Halve an avocado and leave the shell on one half (save the rest for later). Loosen the flesh a little with a spoon.",
+      "Pile the turkey into the avocado half. Add lemon juice and serve with cucumber slices."
+    ],
+    "tags": [
+      "high-protein",
+      "no-cook"
+    ],
+    "nutrition": {
+      "cal": 350,
+      "protein": 32,
+      "satFat": 3.5,
+      "sodium": 260
+    },
+    "leftovers": "Cook a batch of seasoned turkey and keep it 2\u20133 days. Assemble with a fresh avocado half. The no-cook tag applies when the turkey is already cooked.",
+    "protein": "turkey"
+  },
+  {
+    "id": "b14",
+    "name": "Walnut-Cinnamon Protein Bowl",
+    "category": "breakfast",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "water",
+        "qty": 0.3,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "walnuts, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "vanilla"
+      },
+      {
+        "name": "black coffee, on the side (optional)",
+        "qty": 1,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "coffee"
+      }
+    ],
+    "steps": [
+      "Stir the protein powder with just enough water to make a thick pudding. Add vanilla and most of the cinnamon.",
+      "Top with chopped walnuts and a dusting of cinnamon. Drink coffee on the side if you like.",
+      "This is mild and spiced, not sweet \u2014 think breakfast pudding, not dessert."
+    ],
+    "tags": [
+      "no-cook",
+      "shake",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 230,
+      "protein": 27,
+      "satFat": 1.5,
+      "sodium": 150
+    },
+    "leftovers": "Mix fresh. Walnuts can be pre-chopped; stick to about 2 tablespoons (a half ounce).",
+    "protein": "protein-powder"
+  },
+  {
+    "id": "b15",
+    "name": "Herb Cod over Saut\u00e9ed Greens",
+    "category": "breakfast",
+    "prep": 3,
+    "cook": 10,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cod fillet",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "cod"
+      },
+      {
+        "name": "spinach or kale",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "If the cod is not already cooked, season it with a pinch of salt and pepper and bake or pan-cook in 1/2 teaspoon olive oil until it flakes, about 8 minutes.",
+      "Saut\u00e9 garlic in the remaining oil 20 seconds, add the greens, and wilt. Flake the cod over the top. Finish with lemon and parsley."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 200,
+      "protein": 29,
+      "satFat": 0.8,
+      "sodium": 220
+    },
+    "leftovers": "Built for leftover baked white fish. A very light, high-protein start to the day.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "l01",
+    "name": "Lemon Herb Chicken & Broccoli",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the chicken with 1 teaspoon olive oil, oregano, a pinch of salt, and pepper. Toss the broccoli with the remaining oil and garlic.",
+      "Spread on a sheet pan and roast 16\u201318 minutes, until the chicken is 165\u00b0F and the broccoli is browned at the edges.",
+      "Slice the chicken, squeeze lemon over everything, and divide into 2 servings."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 42,
+      "satFat": 1.5,
+      "sodium": 260
+    },
+    "leftovers": "Perfect for 2 lunches. Keeps 3 days. Eat cold or reheat.",
+    "protein": "chicken"
+  },
+  {
+    "id": "l02",
+    "name": "Salmon Salad over Greens",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "mixed leafy greens",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "leafy-greens"
+      },
+      {
+        "name": "cucumber, sliced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh dill (or 1/4 tsp dried)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Bake the salmon at 400\u00b0F for 10\u201312 minutes, seasoned with a pinch of salt, pepper, and a little lemon. Or use leftover salmon.",
+      "Toss the greens and cucumber with olive oil, remaining lemon, and dill. Flake the salmon over the top."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 360,
+      "protein": 34,
+      "satFat": 3.0,
+      "sodium": 220
+    },
+    "leftovers": "Bake two fillets at once. Dress the greens just before eating so they stay crisp.",
+    "protein": "salmon"
+  },
+  {
+    "id": "l03",
+    "name": "Turkey & Avocado Cabbage Wraps",
+    "category": "lunch",
+    "prep": 10,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "turkey breast (fresh roasted, not deli meat)",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "turkey-breast"
+      },
+      {
+        "name": "large cabbage leaves",
+        "qty": 4,
+        "unit": "",
+        "section": "produce",
+        "key": "cabbage"
+      },
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "cucumber, cut into sticks",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "If the turkey is raw, roast or skillet-cook it until 165\u00b0F, then slice. Soften the cabbage leaves by dipping them in hot water 20\u201330 seconds if they crack when folded.",
+      "Mash the avocado with lemon, pepper, and a pinch of salt. Spread on the leaves, add turkey and cucumber, and wrap."
+    ],
+    "tags": [
+      "high-protein",
+      "no-cook",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 350,
+      "protein": 38,
+      "satFat": 3.0,
+      "sodium": 250
+    },
+    "leftovers": "Use leftover roasted turkey \u2014 never packaged deli meat, which is processed and salty. The no-cook tag applies when the turkey is already cooked.",
+    "protein": "turkey"
+  },
+  {
+    "id": "l04",
+    "name": "Shrimp & Zucchini Saut\u00e9",
+    "category": "lunch",
+    "prep": 5,
+    "cook": 10,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 6,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "zucchini, halved and sliced",
+        "qty": 1,
+        "unit": "large",
+        "section": "produce",
+        "key": "zucchini"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "crushed red pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "crushed-red-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet over medium-high heat. Cook the zucchini 3\u20134 minutes until just tender. Push to the side.",
+      "Add the shrimp, garlic, a pinch of salt, pepper, and crushed red pepper. Cook 1\u20132 minutes per side until opaque.",
+      "Toss together, finish with lemon and parsley. Skip extra salt \u2014 shrimp already brings sodium."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 220,
+      "protein": 36,
+      "satFat": 0.8,
+      "sodium": 450
+    },
+    "leftovers": "Best fresh. Leftover shrimp is fine cold the next day over greens.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "l05",
+    "name": "Cod with Roasted Brussels Sprouts",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 22,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cod fillet",
+        "qty": 6,
+        "unit": "oz",
+        "section": "meat",
+        "key": "cod"
+      },
+      {
+        "name": "Brussels sprouts, halved",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "brussels-sprouts"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the Brussels sprouts with the olive oil, garlic, thyme, a pinch of salt, and pepper. Roast 12 minutes.",
+      "Push the sprouts aside, add the cod, and roast 8\u201310 minutes more until the fish flakes and the sprouts are browned.",
+      "Squeeze lemon over the pan and serve."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 38,
+      "satFat": 0.8,
+      "sodium": 280
+    },
+    "leftovers": "The sprouts reheat well. The fish is best the same day or gently warmed the next.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "l06",
+    "name": "Chicken, Pepper & Onion Sheet Pan",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 22,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast, cut into strips",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss everything on a sheet pan with the oil and spices.",
+      "Roast 20\u201322 minutes, stirring once, until the chicken is cooked through and the peppers are soft and browned in spots.",
+      "Divide into 2 lunches."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 40,
+      "satFat": 1.5,
+      "sodium": 250
+    },
+    "leftovers": "A workhorse meal-prep lunch. Keeps 3 days. Good cold or reheated.",
+    "protein": "chicken"
+  },
+  {
+    "id": "l07",
+    "name": "Bison Cabbage Cups",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "ground bison",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "bison"
+      },
+      {
+        "name": "cabbage leaves, for cups",
+        "qty": 4,
+        "unit": "",
+        "section": "produce",
+        "key": "cabbage"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "bell pepper, diced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "ground cumin",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cumin"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet. Cook the onion and pepper 3 minutes. Add the bison, garlic, cumin, paprika, a pinch of salt, and pepper. Cook until browned and done, about 6 minutes.",
+      "Spoon into cabbage leaves and eat like small wraps.",
+      "This is an occasional, modest-portion lunch \u2014 4 ounces of bison, not a large burger."
+    ],
+    "tags": [
+      "high-protein",
+      "occasional"
+    ],
+    "nutrition": {
+      "cal": 260,
+      "protein": 32,
+      "satFat": 2.5,
+      "sodium": 260
+    },
+    "leftovers": "The filling keeps 2 days. Because bison is a red meat, keep it to 1\u20132 times a week.",
+    "protein": "bison"
+  },
+  {
+    "id": "l08",
+    "name": "Rainbow Trout with Asparagus",
+    "category": "lunch",
+    "prep": 5,
+    "cook": 15,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "rainbow trout fillet",
+        "qty": 6,
+        "unit": "oz",
+        "section": "meat",
+        "key": "trout"
+      },
+      {
+        "name": "asparagus spears, trimmed",
+        "qty": 10,
+        "unit": "",
+        "section": "produce",
+        "key": "asparagus"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh dill (or 1/4 tsp dried)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 400\u00b0F. Place the trout and asparagus on a sheet pan. Drizzle with olive oil, and season with garlic, dill, a pinch of salt, and pepper.",
+      "Roast 12\u201315 minutes until the fish flakes and the asparagus is tender-crisp. Finish with lemon."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 320,
+      "protein": 38,
+      "satFat": 2.8,
+      "sodium": 200
+    },
+    "leftovers": "Good cold the next day. Fatty fish like trout is worth eating a few times a week.",
+    "protein": "trout"
+  },
+  {
+    "id": "l09",
+    "name": "Chicken Cauliflower Bowl",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 15,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast, diced",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "cauliflower, riced or finely chopped",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "ground turmeric",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "turmeric"
+      },
+      {
+        "name": "ground cumin",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cumin"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet. Cook the chicken with a pinch of salt and pepper until done, about 6\u20137 minutes. Set aside.",
+      "Add the remaining oil, cauliflower, garlic, turmeric, and cumin. Cook 5\u20136 minutes until tender. Stir in the spinach to wilt, return the chicken, and finish with lemon.",
+      "Divide into 2 bowls."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 290,
+      "protein": 41,
+      "satFat": 1.5,
+      "sodium": 260
+    },
+    "leftovers": "Holds 3 days. The turmeric and lemon keep it from tasting flat without extra salt.",
+    "protein": "chicken"
+  },
+  {
+    "id": "l10",
+    "name": "Grilled Shrimp Salad with Walnuts",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "mixed leafy greens",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "leafy-greens"
+      },
+      {
+        "name": "cucumber, sliced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "walnuts, chopped",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Toss the shrimp with half the oil, a pinch of salt, and pepper. Grill or skillet-cook 1\u20132 minutes per side until just opaque.",
+      "Toss the greens and cucumber with the remaining oil and lemon. Top with shrimp and a small sprinkle of walnuts (about 2 teaspoons \u2014 a modest portion)."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 260,
+      "protein": 32,
+      "satFat": 1.2,
+      "sodium": 430
+    },
+    "leftovers": "Cook extra shrimp for tomorrow. Add walnuts and dressing just before eating.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "l11",
+    "name": "Pork Tenderloin & Green Beans",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "pork tenderloin",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "pork-tenderloin"
+      },
+      {
+        "name": "green beans, trimmed",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "green-beans"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "sliced almonds",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "almonds"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Season the pork with thyme, a pinch of salt, and pepper. Roast 16\u201318 minutes until 145\u00b0F, or skillet-sear and finish in the oven.",
+      "Meanwhile, saut\u00e9 or steam the green beans with garlic and 1 teaspoon oil until tender-crisp. Toss with lemon and the almonds (a small sprinkle, not a handful).",
+      "Rest the pork 5 minutes, slice, and divide with the beans into 2 servings."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 290,
+      "protein": 38,
+      "satFat": 2.0,
+      "sodium": 240
+    },
+    "leftovers": "Roast a whole tenderloin on Sunday and you have lunches ready. Slice only what you need.",
+    "protein": "pork"
+  },
+  {
+    "id": "l12",
+    "name": "Turkey & Mushroom Lettuce Cups",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "ground turkey (lean)",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "mushrooms, chopped",
+        "qty": 1,
+        "unit": "cup",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "leaf lettuce or romaine leaves",
+        "qty": 6,
+        "unit": "",
+        "section": "produce",
+        "key": "leafy-greens"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the olive oil in a skillet. Cook the onion, mushrooms, and turkey with garlic, thyme, a pinch of salt, and pepper until the turkey is done and the mushrooms have browned, about 8\u201310 minutes.",
+      "Spoon into lettuce leaves and eat right away."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 260,
+      "protein": 36,
+      "satFat": 1.8,
+      "sodium": 250
+    },
+    "leftovers": "The filling keeps 3 days. Pack leaves separately so they stay crisp.",
+    "protein": "turkey"
+  },
+  {
+    "id": "l13",
+    "name": "White Fish with Vinegar-Herb Cabbage Slaw",
+    "category": "lunch",
+    "prep": 10,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "haddock or cod fillet",
+        "qty": 6,
+        "unit": "oz",
+        "section": "meat",
+        "key": "haddock"
+      },
+      {
+        "name": "cabbage, shredded",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cabbage"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "unsweetened vinegar (apple cider or white)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "pantry",
+        "key": "vinegar"
+      },
+      {
+        "name": "fresh dill or dried dill",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "dill"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Toss the cabbage with 2 teaspoons olive oil, the vinegar, dill, a pinch of salt, and pepper. Let it sit while you cook the fish \u2014 it softens slightly.",
+      "Season the fish and cook in the remaining teaspoon of oil over medium heat, 4\u20135 minutes per side, until it flakes. Or bake at 400\u00b0F for about 12 minutes.",
+      "Serve the fish on the slaw with a squeeze of lemon."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 260,
+      "protein": 38,
+      "satFat": 1.2,
+      "sodium": 260
+    },
+    "leftovers": "The slaw actually improves after an hour. Fish is best the day it is cooked, or cold the next day.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "l14",
+    "name": "Leftover Chicken & Broccoli Bowl",
+    "category": "lunch",
+    "prep": 5,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cooked skinless chicken, chopped",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 1,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "crushed red pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "crushed-red-pepper"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Steam or skillet-saut\u00e9 the broccoli with a splash of water until tender-crisp, about 4 minutes. Add the oil and garlic for the last minute.",
+      "Add the leftover chicken just to warm it. Finish with lemon, crushed red pepper, and black pepper. No extra salt needed if the chicken was already seasoned."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 270,
+      "protein": 42,
+      "satFat": 1.5,
+      "sodium": 250
+    },
+    "leftovers": "This is the leftover recipe. Keep cooked chicken on hand for a 10-minute lunch.",
+    "protein": "chicken"
+  },
+  {
+    "id": "l15",
+    "name": "Kale Salad with Salmon & Avocado",
+    "category": "lunch",
+    "prep": 10,
+    "cook": 12,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": 5,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "kale, chopped, stems removed",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "kale"
+      },
+      {
+        "name": "avocado",
+        "qty": 0.25,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 0.5,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Bake or skillet-cook the salmon until it flakes, about 10\u201312 minutes.",
+      "Massage the kale with olive oil, lemon, garlic, and a pinch of salt for 1 minute until it darkens and softens.",
+      "Top with flaked salmon and a quarter of an avocado, sliced. A quarter is plenty here because the salmon already brings healthy fat."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 380,
+      "protein": 35,
+      "satFat": 3.5,
+      "sodium": 230
+    },
+    "leftovers": "Massaged kale holds up better than lettuce, so you can dress it ahead. Add avocado at the last minute.",
+    "protein": "salmon"
+  },
+  {
+    "id": "l16",
+    "name": "Sheet-Pan Turkey, Peppers & Onions",
+    "category": "lunch",
+    "prep": 8,
+    "cook": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "turkey breast, cut into chunks",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "turkey-breast"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the turkey, peppers, and onion with oil and spices on a sheet pan.",
+      "Roast 18\u201320 minutes, stirring once, until the turkey is 165\u00b0F and the vegetables are browned at the edges.",
+      "Divide into 2 servings."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 270,
+      "protein": 40,
+      "satFat": 1.2,
+      "sodium": 240
+    },
+    "leftovers": "A reliable two-lunch batch. Keeps 3 days.",
+    "protein": "turkey"
+  },
+  {
+    "id": "l17",
+    "name": "Lemon Haddock & Steamed Broccoli",
+    "category": "lunch",
+    "prep": 5,
+    "cook": 15,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "haddock fillet",
+        "qty": 6,
+        "unit": "oz",
+        "section": "meat",
+        "key": "haddock"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Steam the broccoli until tender-crisp, about 5\u20136 minutes.",
+      "Meanwhile, cook the haddock in the olive oil over medium heat, 4\u20135 minutes per side, or bake at 400\u00b0F for about 12 minutes, with a pinch of salt and pepper.",
+      "Plate together with lemon juice and parsley. Simple and clean."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 230,
+      "protein": 38,
+      "satFat": 0.6,
+      "sodium": 250
+    },
+    "leftovers": "Best the day you cook it. A very low-sat-fat lunch when you want something light.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "d01",
+    "name": "Sheet-Pan Salmon, Broccoli & Red Onion",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "red onion, cut into wedges",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "fresh dill (or 1/2 tsp dried)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the broccoli and onion with 1 teaspoon oil, garlic, a pinch of salt, and pepper. Spread on a sheet pan and roast 8 minutes.",
+      "Add the salmon, brushed with the remaining oil, dill, and a little pepper. Roast 10 minutes more until the salmon flakes.",
+      "Finish with lemon and divide into 2 plates."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 380,
+      "protein": 40,
+      "satFat": 3.0,
+      "sodium": 230
+    },
+    "leftovers": "Excellent next-day lunch, cold or gently reheated. Fatty fish is a weekly staple here.",
+    "protein": "salmon"
+  },
+  {
+    "id": "d02",
+    "name": "Garlic Herb Chicken Thighs with Brussels Sprouts",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 28,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken thighs",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-thigh"
+      },
+      {
+        "name": "Brussels sprouts, halved",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "brussels-sprouts"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried rosemary",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "rosemary"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the thighs and Brussels sprouts with oil, garlic, rosemary, thyme, a pinch of salt, and pepper. Spread on a sheet pan, chicken in the center.",
+      "Roast 25\u201328 minutes until the chicken is 165\u00b0F and the sprouts are browned and crisp at the edges.",
+      "Finish with lemon. This is a little over 25 minutes, but it is almost all hands-off oven time."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 340,
+      "protein": 36,
+      "satFat": 3.0,
+      "sodium": 280
+    },
+    "leftovers": "Skinless thighs stay juicier than breast as leftovers. Keeps 3 days.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d03",
+    "name": "Lemon Dill Trout with Asparagus",
+    "category": "dinner",
+    "prep": 5,
+    "cook": 15,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "rainbow trout fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "trout"
+      },
+      {
+        "name": "asparagus spears, trimmed",
+        "qty": 1,
+        "unit": "bunch",
+        "section": "produce",
+        "key": "asparagus"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh dill (or 1/2 tsp dried)",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 400\u00b0F. Arrange the trout and asparagus on a sheet pan. Drizzle with oil and season with garlic, dill, a pinch of salt, and pepper.",
+      "Roast 12\u201315 minutes until the fish flakes. Squeeze lemon over both and serve."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 320,
+      "protein": 38,
+      "satFat": 2.8,
+      "sodium": 200
+    },
+    "leftovers": "Lovely cold the next day. Trout is a fatty fish \u2014 good for a couple of dinners a week.",
+    "protein": "trout"
+  },
+  {
+    "id": "d04",
+    "name": "Shrimp & Cauliflower Rice Saut\u00e9",
+    "category": "dinner",
+    "prep": 10,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "cauliflower, riced",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "lime juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lime"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet. Cook the onion 2 minutes, then add the cauliflower rice, garlic, and paprika. Cook 5\u20136 minutes until tender. Transfer to a bowl.",
+      "Add the remaining oil and the shrimp. Cook 1\u20132 minutes per side until just opaque. Skip extra salt if you can \u2014 shrimp is naturally salty.",
+      "Return the cauliflower, toss with lime and parsley, and divide into 2 bowls."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 240,
+      "protein": 37,
+      "satFat": 0.8,
+      "sodium": 470
+    },
+    "leftovers": "The cauliflower rice keeps well; add freshly cooked shrimp if you can. Fine reheated once.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "d05",
+    "name": "Pork Tenderloin with Roasted Cabbage Wedges",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 25,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "pork tenderloin",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "pork-tenderloin"
+      },
+      {
+        "name": "cabbage, cut into wedges",
+        "qty": 0.5,
+        "unit": "head",
+        "section": "produce",
+        "key": "cabbage"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "caraway seeds or dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "caraway"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Brush the cabbage wedges with 1 teaspoon oil, garlic, caraway or thyme, and a pinch of salt. Roast 10 minutes.",
+      "Season the pork and nestle it on the pan. Roast 15\u201318 minutes more, until the pork is 145\u00b0F and the cabbage is browned on the edges.",
+      "Rest the pork 5 minutes, slice, and serve with the wedges and a little lemon."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 290,
+      "protein": 36,
+      "satFat": 2.0,
+      "sodium": 250
+    },
+    "leftovers": "Sliced pork and cabbage reheat well. A good Sunday roast for two dinners or a dinner plus lunch.",
+    "protein": "pork"
+  },
+  {
+    "id": "d06",
+    "name": "Lean Beef, Mushrooms & Spinach Skillet",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 14,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "lean beef sirloin or loin, thinly sliced",
+        "qty": 8,
+        "unit": "oz",
+        "section": "meat",
+        "key": "lean-beef"
+      },
+      {
+        "name": "mushrooms, sliced",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet over medium-high heat. Sear the beef quickly, 1\u20132 minutes per side, until just browned. Do not overcook. Transfer to a plate. This is a modest 4 ounces of lean beef per person.",
+      "Add the remaining oil, onion, and mushrooms. Cook 5\u20136 minutes until browned. Add garlic and thyme for 30 seconds.",
+      "Add the spinach to wilt, return the beef and any juices, and toss with pepper. Taste before adding any more salt."
+    ],
+    "tags": [
+      "high-protein",
+      "occasional"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 32,
+      "satFat": 3.5,
+      "sodium": 260
+    },
+    "leftovers": "Eat within 2 days. Keep lean beef and bison to 1\u20132 meals a week, in modest portions.",
+    "protein": "beef"
+  },
+  {
+    "id": "d07",
+    "name": "Bison & Pepper Skillet",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "ground bison",
+        "qty": 8,
+        "unit": "oz",
+        "section": "meat",
+        "key": "bison"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "ground cumin",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cumin"
+      },
+      {
+        "name": "chili powder (no added sugar)",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "chili-powder"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the oil in a skillet over medium-high heat. Cook the onion and peppers 4 minutes.",
+      "Add the bison, garlic, and spices. Cook, breaking it up, until browned and done, about 6\u20137 minutes. This is 4 ounces of bison per person \u2014 a modest, occasional dinner.",
+      "Taste and add pepper or cumin before reaching for more salt."
+    ],
+    "tags": [
+      "high-protein",
+      "occasional"
+    ],
+    "nutrition": {
+      "cal": 260,
+      "protein": 32,
+      "satFat": 2.5,
+      "sodium": 260
+    },
+    "leftovers": "Makes a good lunch the next day in cabbage leaves. Limit red meat to 1\u20132 times a week.",
+    "protein": "bison"
+  },
+  {
+    "id": "d08",
+    "name": "Herb-Roasted Cod with Zucchini",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "cod fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "cod"
+      },
+      {
+        "name": "zucchini, sliced into half-moons",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "zucchini"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the zucchini with 1 teaspoon oil, garlic, oregano, and a pinch of salt. Roast 8 minutes.",
+      "Add the cod, brushed with the remaining oil and pepper. Roast 8\u201310 minutes until the fish flakes.",
+      "Finish with lemon and divide into 2 plates."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 220,
+      "protein": 36,
+      "satFat": 0.6,
+      "sodium": 240
+    },
+    "leftovers": "A very low-sat-fat dinner. The fish is best the day you cook it.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "d09",
+    "name": "Chicken & Mushroom Skillet",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 16,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast, sliced",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "mushrooms, sliced",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.75,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet over medium-high heat. Cook the chicken with a pinch of salt, pepper, and some of the thyme until cooked through, about 6\u20137 minutes. Set aside.",
+      "Add the remaining oil and the mushrooms. Let them sit and brown, 5\u20136 minutes, then add garlic and the rest of the thyme.",
+      "Return the chicken, toss with lemon and parsley, and serve."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 300,
+      "protein": 44,
+      "satFat": 1.5,
+      "sodium": 260
+    },
+    "leftovers": "Very leftover-friendly. The mushrooms soak up the lemon and thyme overnight.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d10",
+    "name": "Turkey-Stuffed Bell Peppers",
+    "category": "dinner",
+    "prep": 12,
+    "cook": 28,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "bell peppers, halved and seeded",
+        "qty": 2,
+        "unit": "large",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "ground turkey (lean)",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "cauliflower, riced",
+        "qty": 1,
+        "unit": "cup",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "onion, diced",
+        "qty": 0.25,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 400\u00b0F. Place the pepper halves cut-side up in a baking dish.",
+      "Cook the onion, turkey, cauliflower, garlic, and spices in the olive oil until the turkey is done, about 8 minutes. Spoon into the peppers.",
+      "Bake 20 minutes until the peppers are tender. A little over 30 minutes total, but the steps stay simple."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 300,
+      "protein": 38,
+      "satFat": 2.0,
+      "sodium": 280
+    },
+    "leftovers": "One of the best meal-prep dinners. Keeps 3 days and reheats in the oven or microwave.",
+    "protein": "turkey"
+  },
+  {
+    "id": "d11",
+    "name": "Broiled Salmon with Garlic Kale",
+    "category": "dinner",
+    "prep": 6,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "salmon fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "kale, chopped, stems removed",
+        "qty": 6,
+        "unit": "cups",
+        "section": "produce",
+        "key": "kale"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the broiler. Brush the salmon with 1 teaspoon oil, a pinch of salt, and pepper. Broil 8\u201310 minutes until it flakes (or bake at 400\u00b0F for 12 minutes).",
+      "Meanwhile, saut\u00e9 the garlic in the remaining oil 20 seconds, add the kale and a splash of water, and cook until wilted but still green, 3\u20134 minutes.",
+      "Finish the kale with lemon and serve under the salmon."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 390,
+      "protein": 40,
+      "satFat": 3.2,
+      "sodium": 240
+    },
+    "leftovers": "Salmon and kale both keep 1\u20132 days. A strong weekly staple for LDL-friendly omega-3s.",
+    "protein": "salmon"
+  },
+  {
+    "id": "d12",
+    "name": "Sheet-Pan Chicken, Cauliflower & Broccoli",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 25,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "cauliflower florets",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the chicken and vegetables with oil, smoked paprika, garlic powder, a pinch of salt, and pepper. Spread in a single layer.",
+      "Roast 22\u201325 minutes, until the chicken is 165\u00b0F and the vegetables are browned.",
+      "Squeeze lemon over the pan and divide into 2 servings."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 320,
+      "protein": 44,
+      "satFat": 1.6,
+      "sodium": 270
+    },
+    "leftovers": "A classic two-night sheet pan. Keeps 3 days and packs well.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d13",
+    "name": "Garlic Shrimp over Saut\u00e9ed Spinach",
+    "category": "dinner",
+    "prep": 5,
+    "cook": 8,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 8,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 4,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "crushed red pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "crushed-red-pepper"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet. Cook half the garlic 20 seconds, add the spinach in handfuls, and wilt. Divide onto 2 plates.",
+      "Add the remaining oil, garlic, shrimp, crushed red pepper, and black pepper. Cook 1\u20132 minutes per side until just opaque. No extra salt.",
+      "Spoon the shrimp over the spinach and finish with lemon. Dinner in 15 minutes."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 230,
+      "protein": 38,
+      "satFat": 0.8,
+      "sodium": 480
+    },
+    "leftovers": "Best fresh. Leftover shrimp is fine cold the next day. Spinach wilts more on reheat.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "d14",
+    "name": "Trout with Green Beans & Almonds",
+    "category": "dinner",
+    "prep": 6,
+    "cook": 14,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "rainbow trout fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "trout"
+      },
+      {
+        "name": "green beans, trimmed",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "green-beans"
+      },
+      {
+        "name": "sliced almonds",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "almonds"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Bake or skillet-cook the trout with 1 teaspoon oil, a pinch of salt, and pepper until it flakes, about 10\u201312 minutes.",
+      "Meanwhile, saut\u00e9 the green beans and garlic in the remaining oil until tender-crisp, 6\u20138 minutes. Toast the almonds in a dry corner of the pan for the last minute \u2014 1 tablespoon per person is a modest portion.",
+      "Plate the trout with the beans, almonds, and lemon. This is a saut\u00e9, not a fry \u2014 keep the oil to the measured teaspoons."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 360,
+      "protein": 38,
+      "satFat": 3.0,
+      "sodium": 210
+    },
+    "leftovers": "Green beans and trout keep 1\u20132 days. Add the almonds just before serving so they stay crisp.",
+    "protein": "trout"
+  },
+  {
+    "id": "d15",
+    "name": "Pork Medallions with Mushrooms & Onions",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 16,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "pork tenderloin, sliced into medallions",
+        "qty": 10,
+        "unit": "oz",
+        "section": "meat",
+        "key": "pork-tenderloin"
+      },
+      {
+        "name": "mushrooms, sliced",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried rosemary",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "rosemary"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Season the medallions with rosemary, a pinch of salt, and pepper. Warm 1 teaspoon oil in a skillet over medium-high heat and cook the pork 2\u20133 minutes per side until 145\u00b0F. Set aside.",
+      "Add the remaining oil, mushrooms, and onion. Cook 6\u20138 minutes until browned and soft. Add garlic for the last 30 seconds.",
+      "Return the pork and any juices to the pan, toss, and serve."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 300,
+      "protein": 36,
+      "satFat": 2.2,
+      "sodium": 250
+    },
+    "leftovers": "Reheats gently. Don't push leftover pork past a couple of days.",
+    "protein": "pork"
+  },
+  {
+    "id": "d16",
+    "name": "White Fish in Parchment with Vegetables",
+    "category": "dinner",
+    "prep": 10,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "cod or haddock fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "cod"
+      },
+      {
+        "name": "zucchini, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "zucchini"
+      },
+      {
+        "name": "bell pepper, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, thinly sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon, sliced, plus extra juice",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 400\u00b0F. Cut two large sheets of parchment (foil works if you don't have parchment).",
+      "Divide the vegetables between the sheets, top with the fish, oil, thyme, lemon slices, a pinch of salt, and pepper. Fold and crimp into sealed packets.",
+      "Bake 16\u201318 minutes. Open carefully \u2014 the steam is hot \u2014 and finish with parsley. The fish steams in its own juices, so it stays moist with very little oil."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 240,
+      "protein": 36,
+      "satFat": 0.8,
+      "sodium": 250
+    },
+    "leftovers": "Best the night you make it. Packets can be assembled a few hours ahead and kept in the fridge until dinner.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "d17",
+    "name": "Chicken Thighs with Cabbage",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 28,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken thighs",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-thigh"
+      },
+      {
+        "name": "cabbage, chopped",
+        "qty": 0.5,
+        "unit": "head",
+        "section": "produce",
+        "key": "cabbage"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "caraway seeds (optional)",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "caraway"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F, or use a large oven-safe skillet. Season the thighs with paprika, a pinch of salt, and pepper.",
+      "Brown the chicken in 1 teaspoon oil, 3 minutes per side. Add the remaining oil, cabbage, onion, garlic, and caraway. Toss, then roast or bake 20\u201322 minutes until the chicken is 165\u00b0F and the cabbage is tender and browned.",
+      "Hands-off after the first sear. Total time is about 30 minutes."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 330,
+      "protein": 35,
+      "satFat": 3.0,
+      "sodium": 280
+    },
+    "leftovers": "Cabbage and thighs reheat beautifully. A solid leftover dinner or lunch.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d18",
+    "name": "Baked Haddock with Peppers & Onions",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "haddock fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "haddock"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.75,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the peppers and onion with 1 teaspoon oil, half the paprika, and a pinch of salt. Roast 10 minutes.",
+      "Add the haddock, brushed with the remaining oil, paprika, and pepper. Bake 10 minutes more until the fish flakes.",
+      "Finish with lemon and parsley."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 240,
+      "protein": 36,
+      "satFat": 0.6,
+      "sodium": 250
+    },
+    "leftovers": "Peppers and onions keep well; the fish is better the day you bake it.",
+    "protein": "white-fish"
+  },
+  {
+    "id": "d19",
+    "name": "Seasoned Turkey Patties with Roasted Broccoli",
+    "category": "dinner",
+    "prep": 10,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "ground turkey (lean)",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "ground-turkey"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "onion powder",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "onion-powder"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Mix the turkey with the garlic powder, onion powder, paprika, oregano, salt, and pepper. Form 4 patties \u2014 no breadcrumbs needed if you handle them gently.",
+      "Toss the broccoli with 1 teaspoon oil and spread on a sheet pan with the patties, brushed with the remaining oil.",
+      "Roast 16\u201318 minutes, flipping the patties once, until the turkey is 165\u00b0F. Finish the broccoli with lemon."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "sheet-pan",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 320,
+      "protein": 42,
+      "satFat": 2.2,
+      "sodium": 280
+    },
+    "leftovers": "Patties freeze well and make an easy lunch. No filler or processed meat \u2014 just seasoned turkey.",
+    "protein": "turkey"
+  },
+  {
+    "id": "d20",
+    "name": "Salmon with Roasted Garlic Brussels Sprouts",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "salmon fillets",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "salmon"
+      },
+      {
+        "name": "Brussels sprouts, halved",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "brussels-sprouts"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the Brussels sprouts with 1 teaspoon oil, garlic, a pinch of salt, and pepper. Roast 10 minutes.",
+      "Add the salmon, brushed with the remaining oil and pepper. Roast 10 minutes more until the salmon flakes and the sprouts are crisp-edged.",
+      "Finish with lemon."
+    ],
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "high-fiber",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 400,
+      "protein": 40,
+      "satFat": 3.2,
+      "sodium": 240
+    },
+    "leftovers": "A repeat-worthy weekly staple. Brussels sprouts reheat especially well.",
+    "protein": "salmon"
+  },
+  {
+    "id": "d21",
+    "name": "Lean Beef & Broccoli Saut\u00e9",
+    "category": "dinner",
+    "prep": 10,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "lean beef sirloin or loin, thinly sliced",
+        "qty": 8,
+        "unit": "oz",
+        "section": "meat",
+        "key": "lean-beef"
+      },
+      {
+        "name": "broccoli florets",
+        "qty": 5,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "fresh ginger, minced (or 1/4 tsp ground)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "ginger"
+      },
+      {
+        "name": "green onions, sliced",
+        "qty": 2,
+        "unit": "",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Warm 1 teaspoon oil in a large skillet over medium-high heat. Sear the beef quickly in a single layer, 1\u20132 minutes, until just browned. Set aside. This is 4 ounces of lean beef per person.",
+      "Add the remaining oil, broccoli, and a splash of water. Cover 3 minutes to steam, then uncover and add garlic and ginger for 1 minute.",
+      "Return the beef, toss with green onions and pepper, and serve. No bottled sauce \u2014 the garlic, ginger, and pepper do the work. This is a saut\u00e9, not a fry."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "occasional"
+    ],
+    "nutrition": {
+      "cal": 280,
+      "protein": 34,
+      "satFat": 3.5,
+      "sodium": 270
+    },
+    "leftovers": "Eat within 2 days. Keep this to 1\u20132 modest red-meat meals a week.",
+    "protein": "beef"
+  },
+  {
+    "id": "d22",
+    "name": "Herb Chicken with Asparagus & Mushrooms",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "asparagus spears, trimmed",
+        "qty": 1,
+        "unit": "bunch",
+        "section": "produce",
+        "key": "asparagus"
+      },
+      {
+        "name": "mushrooms, sliced",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried rosemary",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "rosemary"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Season the chicken with rosemary, a pinch of salt, and pepper, and place on a sheet pan with the mushrooms and asparagus. Drizzle with oil and scatter the garlic.",
+      "Roast 16\u201318 minutes until the chicken is 165\u00b0F. Finish with lemon and slice the chicken to serve."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 300,
+      "protein": 44,
+      "satFat": 1.5,
+      "sodium": 250
+    },
+    "leftovers": "Slices nicely for lunch the next day.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d23",
+    "name": "Sheet-Pan Shrimp, Zucchini & Peppers",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "zucchini, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "zucchini"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "paprika",
+        "qty": 0.75,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "paprika"
+      },
+      {
+        "name": "lime juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lime"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the zucchini and peppers with 1 teaspoon oil, half the garlic, and some paprika. Roast 6 minutes.",
+      "Toss the shrimp with the remaining oil, garlic, paprika, and pepper. Add to the pan and roast 6 minutes more until just opaque.",
+      "Finish with lime. No extra salt \u2014 shrimp already has sodium."
+    ],
+    "tags": [
+      "high-protein",
+      "sheet-pan"
+    ],
+    "nutrition": {
+      "cal": 230,
+      "protein": 36,
+      "satFat": 0.7,
+      "sodium": 460
+    },
+    "leftovers": "Good cold over greens the next day. Don't reheat shrimp too long or it turns rubbery.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "d24",
+    "name": "Walnut-Herb Chicken with Green Beans",
+    "category": "dinner",
+    "prep": 10,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken breast",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-breast"
+      },
+      {
+        "name": "green beans, trimmed",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "green-beans"
+      },
+      {
+        "name": "walnuts",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "fresh basil or parsley",
+        "qty": 0.5,
+        "unit": "cup",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Mash or finely chop the walnuts with the herbs, garlic, 1 teaspoon oil, lemon, and a pinch of salt to make a rough, cheese-free herb paste. This is a modest walnut portion \u2014 about 1 tablespoon per person.",
+      "Cook the chicken in the remaining oil over medium heat until 165\u00b0F, about 6 minutes per side, or bake at 400\u00b0F for 18 minutes. Steam or saut\u00e9 the green beans until tender-crisp.",
+      "Spread the herb paste over the sliced chicken and serve with the beans."
+    ],
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 380,
+      "protein": 44,
+      "satFat": 2.2,
+      "sodium": 260
+    },
+    "leftovers": "The herb paste keeps 2 days. Spread it on leftover chicken just before eating so it stays bright.",
+    "protein": "chicken"
+  },
+  {
+    "id": "d25",
+    "name": "Scallops with Garlic Spinach & Cauliflower",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "sea scallops (plain, dry-packed if possible)",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "scallops"
+      },
+      {
+        "name": "fresh spinach",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "spinach"
+      },
+      {
+        "name": "cauliflower florets",
+        "qty": 3,
+        "unit": "cups",
+        "section": "produce",
+        "key": "cauliflower"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 3,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Steam or roast the cauliflower until tender, about 8\u201310 minutes.",
+      "Pat the scallops very dry. Warm 1 teaspoon oil in a skillet over medium-high heat and cook the scallops 2 minutes per side until just opaque and browned. Do not crowd the pan. Set aside. Wet-packed scallops can be brined \u2014 skip extra salt either way.",
+      "Add the remaining oil, garlic, and spinach; wilt quickly. Plate the cauliflower and spinach, top with scallops, lemon, parsley, and pepper."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 36,
+      "satFat": 0.6,
+      "sodium": 400
+    },
+    "leftovers": "Scallops are best the night you cook them. Use dry-packed if you can; they usually have less added sodium.",
+    "protein": "shellfish"
+  },
+  {
+    "id": "d26",
+    "name": "Chicken Thighs, Peppers & Onions",
+    "category": "dinner",
+    "prep": 8,
+    "cook": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "skinless chicken thighs, cut into chunks",
+        "qty": 12,
+        "unit": "oz",
+        "section": "meat",
+        "key": "chicken-thigh"
+      },
+      {
+        "name": "bell peppers, sliced",
+        "qty": 2,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "onion, sliced",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "onion"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "dried oregano",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "salt",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "salt"
+      },
+      {
+        "name": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Warm the oil in a large skillet over medium-high heat. Brown the thighs with smoked paprika, oregano, a pinch of salt, and pepper, about 5 minutes.",
+      "Add the peppers, onion, and garlic. Cook, stirring now and then, 12\u201315 minutes until the chicken is 165\u00b0F and the vegetables are soft and browned in spots.",
+      "A simple skillet dinner with a lot of flavor and no sauce to measure."
+    ],
+    "tags": [
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 330,
+      "protein": 35,
+      "satFat": 3.0,
+      "sodium": 270
+    },
+    "leftovers": "Even better the next day. Keeps 3 days and makes an easy lunch.",
+    "protein": "chicken"
+  },
+  {
+    "id": "s01",
+    "name": "Almonds & Cucumber",
+    "category": "snack",
+    "prep": 2,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "unsalted almonds",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "almonds"
+      },
+      {
+        "name": "cucumber, sliced",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      }
+    ],
+    "steps": [
+      "Portion 1 ounce of almonds (about 23 almonds, or a small handful). Don't eat from the bag.",
+      "Slice the cucumber, add a little lemon if you like, and eat alongside the almonds."
+    ],
+    "tags": [
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 180,
+      "protein": 7,
+      "satFat": 1.1,
+      "sodium": 80
+    },
+    "leftovers": "Pre-portion almonds into 1-ounce containers for the week.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s02",
+    "name": "Cucumber Rounds with Peanut Butter",
+    "category": "snack",
+    "prep": 3,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cucumber, cut into rounds",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "natural peanut butter (unsalted, no added sugar)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "peanut-butter"
+      }
+    ],
+    "steps": [
+      "Spread 1 tablespoon of natural peanut butter over cucumber rounds. One tablespoon is the portion \u2014 measure it.",
+      "Eat right away. Savory, not sweet, and surprisingly satisfying."
+    ],
+    "tags": [
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 110,
+      "protein": 5,
+      "satFat": 1.5,
+      "sodium": 50
+    },
+    "leftovers": "Assemble fresh so the cucumber stays crisp.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s03",
+    "name": "Lemon-Pepper Avocado",
+    "category": "snack",
+    "prep": 3,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Halve an avocado and keep one half (wrap the rest with the pit in for later).",
+      "Season the cut side with lemon, pepper, and a tiny pinch of salt. Eat with a spoon."
+    ],
+    "tags": [
+      "no-cook"
+    ],
+    "nutrition": {
+      "cal": 130,
+      "protein": 2,
+      "satFat": 1.5,
+      "sodium": 80
+    },
+    "leftovers": "A half avocado is the right snack portion. The other half keeps until the next day with lemon and tight wrap.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s04",
+    "name": "Turkey & Cucumber Roll-Ups",
+    "category": "snack",
+    "prep": 8,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cooked turkey breast, sliced (not deli meat)",
+        "qty": 3,
+        "unit": "oz",
+        "section": "meat",
+        "key": "turkey-breast"
+      },
+      {
+        "name": "cucumber, cut into sticks",
+        "qty": 0.5,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Use leftover roasted turkey breast, not packaged deli slices.",
+      "Wrap cucumber sticks in the turkey, add lemon and pepper, and eat."
+    ],
+    "tags": [
+      "no-cook",
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 140,
+      "protein": 26,
+      "satFat": 0.5,
+      "sodium": 150
+    },
+    "leftovers": "Keep cooked turkey in the fridge for 3 days and roll these up in a minute.",
+    "protein": "turkey"
+  },
+  {
+    "id": "s05",
+    "name": "Lemon Herb Shrimp",
+    "category": "snack",
+    "prep": 3,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "shrimp, peeled and deveined",
+        "qty": 4,
+        "unit": "oz",
+        "section": "meat",
+        "key": "shrimp"
+      },
+      {
+        "name": "olive oil",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh parsley, chopped",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 0.5,
+        "unit": "clove",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Cook the shrimp in the oil with garlic and pepper, 1\u20132 minutes per side, until just opaque. No extra salt.",
+      "Toss with lemon and parsley. Eat warm or chilled, like a clean shrimp cocktail without sweet sauce."
+    ],
+    "tags": [
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 130,
+      "protein": 24,
+      "satFat": 0.3,
+      "sodium": 320
+    },
+    "leftovers": "Make a batch and chill for 1\u20132 days. A high-protein snack with almost no saturated fat.",
+    "protein": "shrimp"
+  },
+  {
+    "id": "s06",
+    "name": "Cinnamon Walnuts",
+    "category": "snack",
+    "prep": 2,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "walnuts",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      }
+    ],
+    "steps": [
+      "Toast 1 ounce of walnuts in a dry skillet over medium-low heat, 4\u20136 minutes, tossing often, until fragrant. Don't walk away \u2014 they burn quickly.",
+      "Toss with cinnamon. Let cool a minute. Stick to 1 ounce."
+    ],
+    "tags": [
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 185,
+      "protein": 4,
+      "satFat": 1.7,
+      "sodium": 1
+    },
+    "leftovers": "Toast a few 1-ounce portions and store in small containers.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s07",
+    "name": "Plain Protein Shake",
+    "category": "snack",
+    "prep": 3,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "water",
+        "qty": 1,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ice (optional)",
+        "qty": 0.5,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ground cinnamon (optional)",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      }
+    ],
+    "steps": [
+      "Shake or blend the protein powder with water and ice. Add a pinch of cinnamon if you want a little aroma.",
+      "This will taste like unsweetened protein, not a milkshake. That is by design."
+    ],
+    "tags": [
+      "no-cook",
+      "shake",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 120,
+      "protein": 25,
+      "satFat": 0.3,
+      "sodium": 140
+    },
+    "leftovers": "Mix fresh. Handy after a workout or when dinner will be late.",
+    "protein": "protein-powder"
+  },
+  {
+    "id": "s08",
+    "name": "Bell Pepper Strips with Herbed Oil",
+    "category": "snack",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "bell pepper, cut into strips",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "bell-pepper"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "dried oregano or Italian seasoning",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "oregano"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Cut the pepper into strips.",
+      "Stir the oil with oregano, lemon, and a tiny pinch of salt. Dip or drizzle lightly \u2014 1 teaspoon of oil is enough."
+    ],
+    "tags": [
+      "no-cook",
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 80,
+      "protein": 1,
+      "satFat": 0.6,
+      "sodium": 80
+    },
+    "leftovers": "Cut peppers keep 2\u20133 days in the fridge. Mix the oil when you eat.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s09",
+    "name": "Measured Mixed Nuts",
+    "category": "snack",
+    "prep": 1,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "unsalted almonds",
+        "qty": 0.4,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "almonds"
+      },
+      {
+        "name": "walnuts",
+        "qty": 0.3,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "plain unsalted peanuts",
+        "qty": 0.3,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "peanuts"
+      }
+    ],
+    "steps": [
+      "Combine 1 ounce total of unsalted almonds, walnuts, and peanuts. Measure on a scale if you have one; otherwise use a small handful that fits in your cupped palm.",
+      "This mix skips macadamias, which are higher in saturated fat. Eat slowly."
+    ],
+    "tags": [
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 170,
+      "protein": 6,
+      "satFat": 1.5,
+      "sodium": 5
+    },
+    "leftovers": "Pre-portion 1-ounce bags for the week so you never eat from a large jar.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s10",
+    "name": "Baked Kale Chips",
+    "category": "snack",
+    "prep": 8,
+    "cook": 15,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "kale, stems removed, torn into pieces",
+        "qty": 6,
+        "unit": "cups",
+        "section": "produce",
+        "key": "kale"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 300\u00b0F. Dry the kale well, then toss with oil, garlic powder, and a tiny pinch of salt. Spread in a single layer.",
+      "Bake 12\u201315 minutes until crisp but not browned. They go from done to burned quickly.",
+      "Cool and eat. This recipe is two modest servings."
+    ],
+    "tags": [
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 80,
+      "protein": 3,
+      "satFat": 0.6,
+      "sodium": 120
+    },
+    "leftovers": "Best the day you bake them. Store in a loosely covered bowl, not a sealed bag, or they soften.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s11",
+    "name": "Steamed Broccoli with Lemon-Herb Oil",
+    "category": "snack",
+    "prep": 3,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "broccoli florets",
+        "qty": 2,
+        "unit": "cups",
+        "section": "produce",
+        "key": "broccoli"
+      },
+      {
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Steam the broccoli until tender-crisp, 5\u20136 minutes.",
+      "Toss with the oil, lemon, garlic powder, and pepper. Eat warm."
+    ],
+    "tags": [
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 90,
+      "protein": 4,
+      "satFat": 0.6,
+      "sodium": 90
+    },
+    "leftovers": "You can steam a larger batch and dress a single serving when you want it.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s12",
+    "name": "Cucumber Boats with Turkey-Avocado",
+    "category": "snack",
+    "prep": 10,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "cucumber, halved and seeded",
+        "qty": 1,
+        "unit": "medium",
+        "section": "produce",
+        "key": "cucumber"
+      },
+      {
+        "name": "cooked turkey breast, chopped (not deli meat)",
+        "qty": 3,
+        "unit": "oz",
+        "section": "meat",
+        "key": "turkey-breast"
+      },
+      {
+        "name": "avocado",
+        "qty": 0.25,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "lemon juice",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "lemon"
+      },
+      {
+        "name": "fresh herbs (parsley, dill, or chives)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      }
+    ],
+    "steps": [
+      "Halve the cucumber lengthwise and scoop out the seeds to make two boats.",
+      "Mash the avocado with lemon, herbs, and pepper. Stir in the chopped leftover turkey and fill the boats."
+    ],
+    "tags": [
+      "no-cook",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 200,
+      "protein": 26,
+      "satFat": 1.5,
+      "sodium": 180
+    },
+    "leftovers": "Fill just before eating so the cucumber stays firm. The turkey mix keeps a day if you add the avocado fresh.",
+    "protein": "turkey"
+  },
+  {
+    "id": "s13",
+    "name": "Garlic Roasted Mushrooms",
+    "category": "snack",
+    "prep": 5,
+    "cook": 18,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "mushrooms, halved if large",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "mushrooms"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "garlic, minced",
+        "qty": 2,
+        "unit": "cloves",
+        "section": "produce",
+        "key": "garlic"
+      },
+      {
+        "name": "dried thyme",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "thyme"
+      },
+      {
+        "name": "black pepper",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "black-pepper"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the mushrooms with oil, garlic, thyme, pepper, and a pinch of salt. Spread on a pan.",
+      "Roast 16\u201318 minutes until browned and the liquid has cooked off. This recipe is two servings \u2014 share or save half."
+    ],
+    "tags": [
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 80,
+      "protein": 4,
+      "satFat": 0.6,
+      "sodium": 120
+    },
+    "leftovers": "Good warm or cold the next day. A savory snack when you want something warm without much fat.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s14",
+    "name": "Thick Cinnamon Protein Pudding",
+    "category": "snack",
+    "prep": 3,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "water",
+        "qty": 4,
+        "unit": "tbsp",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "natural almond butter (no added sugar or oils)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "almond-butter"
+      }
+    ],
+    "steps": [
+      "Stir the protein powder with just enough water to make a thick pudding. Mix in cinnamon and the teaspoon of almond butter.",
+      "This is mild and spiced, not sweet. Eat with a spoon."
+    ],
+    "tags": [
+      "no-cook",
+      "shake",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 160,
+      "protein": 27,
+      "satFat": 1.0,
+      "sodium": 150
+    },
+    "leftovers": "Mix fresh. A useful mid-afternoon snack when you need protein, not a pile of nuts.",
+    "protein": "protein-powder"
+  },
+  {
+    "id": "s15",
+    "name": "Roasted Spiced Brussels Sprouts",
+    "category": "snack",
+    "prep": 6,
+    "cook": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "Brussels sprouts, halved",
+        "qty": 4,
+        "unit": "cups",
+        "section": "produce",
+        "key": "brussels-sprouts"
+      },
+      {
+        "name": "olive oil",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "olive-oil"
+      },
+      {
+        "name": "smoked paprika",
+        "qty": 0.5,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "smoked-paprika"
+      },
+      {
+        "name": "garlic powder",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "garlic-powder"
+      },
+      {
+        "name": "salt",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "salt"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425\u00b0F. Toss the sprouts with oil, smoked paprika, garlic powder, and a pinch of salt.",
+      "Roast 18\u201320 minutes until browned and crisp at the edges. Two servings \u2014 they disappear fast, so plate your share."
+    ],
+    "tags": [
+      "high-fiber"
+    ],
+    "nutrition": {
+      "cal": 110,
+      "protein": 5,
+      "satFat": 0.7,
+      "sodium": 130
+    },
+    "leftovers": "Crispiest fresh from the oven; still good reheated in a hot skillet the next day.",
+    "protein": "nuts"
+  },
+  {
+    "id": "s16",
+    "name": "Iced Tea & a Few Macadamias",
+    "category": "snack",
+    "prep": 2,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "unsweetened iced tea",
+        "qty": 1,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "tea"
+      },
+      {
+        "name": "unsalted macadamia nuts",
+        "qty": 0.5,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "macadamia"
+      }
+    ],
+    "steps": [
+      "Brew unsweetened tea and pour it over ice, or use unsweetened bottled tea with no added sugar.",
+      "Portion 1/2 ounce of macadamias \u2014 about 5 or 6 nuts. That smaller portion is on purpose: macadamias are higher in saturated fat than almonds or walnuts."
+    ],
+    "tags": [
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 100,
+      "protein": 1,
+      "satFat": 1.7,
+      "sodium": 5
+    },
+    "leftovers": "Keep a 1/2-ounce portion ready so you don't overpour from the jar.",
+    "protein": "nuts"
+  },
+  {
+    "id": "e01",
+    "name": "Cinnamon Toasted Walnuts",
+    "category": "dessert",
+    "prep": 2,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "walnuts",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "ground nutmeg (optional)",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "nutmeg"
+      }
+    ],
+    "steps": [
+      "Toast 1 ounce of walnuts in a dry skillet over medium-low heat until fragrant, 4\u20136 minutes.",
+      "Toss with cinnamon and a pinch of nutmeg. Let cool slightly.",
+      "Treat-style, not sweet. You get warmth and spice, not dessert-level sweetness. Stick to 1 ounce."
+    ],
+    "tags": [
+      "treat-style",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 185,
+      "protein": 4,
+      "satFat": 1.7,
+      "sodium": 1
+    },
+    "leftovers": "Toast portions ahead. This is a measured treat, not a bowl to graze from.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. Toasty and spiced only."
+  },
+  {
+    "id": "e02",
+    "name": "Avocado Cocoa Mousse",
+    "category": "dessert",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "avocado",
+        "qty": 0.5,
+        "unit": "",
+        "section": "produce",
+        "key": "avocado"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "unsweetened cocoa powder (optional)",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cocoa"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "vanilla"
+      },
+      {
+        "name": "water",
+        "qty": 3,
+        "unit": "tbsp",
+        "section": "drinks",
+        "key": "water"
+      }
+    ],
+    "steps": [
+      "Mash or blend the avocado with protein powder, cinnamon, vanilla, and just enough water to make a thick mousse.",
+      "Add unsweetened cocoa if you want a chocolate note \u2014 it is optional and unsweetened, so the result is cocoa-forward and mild, not a sweet pudding.",
+      "Treat-style, not sweet. Chill 10 minutes if you like it colder."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 250,
+      "protein": 27,
+      "satFat": 2.0,
+      "sodium": 160
+    },
+    "leftovers": "Best within a few hours; avocado can dull in color. Press plastic wrap onto the surface if you refrigerate it.",
+    "protein": "protein-powder",
+    "dessertNote": "Treat-style, not sweet. Cocoa-forward and mild. Skip the cocoa if you prefer."
+  },
+  {
+    "id": "e03",
+    "name": "Peanut Butter Protein Bites",
+    "category": "dessert",
+    "prep": 10,
+    "cook": 0,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "natural peanut butter (unsalted, no added sugar)",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "peanut-butter"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "plain unsalted peanuts, chopped",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "peanuts"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "vanilla"
+      },
+      {
+        "name": "water, as needed",
+        "qty": 2,
+        "unit": "tsp",
+        "section": "drinks",
+        "key": "water"
+      }
+    ],
+    "steps": [
+      "Stir the peanut butter, protein powder, cinnamon, and vanilla. Add water a few drops at a time until the mixture holds together.",
+      "Form 4 small bites and press a few chopped peanuts on top. One serving is 2 bites.",
+      "Treat-style, not sweet. Nutty and dense, like a savory-leaning protein bite."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook",
+      "high-protein",
+      "meal-prep"
+    ],
+    "nutrition": {
+      "cal": 190,
+      "protein": 16,
+      "satFat": 2.0,
+      "sodium": 120
+    },
+    "leftovers": "Keeps 3\u20134 days in the fridge. Nutrition is for 2 of the 4 bites.",
+    "protein": "protein-powder",
+    "dessertNote": "Treat-style, not sweet. Nutty and dense. Serving is 2 bites."
+  },
+  {
+    "id": "e04",
+    "name": "Warm Spiced Almonds",
+    "category": "dessert",
+    "prep": 2,
+    "cook": 6,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "unsalted almonds",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "almonds"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "cayenne or smoked paprika (optional)",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "cayenne"
+      }
+    ],
+    "steps": [
+      "Toast 1 ounce of almonds in a dry skillet until fragrant, 5\u20136 minutes.",
+      "Toss with cinnamon and, if you like, a tiny pinch of cayenne or smoked paprika for a warm finish.",
+      "Treat-style, not sweet. Eat them warm, and stick to the ounce."
+    ],
+    "tags": [
+      "treat-style",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 165,
+      "protein": 6,
+      "satFat": 1.1,
+      "sodium": 5
+    },
+    "leftovers": "Best warm. You can toast a few portions and rewarm briefly.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. Warm spice, no sugar."
+  },
+  {
+    "id": "e05",
+    "name": "No-Bake Cinnamon Nut Stacks",
+    "category": "dessert",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "natural almond butter (no added sugar or oils)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "almond-butter"
+      },
+      {
+        "name": "walnuts, chopped",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "vanilla"
+      }
+    ],
+    "steps": [
+      "Stir the almond butter, protein powder, cinnamon, and vanilla into a thick paste. Fold in the chopped walnuts.",
+      "Press into two small stacks or one small patty. Eat with a fork.",
+      "Treat-style, not sweet. More nut shop than bakery."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook"
+    ],
+    "nutrition": {
+      "cal": 190,
+      "protein": 10,
+      "satFat": 1.5,
+      "sodium": 80
+    },
+    "leftovers": "Can be chilled for an hour to firm up. Eat the same day.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. A small nut-and-spice bite."
+  },
+  {
+    "id": "e06",
+    "name": "Vanilla-Cinnamon Protein Pudding",
+    "category": "dessert",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "water",
+        "qty": 0.3,
+        "unit": "cup",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "vanilla"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "walnuts, chopped",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "nuts",
+        "key": "walnuts"
+      }
+    ],
+    "steps": [
+      "Stir the protein powder with just enough water to make a thick pudding. Mix in vanilla and cinnamon.",
+      "Top with a small sprinkle of walnuts.",
+      "Treat-style, not sweet. Mild, spiced, and high in protein \u2014 closer to a seasoned pudding than a dessert."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 150,
+      "protein": 26,
+      "satFat": 0.6,
+      "sodium": 150
+    },
+    "leftovers": "Mix fresh. A better nightly treat if you want protein without another handful of nuts.",
+    "protein": "protein-powder",
+    "dessertNote": "Treat-style, not sweet. Mild and spiced."
+  },
+  {
+    "id": "e07",
+    "name": "Espresso Walnut Bites",
+    "category": "dessert",
+    "prep": 8,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "walnuts, finely chopped",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "strong black coffee, cooled",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "drinks",
+        "key": "coffee"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      }
+    ],
+    "steps": [
+      "Stir the chopped walnuts with protein powder, cinnamon, and just enough cooled coffee to hold the mix together.",
+      "Press into 3 small bites. Chill 10 minutes if you want them firmer.",
+      "Treat-style, not sweet. Coffee and walnut are the whole flavor."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook"
+    ],
+    "nutrition": {
+      "cal": 210,
+      "protein": 10,
+      "satFat": 1.7,
+      "sodium": 70
+    },
+    "leftovers": "Keep a day in the fridge. Use leftover morning coffee.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. Coffee-and-walnut flavor only."
+  },
+  {
+    "id": "e08",
+    "name": "Frozen Cocoa-Peanut Butter Bites",
+    "category": "dessert",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "natural peanut butter (unsalted, no added sugar)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "peanut-butter"
+      },
+      {
+        "name": "unsweetened cocoa powder (optional)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cocoa"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.125,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "protein-powder"
+      }
+    ],
+    "steps": [
+      "Stir the peanut butter with cinnamon, protein powder, and optional unsweetened cocoa. Form two small mounds on a parchment-lined plate.",
+      "Freeze about 30 minutes, until firm. Active time is only a few minutes.",
+      "Treat-style, not sweet. The freezer gives them a candy-like bite without any sweetener. Skip the cocoa if you don't keep it around."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 110,
+      "protein": 6,
+      "satFat": 1.5,
+      "sodium": 50
+    },
+    "leftovers": "Keep frozen and eat straight from the freezer. Don't leave them out or they soften.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. Optional unsweetened cocoa only."
+  },
+  {
+    "id": "e09",
+    "name": "Mint Cocoa Almond Mash",
+    "category": "dessert",
+    "prep": 5,
+    "cook": 0,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "natural almond butter (no added sugar or oils)",
+        "qty": 1,
+        "unit": "tbsp",
+        "section": "nuts",
+        "key": "almond-butter"
+      },
+      {
+        "name": "unsweetened cocoa powder (optional)",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cocoa"
+      },
+      {
+        "name": "fresh mint leaves, finely chopped",
+        "qty": 1,
+        "unit": "tsp",
+        "section": "produce",
+        "key": "fresh-herbs"
+      },
+      {
+        "name": "pure vanilla extract",
+        "qty": 1,
+        "unit": "drop",
+        "section": "pantry",
+        "key": "vanilla"
+      }
+    ],
+    "steps": [
+      "Stir the almond butter with optional cocoa, chopped fresh mint, and a drop of vanilla.",
+      "Eat with a spoon, slowly.",
+      "Treat-style, not sweet. Fresh mint is the lift; there is no mint candy flavor here."
+    ],
+    "tags": [
+      "treat-style",
+      "no-cook",
+      "portion-controlled"
+    ],
+    "nutrition": {
+      "cal": 110,
+      "protein": 3,
+      "satFat": 1.0,
+      "sodium": 40
+    },
+    "leftovers": "Mix fresh so the mint stays bright. One tablespoon of almond butter is the whole serving.",
+    "protein": "nuts",
+    "dessertNote": "Treat-style, not sweet. Fresh mint, optional unsweetened cocoa."
+  },
+  {
+    "id": "e10",
+    "name": "Warm Walnut-Cinnamon Skillet Crumble",
+    "category": "dessert",
+    "prep": 3,
+    "cook": 4,
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "walnuts, chopped",
+        "qty": 1,
+        "unit": "oz",
+        "section": "nuts",
+        "key": "walnuts"
+      },
+      {
+        "name": "clean unsweetened protein powder (Previnex or similar)",
+        "qty": 0.5,
+        "unit": "scoop",
+        "section": "pantry",
+        "key": "protein-powder"
+      },
+      {
+        "name": "water",
+        "qty": 2,
+        "unit": "tbsp",
+        "section": "drinks",
+        "key": "water"
+      },
+      {
+        "name": "ground cinnamon",
+        "qty": 0.25,
+        "unit": "tsp",
+        "section": "pantry",
+        "key": "cinnamon"
+      },
+      {
+        "name": "ground nutmeg (optional)",
+        "qty": 1,
+        "unit": "pinch",
+        "section": "pantry",
+        "key": "nutmeg"
+      }
+    ],
+    "steps": [
+      "Stir the protein powder with a little water and cinnamon to make a thick dollop. Spoon into a small bowl.",
+      "Warm the chopped walnuts in a dry skillet with the remaining cinnamon and a pinch of nutmeg, 2\u20133 minutes, until fragrant.",
+      "Scatter the warm walnuts over the pudding. Treat-style, not sweet \u2014 a warm crumble without a sugary filling."
+    ],
+    "tags": [
+      "treat-style",
+      "high-protein"
+    ],
+    "nutrition": {
+      "cal": 245,
+      "protein": 16,
+      "satFat": 1.9,
+      "sodium": 80
+    },
+    "leftovers": "Toast the walnuts fresh. The pudding can be mixed while the pan heats.",
+    "protein": "protein-powder",
+    "dessertNote": "Treat-style, not sweet. Warm spice over a mild protein pudding."
+  }
+]

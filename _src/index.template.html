@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4f3a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Heart-Healthy Meals">
+  <meta name="description" content="Simple, tasty heart-healthy meals for a gluten-free, dairy-free, no-added-sugar kitchen. Plan a week and build a shopping list.">
+  <title>Heart-Healthy Meals</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%231d4f3a'/%3E%3Cpath d='M32 48c-10-7-18-16-18-24a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 17-18 24z' fill='%23f3efe6'/%3E%3C/svg%3E">
+  <style>/*__CSS__*/</style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect rx="14" width="64" height="64" fill="#1d4f3a"/>
+        <path d="M32 48c-10-7-18-16-18-24a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 17-18 24z" fill="#f3efe6"/>
+      </svg>
+      <div>
+        <h1>Heart-Healthy Meals</h1>
+        <p class="tagline">Simple, tasty plates for Dave</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">Gluten-free</span>
+      <span class="pill">Dairy-free</span>
+      <span class="pill">No added sugar</span>
+      <span class="pill">High protein</span>
+      <span class="pill">LDL &amp; blood pressure focus</span>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Main">
+    <button type="button" data-view="recipes" aria-selected="true">Recipes</button>
+    <button type="button" data-view="plan">Plan</button>
+    <button type="button" data-view="shop">Shop</button>
+    <button type="button" data-view="hand">On hand</button>
+    <button type="button" data-view="foods">Foods</button>
+    <button type="button" data-view="tips">Tips</button>
+  </nav>
+
+  <main>
+    <div id="welcome" class="welcome">
+      <p>Welcome, Dave. Every recipe stays inside your approved foods — gluten-free, dairy-free, no added sugar, and built for a heart-healthy pattern. Plan a week, auto-fill if you want, then use the shopping list. This is not medical advice; follow your doctor’s guidance.</p>
+      <button type="button" class="close" id="dismiss-welcome" aria-label="Dismiss">×</button>
+    </div>
+
+    <section id="view-recipes" class="view on">
+      <div class="subtabs" role="tablist" aria-label="Meal type">
+        <button type="button" class="chip on" data-cat="all">All</button>
+        <button type="button" class="chip" data-cat="breakfast">Breakfast</button>
+        <button type="button" class="chip" data-cat="lunch">Lunch</button>
+        <button type="button" class="chip" data-cat="dinner">Dinner</button>
+        <button type="button" class="chip" data-cat="snack">Snacks</button>
+        <button type="button" class="chip" data-cat="dessert">Desserts</button>
+      </div>
+      <div class="toolbar">
+        <input type="search" id="recipe-search" placeholder="Search recipes, ingredients, or tags" autocomplete="off">
+        <select id="filter-protein" aria-label="Filter by protein">
+          <option value="">Any protein</option>
+          <option value="chicken">Chicken</option>
+          <option value="turkey">Turkey</option>
+          <option value="salmon">Salmon</option>
+          <option value="trout">Trout</option>
+          <option value="white-fish">White fish</option>
+          <option value="shrimp">Shrimp</option>
+          <option value="shellfish">Shellfish</option>
+          <option value="beef">Lean beef</option>
+          <option value="bison">Bison</option>
+          <option value="pork">Pork</option>
+          <option value="protein-powder">Protein powder</option>
+          <option value="nuts">Nuts / nut butter</option>
+        </select>
+        <select id="filter-time" aria-label="Filter by time">
+          <option value="">Any time</option>
+          <option value="15">15 minutes or less</option>
+          <option value="20">20 minutes or less</option>
+          <option value="30">30 minutes or less</option>
+        </select>
+        <select id="filter-tag" aria-label="Filter by tag">
+          <option value="">Any tag</option>
+          <option value="omega-3">Omega-3</option>
+          <option value="high-fiber">High fiber</option>
+          <option value="sheet-pan">Sheet-pan</option>
+          <option value="no-cook">No-cook</option>
+          <option value="meal-prep">Meal-prep</option>
+          <option value="shake">Shake</option>
+          <option value="occasional">Occasional (beef / bison)</option>
+          <option value="treat-style">Treat-style</option>
+          <option value="portion-controlled">Portion-controlled</option>
+          <option value="high-protein">High protein</option>
+        </select>
+        <button type="button" class="chip" id="filter-fav">Favorites only</button>
+        <span id="recipe-count" class="meta"></span>
+      </div>
+      <div id="recipe-grid" class="grid"></div>
+    </section>
+
+    <section id="view-plan" class="view">
+      <div class="plan-head">
+        <button type="button" class="btn" id="auto-fill">Auto-fill week</button>
+        <button type="button" class="btn ghost" id="clear-plan">Clear week</button>
+        <div class="water" id="water-track" aria-label="Water tracker"></div>
+      </div>
+      <p class="targets">Gentle daily targets: protein at least 90g · saturated fat under 15g (amber to 20g) · sodium under 1,500mg (amber to 2,300mg). Totals are estimates from the meals you plan, including a snack or treat if one is on the day. Auto-fill puts fatty fish on at least three days, limits beef or bison to one or two modest meals, and adds a dessert on only two days.</p>
+      <p class="targets">Tap a slot to pick a recipe, or drag one from another slot. Most recipes are written for more than one serving in the cookbook view; the plan starts each slot at 1 serving for you, and you can open the recipe to scale it.</p>
+      <div id="week" class="week"></div>
+    </section>
+
+    <section id="view-shop" class="view">
+      <div class="shop-tools">
+        <button type="button" class="btn" id="copy-shop">Copy list</button>
+        <button type="button" class="btn secondary" id="share-shop">Share</button>
+        <button type="button" class="btn secondary" id="print-shop">Print</button>
+        <button type="button" class="btn ghost" id="clear-checks">Clear checks</button>
+      </div>
+      <p class="targets">Quantities are combined from this week’s plan and scaled to the servings in each slot. Spices you likely already have are listed once at the bottom.</p>
+      <div id="shop-list"></div>
+      <div class="add-row">
+        <input id="custom-name" placeholder="Add an item" aria-label="Add a shopping item">
+        <select id="custom-section" aria-label="Section">
+          <option value="produce">Produce</option>
+          <option value="meat">Meat &amp; Seafood</option>
+          <option value="nuts">Nuts &amp; Oils</option>
+          <option value="pantry">Pantry / Spices</option>
+          <option value="drinks">Drinks</option>
+        </select>
+        <button type="button" class="btn secondary" id="add-custom">Add</button>
+      </div>
+    </section>
+
+    <section id="view-hand" class="view">
+      <p class="targets">Tick what you have. “I can make now” shows recipes whose main ingredients are all checked. Basic seasonings — salt in moderation, pepper, dried herbs and spices, lemon or lime, vinegar, vanilla, coffee, tea, and water — are assumed if you leave the box below checked. Garlic, onion, and cocoa are not assumed.</p>
+      <p><label><input type="checkbox" id="have-seasonings" checked> I have basic seasonings</label></p>
+      <div id="pantry-groups" class="groups"></div>
+      <div class="match-head">
+        <h2 id="match-head">Recipes you can make</h2>
+        <div>
+          <button type="button" class="chip on" id="match-now">I can make now</button>
+          <button type="button" class="chip" id="match-almost">Missing just one</button>
+        </div>
+      </div>
+      <div id="match-grid" class="grid"></div>
+    </section>
+
+    <section id="view-foods" class="view">
+      <div class="cols">
+        <article class="panel">
+          <h2>Approved foods</h2>
+          <p>This is the list the recipes are built from, aligned with a gluten-free, sugar-free, dairy-free, low-processed, high-protein pattern and a high coronary calcium (CAC) score. The focus is LDL control, blood pressure, and overall cardiovascular health.</p>
+          <h3>Proteins (primary focus)</h3>
+          <ul>
+            <li>Chicken, skinless breast or thigh</li>
+            <li>Turkey (fresh or ground, not deli meat)</li>
+            <li>Salmon, rainbow trout, and other fatty fish</li>
+            <li>White fish such as cod and haddock</li>
+            <li>Shrimp and other plain shellfish</li>
+            <li>Lean beef or bison, occasional and in modest portions</li>
+            <li>Pork tenderloin or other lean cuts</li>
+            <li>Previnex shakes or a similar clean, unsweetened protein powder you already tolerate</li>
+            <li>Plain peanuts or natural peanut butter, unsalted, no added sugar</li>
+          </ul>
+          <h3>Vegetables</h3>
+          <ul>
+            <li>Brussels sprouts, broccoli, cauliflower</li>
+            <li>Spinach, kale, and other leafy greens</li>
+            <li>Asparagus, green beans, zucchini, cucumber</li>
+            <li>Bell peppers, onions, garlic, mushrooms, cabbage</li>
+          </ul>
+          <h3>Healthy fats</h3>
+          <ul>
+            <li>Olive oil</li>
+            <li>Avocado, plain, in measured portions</li>
+            <li>Fatty fish, listed above</li>
+            <li>Plain nuts: almonds, walnuts, macadamia, peanuts — about 1 ounce, or ½ ounce for macadamias</li>
+            <li>Natural nut butters with no added sugar or oils, measured tablespoons</li>
+          </ul>
+          <h3>Drinks</h3>
+          <ul>
+            <li>Plain water, sparkling water, black coffee, unsweetened tea</li>
+            <li>Occasional bourbon or dry wine, limited, as previously discussed with your clinician</li>
+          </ul>
+          <h3>Seasonings used in this app</h3>
+          <ul>
+            <li>Herbs and spices, unlimited — including garlic and onion as vegetables, plus dried spices, fresh herbs, and fresh ginger</li>
+            <li>Salt, in moderation</li>
+            <li>Lemon juice, lime juice, and unsweetened vinegar, used as seasonings</li>
+            <li>Pure vanilla extract, in a few desserts</li>
+            <li>Unsweetened cocoa powder, optional and clearly marked, desserts only</li>
+          </ul>
+        </article>
+        <article class="panel avoid">
+          <h2>Foods to minimize or avoid</h2>
+          <ul>
+            <li>Anything with gluten — no bread, pasta, flour, oats, or other grains</li>
+            <li>Added sugars or sweetened products, including honey, maple, syrups, and non-sugar sweeteners</li>
+            <li>Dairy: milk, cheese, yogurt, butter, cream, and the rest</li>
+            <li>Eggs, and fruit other than avocado (they are not on your approved list, so they stay out of the recipes)</li>
+            <li>Legumes other than peanuts — no beans, lentils, or chickpeas</li>
+            <li>Highly processed meats or packaged foods, including deli turkey, bacon, and sausage</li>
+            <li>Fried foods — sautéing in a teaspoon or two of olive oil is not the same as frying</li>
+            <li>Excess saturated fat from fatty cuts of meat</li>
+            <li>Prepared sauces and condiments that often hide sugar or gluten (soy sauce, ketchup, bottled mustard, mayo)</li>
+          </ul>
+          <p>Portions of nuts and any higher-fat proteins stay moderate so overall calorie and saturated-fat intake remains controlled.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-tips" class="view">
+      <div class="cols">
+        <article class="panel">
+          <h2>Cooking methods</h2>
+          <p>Stay with bake, grill, roast, broil, steam, parchment packets, and skillet sauté in a measured amount of olive oil. An air fryer is fine when you use it like a small roaster — a light brush of oil, not a bath of oil, and never a deep fry.</p>
+          <h2>Low-sodium flavor</h2>
+          <ul>
+            <li>Lemon or lime at the end of cooking brightens food more than another pinch of salt.</li>
+            <li>Unsweetened vinegar in a cabbage slaw or over fish does the same job.</li>
+            <li>Garlic, onion, smoked paprika, cumin, dill, rosemary, thyme, and crushed red pepper carry a lot of flavor.</li>
+            <li>Toast spices briefly in the pan. Let mushrooms and onions brown instead of salting early.</li>
+            <li>Shrimp, scallops, and some protein powders already bring sodium. Taste before you add salt.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2>Portions and rhythm</h2>
+          <ul>
+            <li>Nuts: about 1 ounce is a small handful, or roughly 23 almonds. Measure, don’t eat from the jar.</li>
+            <li>Macadamias are higher in saturated fat — keep those closer to ½ ounce (about 5 or 6 nuts).</li>
+            <li>Nut butters: 1 tablespoon is a typical snack portion.</li>
+            <li>Avocado: a half, or a quarter when the plate already has salmon or nut butter.</li>
+            <li>Lean beef or bison: modest, about 4 ounces cooked, and only 1–2 times a week. Auto-fill follows that rule.</li>
+            <li>Fatty fish (salmon or trout): aim for at least two meals a week; auto-fill aims for three.</li>
+            <li>Desserts in this app are treat-style, not sweet. They use nuts, spices, protein powder, and sometimes unsweetened cocoa. There is no added sugar and no sweetener.</li>
+          </ul>
+          <h2>Alcohol</h2>
+          <p>Occasional bourbon or dry wine, limited, as you and your clinician have already discussed. This app does not put alcohol into recipes. If you have been advised to skip it, skip it.</p>
+          <h2>Meal prep</h2>
+          <p>Recipes tagged meal-prep keep well for 2–3 days. Roast a tray of chicken or a pork tenderloin on Sunday, bake an extra salmon fillet, and cook a batch of turkey patties. Leftover notes are on every recipe. Reheat gently; don’t scorch leftover fish or shrimp.</p>
+        </article>
+      </div>
+      <article class="panel" style="margin-top:16px">
+        <h2>A short disclaimer</h2>
+        <p>Heart-Healthy Meals is a home cooking helper, not medical advice, a diet prescription, or a substitute for care from your physician, cardiologist, or dietitian. Nutrition numbers are estimates. Follow the plan your doctor has given you, including any limits on sodium, protein, potassium, or alcohol, and get help if a food on this list disagrees with you.</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="detail" class="overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Recipe">
+    <div class="modal" id="detail-body"></div>
+  </div>
+
+  <div id="picker" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal">
+      <header class="mh">
+        <h2 id="picker-title">Choose a recipe</h2>
+        <button type="button" class="icon-btn" data-close-picker aria-label="Close">×</button>
+      </header>
+      <input type="search" id="picker-search" placeholder="Search this category" autocomplete="off">
+      <div id="picker-list" class="grid" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <div id="cook" class="cook" role="dialog" aria-modal="true" aria-label="Cook mode">
+    <header>
+      <div>
+        <h2 id="cook-title"></h2>
+        <p class="progress" id="cook-progress"></p>
+      </div>
+      <button type="button" class="icon-btn" id="cook-close" aria-label="Close cook mode">×</button>
+    </header>
+    <div class="step" id="cook-step"></div>
+    <footer>
+      <button type="button" class="btn secondary" id="cook-prev">Back</button>
+      <span class="wake" id="cook-wake"></span>
+      <button type="button" class="btn" id="cook-next">Next</button>
+    </footer>
+  </div>
+
+  <footer class="site">
+    <p>Not medical advice. Nutrition figures are estimates. Follow your doctor’s guidance. Favorites, your meal plan, shopping checks, and pantry ticks are saved in this browser only.</p>
+  </footer>
+
+  <script>window.RECIPES = /*__RECIPES__*/;</script>
+  <script>/*__JS__*/</script>
+</body>
+</html>

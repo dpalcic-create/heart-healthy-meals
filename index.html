@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4f3a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Heart-Healthy Meals">
+  <meta name="description" content="Simple, tasty heart-healthy meals for a gluten-free, dairy-free, no-added-sugar kitchen. Plan a week and build a shopping list.">
+  <title>Heart-Healthy Meals</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%231d4f3a'/%3E%3Cpath d='M32 48c-10-7-18-16-18-24a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 17-18 24z' fill='%23f3efe6'/%3E%3C/svg%3E">
+  <style>:root {
+  --bg: #f3efe6;
+  --bg-wash: radial-gradient(1200px 600px at 10% -10%, #e7eee8 0%, transparent 55%), radial-gradient(900px 500px at 110% 0%, #f3e0d6 0%, transparent 45%), #f3efe6;
+  --surface: #fffdf8;
+  --surface-2: #f7f3ea;
+  --ink: #1a2a22;
+  --ink-soft: #3d4f45;
+  --muted: #5e6e65;
+  --line: #d7d1c4;
+  --line-2: #c3cfc6;
+  --green: #1d4f3a;
+  --green-2: #2a6b4e;
+  --sage: #dce8df;
+  --sage-2: #c5d9cc;
+  --accent: #b85c38;
+  --accent-soft: #f3e0d6;
+  --gold: #b8954e;
+  --ok: #2a6b4e;
+  --warn: #9a6b2f;
+  --alert: #8f3a32;
+  --shadow: 0 10px 30px rgba(26, 42, 34, .08);
+  --shadow-sm: 0 2px 10px rgba(26, 42, 34, .06);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", Georgia, serif;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font: 16px/1.5 var(--font);
+  color: var(--ink);
+  background: var(--bg-wash) fixed;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: calc(28px + var(--safe-b));
+}
+img, svg { max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: var(--green); }
+:focus-visible {
+  outline: 3px solid var(--green-2);
+  outline-offset: 2px;
+}
+
+.app-header {
+  padding: calc(22px + var(--safe-t)) 20px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,253,248,.92), rgba(243,239,230,.88));
+  backdrop-filter: blur(8px);
+}
+.brand {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.brand svg { width: 42px; height: 42px; flex: none; }
+.brand h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4.4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: .01em;
+  margin: 0;
+  color: var(--green);
+  line-height: 1.15;
+}
+.tagline {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.pills {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+  margin-top: 10px;
+}
+.pill {
+  background: var(--sage);
+  color: var(--green);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+nav.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  background: #f3efe6f2;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+nav.tabs button {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .92rem;
+}
+nav.tabs button[aria-selected="true"] {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+nav.tabs button:hover:not([aria-selected="true"]) { background: var(--sage); }
+
+main { width: min(1120px, calc(100% - 24px)); margin: 18px auto 0; }
+.view { display: none; }
+.view.on { display: block; }
+
+.welcome {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  display: flex; gap: 12px; align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.welcome p { margin: 0; }
+.welcome .close { margin-left: auto; border: 0; background: transparent; color: var(--muted); padding: 4px 8px; }
+
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  margin-bottom: 14px;
+}
+.toolbar input[type="search"], .toolbar select, .field {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 12px;
+  min-width: 0;
+}
+.toolbar input[type="search"] { flex: 1 1 220px; }
+.subtabs, .filters {
+  display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+}
+.chip {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: .86rem;
+}
+.chip.on, .chip[aria-pressed="true"] {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.chip.ghost { background: transparent; }
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: #fff;
+  border-radius: 12px;
+  padding: 9px 14px;
+  font-weight: 650;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn:hover { background: var(--green-2); }
+.btn.secondary {
+  background: var(--surface);
+  color: var(--green);
+}
+.btn.ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+.btn.danger { background: transparent; color: var(--alert); border-color: #e2c4c1; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 14px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  border-color: var(--line-2);
+}
+.card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.card h3 {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.fav {
+  border: 0; background: transparent; color: var(--muted); padding: 0 0 0 6px; font-size: 1.2rem; line-height: 1;
+}
+.fav.on { color: var(--accent); }
+.meta { color: var(--muted); font-size: .86rem; display: flex; flex-wrap: wrap; gap: 8px; }
+.macros {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  font-size: .78rem;
+}
+.macros span, .nut {
+  background: var(--sage);
+  color: var(--green);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag {
+  font-size: .72rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 7px;
+}
+.tag.omega-3 { color: #1a4d6e; border-color: #b9d0de; background: #eef5f8; }
+.tag.occasional { color: var(--accent); border-color: #ead0c5; background: var(--accent-soft); }
+.tag.treat-style { color: #6a4a16; border-color: #e4d4ad; background: #f8f1de; }
+.empty { color: var(--muted); font-style: italic; padding: 28px 8px; text-align: center; }
+
+/* Modal / detail */
+.overlay {
+  position: fixed; inset: 0; background: rgba(26,42,34,.45);
+  z-index: 40; display: none; align-items: flex-end; justify-content: center;
+  padding: 12px 12px calc(12px + var(--safe-b));
+}
+.overlay.on { display: flex; }
+.modal {
+  background: var(--surface);
+  width: min(720px, 100%);
+  max-height: min(92dvh, 900px);
+  overflow: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 8px 20px 24px;
+  position: relative;
+}
+@media (min-width: 720px) {
+  .overlay { align-items: center; }
+}
+.modal header.mh {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+  position: sticky; top: 0; background: var(--surface); padding: 14px 0 8px; z-index: 1;
+}
+.modal h2 { font-family: var(--serif); margin: 0; font-size: 1.55rem; line-height: 1.2; }
+.icon-btn {
+  border: 1px solid var(--line); background: var(--surface-2); width: 38px; height: 38px;
+  border-radius: 50%; display: grid; place-items: center; flex: none;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.servings {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: 12px; padding: 4px 8px; background: var(--surface-2);
+}
+.servings button { border: 0; background: var(--sage); width: 32px; height: 32px; border-radius: 8px; font-weight: 700; }
+.ingredients { list-style: none; margin: 0; padding: 0; }
+.ingredients li {
+  display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line);
+}
+.ingredients li .qty { color: var(--green); font-weight: 650; min-width: 5.5rem; }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li {
+  position: relative; padding: 10px 0 10px 46px; counter-increment: step; border-bottom: 1px dashed var(--line);
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 10px;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  display: grid; place-items: center; font-weight: 700; font-size: .9rem;
+}
+.note, .callout {
+  background: var(--surface-2);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: var(--ink-soft);
+  margin: 14px 0;
+}
+.callout.warn { border-color: #e4d4ad; background: #f8f1de; }
+.callout.alert { border-color: #e2c4c1; background: #fbf0ee; }
+.est { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+
+/* Cook mode */
+.cook {
+  position: fixed; inset: 0; background: #13251c; color: #f4efe4; z-index: 50;
+  display: none; flex-direction: column; padding: calc(12px + var(--safe-t)) 16px calc(16px + var(--safe-b));
+}
+.cook.on { display: flex; }
+.cook header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cook h2 { font-family: var(--serif); margin: 0; font-size: 1.2rem; }
+.cook .progress { color: #c9d6ce; margin: 8px 0 0; }
+.cook .step {
+  flex: 1; display: grid; place-items: center; text-align: center;
+  font-family: var(--serif); font-size: clamp(1.5rem, 4.5vw, 2.4rem); line-height: 1.35;
+  padding: 20px 8px;
+}
+.cook footer { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+.cook .btn { flex: 1 1 140px; justify-content: center; padding: 14px; font-size: 1.05rem; }
+.cook .wake { flex: 1 1 100%; text-align: center; order: -1; }
+.wake { font-size: .85rem; color: #c9d6ce; }
+
+/* Plan */
+.plan-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+.water {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px;
+}
+.water button.drop {
+  width: 28px; height: 28px; border-radius: 50%; border: 1px solid #9bb8c9;
+  background: #f3f8fb; color: #4a6d80; padding: 0; font-size: .85rem;
+}
+.water button.drop.on { background: #3d7ea6; border-color: #3d7ea6; color: #fff; }
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (max-width: 960px) {
+  .week { grid-template-columns: 1fr; }
+}
+.day {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 10px 12px;
+  min-width: 0;
+}
+.day.today { border-color: var(--green-2); box-shadow: 0 0 0 2px var(--sage); }
+.day h3 { margin: 0 0 8px; font-size: .95rem; display: flex; justify-content: space-between; }
+.slot {
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 7px 8px;
+  margin: 6px 0 0;
+  min-height: 58px;
+  background: var(--surface-2);
+}
+.slot.filled { border-style: solid; background: #fff; cursor: grab; }
+.slot.dragover { outline: 2px solid var(--green-2); background: var(--sage); }
+.slot .label { font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.slot .name { font-weight: 650; font-size: .86rem; line-height: 1.25; margin-top: 2px; }
+.slot .row { display: flex; justify-content: space-between; gap: 6px; align-items: flex-start; }
+.slot .tiny { border: 0; background: transparent; color: var(--muted); padding: 0; font-size: 1rem; }
+.totals {
+  margin-top: 8px; font-size: .75rem; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 4px 8px;
+}
+.totals b.ok { color: var(--ok); }
+.totals b.warn { color: var(--warn); }
+.totals b.alert { color: var(--alert); }
+.targets { font-size: .85rem; color: var(--muted); margin: 0 0 12px; }
+
+/* Shop */
+.shop-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.section h3 {
+  font-family: var(--serif);
+  color: var(--green);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+  margin: 18px 0 8px;
+}
+.shop-item, .add-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--line);
+}
+.shop-item input { width: 18px; height: 18px; accent-color: var(--green); flex: none; }
+.shop-item.checked label { text-decoration: line-through; color: var(--muted); }
+.shop-item label { flex: 1; }
+.add-row input { flex: 1; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
+.add-row select { border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: var(--surface); }
+
+/* On hand */
+.groups { display: grid; gap: 8px; }
+.group {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px;
+}
+.group h3 { margin: 0 0 8px; font-size: 1rem; color: var(--green); }
+.checks { display: flex; flex-wrap: wrap; gap: 6px; }
+.checks label {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--line); background: var(--surface-2);
+  border-radius: 999px; padding: 6px 10px; cursor: pointer; font-size: .9rem;
+}
+.checks label:has(input:checked) { background: var(--sage); border-color: var(--green-2); }
+.checks input { accent-color: var(--green); }
+.match-head { margin: 18px 0 8px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+
+/* Foods / tips */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 720px) { .cols { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.panel h2 { font-family: var(--serif); margin: 0 0 8px; color: var(--green); font-size: 1.35rem; }
+.panel h3 { margin: 14px 0 6px; font-size: 1.02rem; }
+.panel ul { margin: 0; padding-left: 1.15rem; }
+.panel li { margin: 4px 0; }
+.avoid { border-left: 4px solid var(--alert); }
+footer.site {
+  width: min(1120px, calc(100% - 24px));
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+@media print {
+  nav.tabs, .toolbar, .filters, .subtabs, .actions, .btn, .icon-btn, .welcome, .water, .plan-head, .fav, footer.site, .add-row { display: none !important; }
+  body { background: #fff; }
+  .view { display: none !important; }
+  .view.on, .view.print-show { display: block !important; }
+  .card, .day, .panel, .modal { box-shadow: none; break-inside: avoid; }
+  .overlay { position: static; background: none; display: block; padding: 0; }
+  .modal { max-height: none; overflow: visible; width: 100%; }
+  .week { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect rx="14" width="64" height="64" fill="#1d4f3a"/>
+        <path d="M32 48c-10-7-18-16-18-24a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 17-18 24z" fill="#f3efe6"/>
+      </svg>
+      <div>
+        <h1>Heart-Healthy Meals</h1>
+        <p class="tagline">Simple, tasty plates for Dave</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">Gluten-free</span>
+      <span class="pill">Dairy-free</span>
+      <span class="pill">No added sugar</span>
+      <span class="pill">High protein</span>
+      <span class="pill">LDL &amp; blood pressure focus</span>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Main">
+    <button type="button" data-view="recipes" aria-selected="true">Recipes</button>
+    <button type="button" data-view="plan">Plan</button>
+    <button type="button" data-view="shop">Shop</button>
+    <button type="button" data-view="hand">On hand</button>
+    <button type="button" data-view="foods">Foods</button>
+    <button type="button" data-view="tips">Tips</button>
+  </nav>
+
+  <main>
+    <div id="welcome" class="welcome">
+      <p>Welcome, Dave. Every recipe stays inside your approved foods — gluten-free, dairy-free, no added sugar, and built for a heart-healthy pattern. Plan a week, auto-fill if you want, then use the shopping list. This is not medical advice; follow your doctor’s guidance.</p>
+      <button type="button" class="close" id="dismiss-welcome" aria-label="Dismiss">×</button>
+    </div>
+
+    <section id="view-recipes" class="view on">
+      <div class="subtabs" role="tablist" aria-label="Meal type">
+        <button type="button" class="chip on" data-cat="all">All</button>
+        <button type="button" class="chip" data-cat="breakfast">Breakfast</button>
+        <button type="button" class="chip" data-cat="lunch">Lunch</button>
+        <button type="button" class="chip" data-cat="dinner">Dinner</button>
+        <button type="button" class="chip" data-cat="snack">Snacks</button>
+        <button type="button" class="chip" data-cat="dessert">Desserts</button>
+      </div>
+      <div class="toolbar">
+        <input type="search" id="recipe-search" placeholder="Search recipes, ingredients, or tags" autocomplete="off">
+        <select id="filter-protein" aria-label="Filter by protein">
+          <option value="">Any protein</option>
+          <option value="chicken">Chicken</option>
+          <option value="turkey">Turkey</option>
+          <option value="salmon">Salmon</option>
+          <option value="trout">Trout</option>
+          <option value="white-fish">White fish</option>
+          <option value="shrimp">Shrimp</option>
+          <option value="shellfish">Shellfish</option>
+          <option value="beef">Lean beef</option>
+          <option value="bison">Bison</option>
+          <option value="pork">Pork</option>
+          <option value="protein-powder">Protein powder</option>
+          <option value="nuts">Nuts / nut butter</option>
+        </select>
+        <select id="filter-time" aria-label="Filter by time">
+          <option value="">Any time</option>
+          <option value="15">15 minutes or less</option>
+          <option value="20">20 minutes or less</option>
+          <option value="30">30 minutes or less</option>
+        </select>
+        <select id="filter-tag" aria-label="Filter by tag">
+          <option value="">Any tag</option>
+          <option value="omega-3">Omega-3</option>
+          <option value="high-fiber">High fiber</option>
+          <option value="sheet-pan">Sheet-pan</option>
+          <option value="no-cook">No-cook</option>
+          <option value="meal-prep">Meal-prep</option>
+          <option value="shake">Shake</option>
+          <option value="occasional">Occasional (beef / bison)</option>
+          <option value="treat-style">Treat-style</option>
+          <option value="portion-controlled">Portion-controlled</option>
+          <option value="high-protein">High protein</option>
+        </select>
+        <button type="button" class="chip" id="filter-fav">Favorites only</button>
+        <span id="recipe-count" class="meta"></span>
+      </div>
+      <div id="recipe-grid" class="grid"></div>
+    </section>
+
+    <section id="view-plan" class="view">
+      <div class="plan-head">
+        <button type="button" class="btn" id="auto-fill">Auto-fill week</button>
+        <button type="button" class="btn ghost" id="clear-plan">Clear week</button>
+        <div class="water" id="water-track" aria-label="Water tracker"></div>
+      </div>
+      <p class="targets">Gentle daily targets: protein at least 90g · saturated fat under 15g (amber to 20g) · sodium under 1,500mg (amber to 2,300mg). Totals are estimates from the meals you plan, including a snack or treat if one is on the day. Auto-fill puts fatty fish on at least three days, limits beef or bison to one or two modest meals, and adds a dessert on only two days.</p>
+      <p class="targets">Tap a slot to pick a recipe, or drag one from another slot. Most recipes are written for more than one serving in the cookbook view; the plan starts each slot at 1 serving for you, and you can open the recipe to scale it.</p>
+      <div id="week" class="week"></div>
+    </section>
+
+    <section id="view-shop" class="view">
+      <div class="shop-tools">
+        <button type="button" class="btn" id="copy-shop">Copy list</button>
+        <button type="button" class="btn secondary" id="share-shop">Share</button>
+        <button type="button" class="btn secondary" id="print-shop">Print</button>
+        <button type="button" class="btn ghost" id="clear-checks">Clear checks</button>
+      </div>
+      <p class="targets">Quantities are combined from this week’s plan and scaled to the servings in each slot. Spices you likely already have are listed once at the bottom.</p>
+      <div id="shop-list"></div>
+      <div class="add-row">
+        <input id="custom-name" placeholder="Add an item" aria-label="Add a shopping item">
+        <select id="custom-section" aria-label="Section">
+          <option value="produce">Produce</option>
+          <option value="meat">Meat &amp; Seafood</option>
+          <option value="nuts">Nuts &amp; Oils</option>
+          <option value="pantry">Pantry / Spices</option>
+          <option value="drinks">Drinks</option>
+        </select>
+        <button type="button" class="btn secondary" id="add-custom">Add</button>
+      </div>
+    </section>
+
+    <section id="view-hand" class="view">
+      <p class="targets">Tick what you have. “I can make now” shows recipes whose main ingredients are all checked. Basic seasonings — salt in moderation, pepper, dried herbs and spices, lemon or lime, vinegar, vanilla, coffee, tea, and water — are assumed if you leave the box below checked. Garlic, onion, and cocoa are not assumed.</p>
+      <p><label><input type="checkbox" id="have-seasonings" checked> I have basic seasonings</label></p>
+      <div id="pantry-groups" class="groups"></div>
+      <div class="match-head">
+        <h2 id="match-head">Recipes you can make</h2>
+        <div>
+          <button type="button" class="chip on" id="match-now">I can make now</button>
+          <button type="button" class="chip" id="match-almost">Missing just one</button>
+        </div>
+      </div>
+      <div id="match-grid" class="grid"></div>
+    </section>
+
+    <section id="view-foods" class="view">
+      <div class="cols">
+        <article class="panel">
+          <h2>Approved foods</h2>
+          <p>This is the list the recipes are built from, aligned with a gluten-free, sugar-free, dairy-free, low-processed, high-protein pattern and a high coronary calcium (CAC) score. The focus is LDL control, blood pressure, and overall cardiovascular health.</p>
+          <h3>Proteins (primary focus)</h3>
+          <ul>
+            <li>Chicken, skinless breast or thigh</li>
+            <li>Turkey (fresh or ground, not deli meat)</li>
+            <li>Salmon, rainbow trout, and other fatty fish</li>
+            <li>White fish such as cod and haddock</li>
+            <li>Shrimp and other plain shellfish</li>
+            <li>Lean beef or bison, occasional and in modest portions</li>
+            <li>Pork tenderloin or other lean cuts</li>
+            <li>Previnex shakes or a similar clean, unsweetened protein powder you already tolerate</li>
+            <li>Plain peanuts or natural peanut butter, unsalted, no added sugar</li>
+          </ul>
+          <h3>Vegetables</h3>
+          <ul>
+            <li>Brussels sprouts, broccoli, cauliflower</li>
+            <li>Spinach, kale, and other leafy greens</li>
+            <li>Asparagus, green beans, zucchini, cucumber</li>
+            <li>Bell peppers, onions, garlic, mushrooms, cabbage</li>
+          </ul>
+          <h3>Healthy fats</h3>
+          <ul>
+            <li>Olive oil</li>
+            <li>Avocado, plain, in measured portions</li>
+            <li>Fatty fish, listed above</li>
+            <li>Plain nuts: almonds, walnuts, macadamia, peanuts — about 1 ounce, or ½ ounce for macadamias</li>
+            <li>Natural nut butters with no added sugar or oils, measured tablespoons</li>
+          </ul>
+          <h3>Drinks</h3>
+          <ul>
+            <li>Plain water, sparkling water, black coffee, unsweetened tea</li>
+            <li>Occasional bourbon or dry wine, limited, as previously discussed with your clinician</li>
+          </ul>
+          <h3>Seasonings used in this app</h3>
+          <ul>
+            <li>Herbs and spices, unlimited — including garlic and onion as vegetables, plus dried spices, fresh herbs, and fresh ginger</li>
+            <li>Salt, in moderation</li>
+            <li>Lemon juice, lime juice, and unsweetened vinegar, used as seasonings</li>
+            <li>Pure vanilla extract, in a few desserts</li>
+            <li>Unsweetened cocoa powder, optional and clearly marked, desserts only</li>
+          </ul>
+        </article>
+        <article class="panel avoid">
+          <h2>Foods to minimize or avoid</h2>
+          <ul>
+            <li>Anything with gluten — no bread, pasta, flour, oats, or other grains</li>
+            <li>Added sugars or sweetened products, including honey, maple, syrups, and non-sugar sweeteners</li>
+            <li>Dairy: milk, cheese, yogurt, butter, cream, and the rest</li>
+            <li>Eggs, and fruit other than avocado (they are not on your approved list, so they stay out of the recipes)</li>
+            <li>Legumes other than peanuts — no beans, lentils, or chickpeas</li>
+            <li>Highly processed meats or packaged foods, including deli turkey, bacon, and sausage</li>
+            <li>Fried foods — sautéing in a teaspoon or two of olive oil is not the same as frying</li>
+            <li>Excess saturated fat from fatty cuts of meat</li>
+            <li>Prepared sauces and condiments that often hide sugar or gluten (soy sauce, ketchup, bottled mustard, mayo)</li>
+          </ul>
+          <p>Portions of nuts and any higher-fat proteins stay moderate so overall calorie and saturated-fat intake remains controlled.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-tips" class="view">
+      <div class="cols">
+        <article class="panel">
+          <h2>Cooking methods</h2>
+          <p>Stay with bake, grill, roast, broil, steam, parchment packets, and skillet sauté in a measured amount of olive oil. An air fryer is fine when you use it like a small roaster — a light brush of oil, not a bath of oil, and never a deep fry.</p>
+          <h2>Low-sodium flavor</h2>
+          <ul>
+            <li>Lemon or lime at the end of cooking brightens food more than another pinch of salt.</li>
+            <li>Unsweetened vinegar in a cabbage slaw or over fish does the same job.</li>
+            <li>Garlic, onion, smoked paprika, cumin, dill, rosemary, thyme, and crushed red pepper carry a lot of flavor.</li>
+            <li>Toast spices briefly in the pan. Let mushrooms and onions brown instead of salting early.</li>
+            <li>Shrimp, scallops, and some protein powders already bring sodium. Taste before you add salt.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2>Portions and rhythm</h2>
+          <ul>
+            <li>Nuts: about 1 ounce is a small handful, or roughly 23 almonds. Measure, don’t eat from the jar.</li>
+            <li>Macadamias are higher in saturated fat — keep those closer to ½ ounce (about 5 or 6 nuts).</li>
+            <li>Nut butters: 1 tablespoon is a typical snack portion.</li>
+            <li>Avocado: a half, or a quarter when the plate already has salmon or nut butter.</li>
+            <li>Lean beef or bison: modest, about 4 ounces cooked, and only 1–2 times a week. Auto-fill follows that rule.</li>
+            <li>Fatty fish (salmon or trout): aim for at least two meals a week; auto-fill aims for three.</li>
+            <li>Desserts in this app are treat-style, not sweet. They use nuts, spices, protein powder, and sometimes unsweetened cocoa. There is no added sugar and no sweetener.</li>
+          </ul>
+          <h2>Alcohol</h2>
+          <p>Occasional bourbon or dry wine, limited, as you and your clinician have already discussed. This app does not put alcohol into recipes. If you have been advised to skip it, skip it.</p>
+          <h2>Meal prep</h2>
+          <p>Recipes tagged meal-prep keep well for 2–3 days. Roast a tray of chicken or a pork tenderloin on Sunday, bake an extra salmon fillet, and cook a batch of turkey patties. Leftover notes are on every recipe. Reheat gently; don’t scorch leftover fish or shrimp.</p>
+        </article>
+      </div>
+      <article class="panel" style="margin-top:16px">
+        <h2>A short disclaimer</h2>
+        <p>Heart-Healthy Meals is a home cooking helper, not medical advice, a diet prescription, or a substitute for care from your physician, cardiologist, or dietitian. Nutrition numbers are estimates. Follow the plan your doctor has given you, including any limits on sodium, protein, potassium, or alcohol, and get help if a food on this list disagrees with you.</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="detail" class="overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Recipe">
+    <div class="modal" id="detail-body"></div>
+  </div>
+
+  <div id="picker" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal">
+      <header class="mh">
+        <h2 id="picker-title">Choose a recipe</h2>
+        <button type="button" class="icon-btn" data-close-picker aria-label="Close">×</button>
+      </header>
+      <input type="search" id="picker-search" placeholder="Search this category" autocomplete="off">
+      <div id="picker-list" class="grid" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <div id="cook" class="cook" role="dialog" aria-modal="true" aria-label="Cook mode">
+    <header>
+      <div>
+        <h2 id="cook-title"></h2>
+        <p class="progress" id="cook-progress"></p>
+      </div>
+      <button type="button" class="icon-btn" id="cook-close" aria-label="Close cook mode">×</button>
+    </header>
+    <div class="step" id="cook-step"></div>
+    <footer>
+      <button type="button" class="btn secondary" id="cook-prev">Back</button>
+      <span class="wake" id="cook-wake"></span>
+      <button type="button" class="btn" id="cook-next">Next</button>
+    </footer>
+  </div>
+
+  <footer class="site">
+    <p>Not medical advice. Nutrition figures are estimates. Follow your doctor’s guidance. Favorites, your meal plan, shopping checks, and pantry ticks are saved in this browser only.</p>
+  </footer>
+
+  <script>window.RECIPES = [{"id":"b01","name":"Cinnamon Coffee Protein Shake","category":"breakfast","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"brewed black coffee, cooled","qty":1,"unit":"cup","section":"drinks","key":"coffee"},{"name":"natural almond butter (no added sugar or oils)","qty":1,"unit":"tbsp","section":"nuts","key":"almond-butter"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"water or ice","qty":0.5,"unit":"cup","section":"drinks","key":"water"}],"steps":["Add the protein powder, cooled coffee, almond butter, cinnamon, and water or ice to a blender or shaker.","Blend or shake until smooth. Drink right away."],"tags":["no-cook","shake","high-protein"],"nutrition":{"cal":280,"protein":29,"satFat":1.8,"sodium":160},"leftovers":"Best made fresh. You can portion the powder, cinnamon, and a little almond butter the night before.","protein":"protein-powder"},{"id":"b02","name":"Green Protein Shake","category":"breakfast","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"fresh spinach","qty":1,"unit":"handful","section":"produce","key":"spinach"},{"name":"natural peanut butter (unsalted, no added sugar)","qty":1,"unit":"tbsp","section":"nuts","key":"peanut-butter"},{"name":"water","qty":1,"unit":"cup","section":"drinks","key":"water"},{"name":"ice","qty":0.5,"unit":"cup","section":"drinks","key":"water"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"}],"steps":["Pack the spinach into a blender with the water, protein powder, peanut butter, cinnamon, and ice.","Blend until the spinach disappears and the shake is smooth."],"tags":["no-cook","shake","high-protein","high-fiber"],"nutrition":{"cal":250,"protein":30,"satFat":1.8,"sodium":180},"leftovers":"Blend fresh. Spinach and powder can be pre-portioned.","protein":"protein-powder"},{"id":"b03","name":"Turkey & Spinach Breakfast Skillet","category":"breakfast","prep":5,"cook":12,"servings":1,"ingredients":[{"name":"ground turkey (lean)","qty":5,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"fresh spinach","qty":2,"unit":"cups","section":"produce","key":"spinach"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":0.25,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet over medium heat. Cook the onion 2 minutes until it softens.","Add the turkey, garlic, smoked paprika, a pinch of salt, and pepper. Cook, breaking it up, until no pink remains, about 6–8 minutes.","Stir in the spinach and wilt 1 minute. Taste and add a little pepper or paprika rather than more salt if you want more flavor."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":280,"protein":36,"satFat":2.0,"sodium":280},"leftovers":"Keeps 2 days in the fridge. Reheat gently in a skillet with a splash of water.","protein":"turkey"},{"id":"b04","name":"Salmon Breakfast Plate","category":"breakfast","prep":5,"cook":12,"servings":1,"ingredients":[{"name":"salmon fillet","qty":4,"unit":"oz","section":"meat","key":"salmon"},{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"cucumber, sliced","qty":0.5,"unit":"medium","section":"produce","key":"cucumber"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh dill (or 1/4 tsp dried)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Heat the oven to 400°F. Place the salmon on a small pan, season with a pinch of salt, pepper, and lemon juice, and bake 10–12 minutes until it flakes. Skip this step if you already have leftover baked salmon.","Slice the avocado and cucumber. Plate with the salmon, a little more lemon, and dill."],"tags":["omega-3","high-protein","meal-prep"],"nutrition":{"cal":340,"protein":28,"satFat":3.5,"sodium":200},"leftovers":"This is one of the best uses for leftover baked salmon. Eat the avocado fresh.","protein":"salmon"},{"id":"b05","name":"Chicken & Zucchini Morning Hash","category":"breakfast","prep":8,"cook":12,"servings":1,"ingredients":[{"name":"skinless chicken breast, diced","qty":4,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"zucchini, diced","qty":1,"unit":"medium","section":"produce","key":"zucchini"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"bell pepper, diced","qty":0.5,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried oregano","qty":0.25,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet over medium-high heat. Cook the chicken with a pinch of salt, pepper, and oregano until cooked through, about 6 minutes. Set aside if the pan is crowded.","Add the onion, pepper, and zucchini. Sauté 5–6 minutes until tender-crisp. Return the chicken, toss, and serve."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":250,"protein":35,"satFat":1.5,"sodium":250},"leftovers":"Keeps 2–3 days. Reheat in a skillet so the zucchini does not go soggy in the microwave.","protein":"chicken"},{"id":"b06","name":"Mushroom-Kale Sauté with Turkey","category":"breakfast","prep":5,"cook":10,"servings":1,"ingredients":[{"name":"turkey breast, cut into strips","qty":4,"unit":"oz","section":"meat","key":"turkey-breast"},{"name":"mushrooms, sliced","qty":1,"unit":"cup","section":"produce","key":"mushrooms"},{"name":"kale, chopped, stems removed","qty":2,"unit":"cups","section":"produce","key":"kale"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried thyme","qty":0.25,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"}],"steps":["Warm the olive oil in a skillet over medium heat. Cook the turkey with a pinch of salt, pepper, and thyme until cooked through, about 5–6 minutes.","Add the mushrooms and garlic. Cook 3 minutes until the mushrooms give off liquid.","Add the kale and toss until wilted, 1–2 minutes. Finish with lemon juice."],"tags":["high-protein","high-fiber"],"nutrition":{"cal":240,"protein":32,"satFat":1.2,"sodium":240},"leftovers":"Good the next day. The kale softens more on reheating, which is fine.","protein":"turkey"},{"id":"b07","name":"Garlic Shrimp, Avocado & Greens","category":"breakfast","prep":5,"cook":8,"servings":1,"ingredients":[{"name":"shrimp, peeled and deveined","qty":5,"unit":"oz","section":"meat","key":"shrimp"},{"name":"mixed leafy greens","qty":2,"unit":"cups","section":"produce","key":"leafy-greens"},{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":1,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Pat the shrimp dry. Warm the olive oil over medium heat and cook the garlic 20 seconds.","Add the shrimp, a pinch of salt, and pepper. Cook 1–2 minutes per side until just pink and opaque. Do not overcook.","Pile the greens and sliced avocado on a plate. Top with the shrimp, lemon juice, and parsley."],"tags":["high-protein"],"nutrition":{"cal":320,"protein":32,"satFat":2.0,"sodium":420},"leftovers":"Cook the shrimp ahead and chill. Assemble with avocado just before eating. Shrimp is naturally higher in sodium; skip extra salt.","protein":"shrimp"},{"id":"b08","name":"Cauliflower Hash with Turkey","category":"breakfast","prep":8,"cook":12,"servings":1,"ingredients":[{"name":"ground turkey (lean)","qty":5,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"cauliflower, riced or finely chopped","qty":1.5,"unit":"cups","section":"produce","key":"cauliflower"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"bell pepper, diced","qty":0.5,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"ground cumin","qty":0.25,"unit":"tsp","section":"pantry","key":"cumin"},{"name":"paprika","qty":0.25,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a large skillet. Cook the turkey with cumin, paprika, a pinch of salt, and pepper until browned, about 6 minutes.","Add the onion, bell pepper, and cauliflower rice. Cook 5–6 minutes, stirring, until the cauliflower is tender and any liquid cooks off."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":280,"protein":36,"satFat":2.0,"sodium":280},"leftovers":"Excellent meal-prep breakfast. Makes a good double batch. Reheats well in a skillet.","protein":"turkey"},{"id":"b09","name":"Pork Medallions with Asparagus","category":"breakfast","prep":5,"cook":14,"servings":1,"ingredients":[{"name":"pork tenderloin, sliced into medallions","qty":4,"unit":"oz","section":"meat","key":"pork-tenderloin"},{"name":"asparagus spears, trimmed","qty":8,"unit":"","section":"produce","key":"asparagus"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"dried rosemary","qty":0.25,"unit":"tsp","section":"pantry","key":"rosemary"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Season the pork with rosemary, a pinch of salt, and pepper.","Warm the olive oil in a skillet over medium-high heat. Cook the medallions 2–3 minutes per side until just cooked through (145°F). Transfer to a plate.","In the same pan, sauté the asparagus and garlic 3–4 minutes until tender-crisp. Add lemon juice and serve with the pork."],"tags":["high-protein"],"nutrition":{"cal":250,"protein":32,"satFat":2.0,"sodium":230},"leftovers":"A great use for leftover roasted pork tenderloin. Just warm the slices and sauté fresh asparagus.","protein":"pork"},{"id":"b10","name":"Broccoli & Chicken Morning Sauté","category":"breakfast","prep":5,"cook":12,"servings":1,"ingredients":[{"name":"skinless chicken breast, thinly sliced","qty":4,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"broccoli florets","qty":1.5,"unit":"cups","section":"produce","key":"broccoli"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"crushed red pepper","qty":1,"unit":"pinch","section":"pantry","key":"crushed-red-pepper"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet over medium-high heat. Cook the chicken with a pinch of salt and pepper until cooked through, about 5–6 minutes. Set aside.","Add the broccoli and 2 tablespoons water. Cover 2–3 minutes to steam, then uncover, add garlic and crushed red pepper, and sauté 2 minutes.","Return the chicken, toss with lemon juice, and serve."],"tags":["high-protein","high-fiber"],"nutrition":{"cal":240,"protein":35,"satFat":1.3,"sodium":240},"leftovers":"Works with leftover chicken. Reheat quickly so the broccoli stays bright.","protein":"chicken"},{"id":"b11","name":"Smoky Turkey Patties with Peppers","category":"breakfast","prep":8,"cook":12,"servings":2,"ingredients":[{"name":"ground turkey (lean)","qty":10,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":1,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"onion powder","qty":0.5,"unit":"tsp","section":"pantry","key":"onion-powder"},{"name":"mustard powder","qty":0.25,"unit":"tsp","section":"pantry","key":"mustard-powder"},{"name":"salt","qty":0.25,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Mix the turkey with smoked paprika, onion powder, mustard powder, salt, and pepper. Form 4 thin patties.","Warm 1 teaspoon olive oil in a skillet over medium heat. Cook the patties 4–5 minutes per side until cooked through. Transfer to a plate.","Add the remaining teaspoon of oil, then the peppers and onion. Sauté 5–6 minutes until soft and slightly browned. Serve 2 patties with half the peppers per plate."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":290,"protein":36,"satFat":2.0,"sodium":300},"leftovers":"Patties keep 3 days and freeze well. Reheat in a skillet or oven. This recipe makes 2 breakfasts.","protein":"turkey"},{"id":"b12","name":"Trout & Wilted Spinach","category":"breakfast","prep":5,"cook":10,"servings":1,"ingredients":[{"name":"rainbow trout fillet","qty":4,"unit":"oz","section":"meat","key":"trout"},{"name":"fresh spinach","qty":2,"unit":"cups","section":"produce","key":"spinach"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh dill (or 1/4 tsp dried)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Season the trout with a pinch of salt, pepper, and dill.","Warm the olive oil in a skillet over medium heat. Cook the trout skin-side down (if it has skin) 3–4 minutes, flip, and cook 2–3 minutes more until it flakes.","Push the fish to the side or plate it. Add garlic and spinach to the pan and wilt 1 minute. Finish with lemon and serve beside the trout."],"tags":["omega-3","high-protein"],"nutrition":{"cal":280,"protein":28,"satFat":2.5,"sodium":200},"leftovers":"Best fresh, but leftover trout is also good cold with the spinach rewarmed.","protein":"trout"},{"id":"b13","name":"Avocado Stuffed with Seasoned Turkey","category":"breakfast","prep":5,"cook":8,"servings":1,"ingredients":[{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"ground turkey (lean)","qty":4,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"cucumber, sliced, on the side","qty":0.5,"unit":"medium","section":"produce","key":"cucumber"},{"name":"olive oil","qty":0.5,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic powder","qty":0.125,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"smoked paprika","qty":0.125,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Cook the turkey in a small skillet with the olive oil, garlic powder, paprika, a pinch of salt, and pepper until cooked through, about 6–8 minutes.","Halve an avocado and leave the shell on one half (save the rest for later). Loosen the flesh a little with a spoon.","Pile the turkey into the avocado half. Add lemon juice and serve with cucumber slices."],"tags":["high-protein","no-cook"],"nutrition":{"cal":350,"protein":32,"satFat":3.5,"sodium":260},"leftovers":"Cook a batch of seasoned turkey and keep it 2–3 days. Assemble with a fresh avocado half. The no-cook tag applies when the turkey is already cooked.","protein":"turkey"},{"id":"b14","name":"Walnut-Cinnamon Protein Bowl","category":"breakfast","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"water","qty":0.3,"unit":"cup","section":"drinks","key":"water"},{"name":"walnuts, chopped","qty":2,"unit":"tbsp","section":"nuts","key":"walnuts"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"pure vanilla extract","qty":0.25,"unit":"tsp","section":"pantry","key":"vanilla"},{"name":"black coffee, on the side (optional)","qty":1,"unit":"cup","section":"drinks","key":"coffee"}],"steps":["Stir the protein powder with just enough water to make a thick pudding. Add vanilla and most of the cinnamon.","Top with chopped walnuts and a dusting of cinnamon. Drink coffee on the side if you like.","This is mild and spiced, not sweet — think breakfast pudding, not dessert."],"tags":["no-cook","shake","high-protein"],"nutrition":{"cal":230,"protein":27,"satFat":1.5,"sodium":150},"leftovers":"Mix fresh. Walnuts can be pre-chopped; stick to about 2 tablespoons (a half ounce).","protein":"protein-powder"},{"id":"b15","name":"Herb Cod over Sautéed Greens","category":"breakfast","prep":3,"cook":10,"servings":1,"ingredients":[{"name":"cod fillet","qty":4,"unit":"oz","section":"meat","key":"cod"},{"name":"spinach or kale","qty":2,"unit":"cups","section":"produce","key":"spinach"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":1,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["If the cod is not already cooked, season it with a pinch of salt and pepper and bake or pan-cook in 1/2 teaspoon olive oil until it flakes, about 8 minutes.","Sauté garlic in the remaining oil 20 seconds, add the greens, and wilt. Flake the cod over the top. Finish with lemon and parsley."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":200,"protein":29,"satFat":0.8,"sodium":220},"leftovers":"Built for leftover baked white fish. A very light, high-protein start to the day.","protein":"white-fish"},{"id":"l01","name":"Lemon Herb Chicken & Broccoli","category":"lunch","prep":8,"cook":18,"servings":2,"ingredients":[{"name":"skinless chicken breast","qty":10,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"broccoli florets","qty":4,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the chicken with 1 teaspoon olive oil, oregano, a pinch of salt, and pepper. Toss the broccoli with the remaining oil and garlic.","Spread on a sheet pan and roast 16–18 minutes, until the chicken is 165°F and the broccoli is browned at the edges.","Slice the chicken, squeeze lemon over everything, and divide into 2 servings."],"tags":["high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":280,"protein":42,"satFat":1.5,"sodium":260},"leftovers":"Perfect for 2 lunches. Keeps 3 days. Eat cold or reheat.","protein":"chicken"},{"id":"l02","name":"Salmon Salad over Greens","category":"lunch","prep":8,"cook":12,"servings":1,"ingredients":[{"name":"salmon fillet","qty":5,"unit":"oz","section":"meat","key":"salmon"},{"name":"mixed leafy greens","qty":3,"unit":"cups","section":"produce","key":"leafy-greens"},{"name":"cucumber, sliced","qty":0.25,"unit":"medium","section":"produce","key":"cucumber"},{"name":"olive oil","qty":1,"unit":"tbsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh dill (or 1/4 tsp dried)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Bake the salmon at 400°F for 10–12 minutes, seasoned with a pinch of salt, pepper, and a little lemon. Or use leftover salmon.","Toss the greens and cucumber with olive oil, remaining lemon, and dill. Flake the salmon over the top."],"tags":["omega-3","high-protein"],"nutrition":{"cal":360,"protein":34,"satFat":3.0,"sodium":220},"leftovers":"Bake two fillets at once. Dress the greens just before eating so they stay crisp.","protein":"salmon"},{"id":"l03","name":"Turkey & Avocado Cabbage Wraps","category":"lunch","prep":10,"cook":12,"servings":1,"ingredients":[{"name":"turkey breast (fresh roasted, not deli meat)","qty":5,"unit":"oz","section":"meat","key":"turkey-breast"},{"name":"large cabbage leaves","qty":4,"unit":"","section":"produce","key":"cabbage"},{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"cucumber, cut into sticks","qty":0.25,"unit":"medium","section":"produce","key":"cucumber"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["If the turkey is raw, roast or skillet-cook it until 165°F, then slice. Soften the cabbage leaves by dipping them in hot water 20–30 seconds if they crack when folded.","Mash the avocado with lemon, pepper, and a pinch of salt. Spread on the leaves, add turkey and cucumber, and wrap."],"tags":["high-protein","no-cook","meal-prep"],"nutrition":{"cal":350,"protein":38,"satFat":3.0,"sodium":250},"leftovers":"Use leftover roasted turkey — never packaged deli meat, which is processed and salty. The no-cook tag applies when the turkey is already cooked.","protein":"turkey"},{"id":"l04","name":"Shrimp & Zucchini Sauté","category":"lunch","prep":5,"cook":10,"servings":1,"ingredients":[{"name":"shrimp, peeled and deveined","qty":6,"unit":"oz","section":"meat","key":"shrimp"},{"name":"zucchini, halved and sliced","qty":1,"unit":"large","section":"produce","key":"zucchini"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":1,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"crushed red pepper","qty":1,"unit":"pinch","section":"pantry","key":"crushed-red-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet over medium-high heat. Cook the zucchini 3–4 minutes until just tender. Push to the side.","Add the shrimp, garlic, a pinch of salt, pepper, and crushed red pepper. Cook 1–2 minutes per side until opaque.","Toss together, finish with lemon and parsley. Skip extra salt — shrimp already brings sodium."],"tags":["high-protein"],"nutrition":{"cal":220,"protein":36,"satFat":0.8,"sodium":450},"leftovers":"Best fresh. Leftover shrimp is fine cold the next day over greens.","protein":"shrimp"},{"id":"l05","name":"Cod with Roasted Brussels Sprouts","category":"lunch","prep":8,"cook":22,"servings":1,"ingredients":[{"name":"cod fillet","qty":6,"unit":"oz","section":"meat","key":"cod"},{"name":"Brussels sprouts, halved","qty":2,"unit":"cups","section":"produce","key":"brussels-sprouts"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"dried thyme","qty":0.25,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the Brussels sprouts with the olive oil, garlic, thyme, a pinch of salt, and pepper. Roast 12 minutes.","Push the sprouts aside, add the cod, and roast 8–10 minutes more until the fish flakes and the sprouts are browned.","Squeeze lemon over the pan and serve."],"tags":["high-protein","high-fiber","sheet-pan"],"nutrition":{"cal":250,"protein":38,"satFat":0.8,"sodium":280},"leftovers":"The sprouts reheat well. The fish is best the same day or gently warmed the next.","protein":"white-fish"},{"id":"l06","name":"Chicken, Pepper & Onion Sheet Pan","category":"lunch","prep":8,"cook":22,"servings":2,"ingredients":[{"name":"skinless chicken breast, cut into strips","qty":10,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":1,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"garlic powder","qty":0.5,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss everything on a sheet pan with the oil and spices.","Roast 20–22 minutes, stirring once, until the chicken is cooked through and the peppers are soft and browned in spots.","Divide into 2 lunches."],"tags":["high-protein","sheet-pan","meal-prep"],"nutrition":{"cal":280,"protein":40,"satFat":1.5,"sodium":250},"leftovers":"A workhorse meal-prep lunch. Keeps 3 days. Good cold or reheated.","protein":"chicken"},{"id":"l07","name":"Bison Cabbage Cups","category":"lunch","prep":8,"cook":12,"servings":1,"ingredients":[{"name":"ground bison","qty":4,"unit":"oz","section":"meat","key":"bison"},{"name":"cabbage leaves, for cups","qty":4,"unit":"","section":"produce","key":"cabbage"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"bell pepper, diced","qty":0.5,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"ground cumin","qty":0.25,"unit":"tsp","section":"pantry","key":"cumin"},{"name":"paprika","qty":0.25,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet. Cook the onion and pepper 3 minutes. Add the bison, garlic, cumin, paprika, a pinch of salt, and pepper. Cook until browned and done, about 6 minutes.","Spoon into cabbage leaves and eat like small wraps.","This is an occasional, modest-portion lunch — 4 ounces of bison, not a large burger."],"tags":["high-protein","occasional"],"nutrition":{"cal":260,"protein":32,"satFat":2.5,"sodium":260},"leftovers":"The filling keeps 2 days. Because bison is a red meat, keep it to 1–2 times a week.","protein":"bison"},{"id":"l08","name":"Rainbow Trout with Asparagus","category":"lunch","prep":5,"cook":15,"servings":1,"ingredients":[{"name":"rainbow trout fillet","qty":6,"unit":"oz","section":"meat","key":"trout"},{"name":"asparagus spears, trimmed","qty":10,"unit":"","section":"produce","key":"asparagus"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh dill (or 1/4 tsp dried)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 400°F. Place the trout and asparagus on a sheet pan. Drizzle with olive oil, and season with garlic, dill, a pinch of salt, and pepper.","Roast 12–15 minutes until the fish flakes and the asparagus is tender-crisp. Finish with lemon."],"tags":["omega-3","high-protein","sheet-pan"],"nutrition":{"cal":320,"protein":38,"satFat":2.8,"sodium":200},"leftovers":"Good cold the next day. Fatty fish like trout is worth eating a few times a week.","protein":"trout"},{"id":"l09","name":"Chicken Cauliflower Bowl","category":"lunch","prep":8,"cook":15,"servings":2,"ingredients":[{"name":"skinless chicken breast, diced","qty":10,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"cauliflower, riced or finely chopped","qty":4,"unit":"cups","section":"produce","key":"cauliflower"},{"name":"fresh spinach","qty":2,"unit":"cups","section":"produce","key":"spinach"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"ground turmeric","qty":0.5,"unit":"tsp","section":"pantry","key":"turmeric"},{"name":"ground cumin","qty":0.5,"unit":"tsp","section":"pantry","key":"cumin"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm 1 teaspoon oil in a large skillet. Cook the chicken with a pinch of salt and pepper until done, about 6–7 minutes. Set aside.","Add the remaining oil, cauliflower, garlic, turmeric, and cumin. Cook 5–6 minutes until tender. Stir in the spinach to wilt, return the chicken, and finish with lemon.","Divide into 2 bowls."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":290,"protein":41,"satFat":1.5,"sodium":260},"leftovers":"Holds 3 days. The turmeric and lemon keep it from tasting flat without extra salt.","protein":"chicken"},{"id":"l10","name":"Grilled Shrimp Salad with Walnuts","category":"lunch","prep":8,"cook":6,"servings":1,"ingredients":[{"name":"shrimp, peeled and deveined","qty":5,"unit":"oz","section":"meat","key":"shrimp"},{"name":"mixed leafy greens","qty":3,"unit":"cups","section":"produce","key":"leafy-greens"},{"name":"cucumber, sliced","qty":0.25,"unit":"medium","section":"produce","key":"cucumber"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"walnuts, chopped","qty":2,"unit":"tsp","section":"nuts","key":"walnuts"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Toss the shrimp with half the oil, a pinch of salt, and pepper. Grill or skillet-cook 1–2 minutes per side until just opaque.","Toss the greens and cucumber with the remaining oil and lemon. Top with shrimp and a small sprinkle of walnuts (about 2 teaspoons — a modest portion)."],"tags":["high-protein"],"nutrition":{"cal":260,"protein":32,"satFat":1.2,"sodium":430},"leftovers":"Cook extra shrimp for tomorrow. Add walnuts and dressing just before eating.","protein":"shrimp"},{"id":"l11","name":"Pork Tenderloin & Green Beans","category":"lunch","prep":8,"cook":18,"servings":2,"ingredients":[{"name":"pork tenderloin","qty":10,"unit":"oz","section":"meat","key":"pork-tenderloin"},{"name":"green beans, trimmed","qty":4,"unit":"cups","section":"produce","key":"green-beans"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"sliced almonds","qty":2,"unit":"tsp","section":"nuts","key":"almonds"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Season the pork with thyme, a pinch of salt, and pepper. Roast 16–18 minutes until 145°F, or skillet-sear and finish in the oven.","Meanwhile, sauté or steam the green beans with garlic and 1 teaspoon oil until tender-crisp. Toss with lemon and the almonds (a small sprinkle, not a handful).","Rest the pork 5 minutes, slice, and divide with the beans into 2 servings."],"tags":["high-protein","high-fiber","meal-prep"],"nutrition":{"cal":290,"protein":38,"satFat":2.0,"sodium":240},"leftovers":"Roast a whole tenderloin on Sunday and you have lunches ready. Slice only what you need.","protein":"pork"},{"id":"l12","name":"Turkey & Mushroom Lettuce Cups","category":"lunch","prep":8,"cook":12,"servings":1,"ingredients":[{"name":"ground turkey (lean)","qty":5,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"mushrooms, chopped","qty":1,"unit":"cup","section":"produce","key":"mushrooms"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"leaf lettuce or romaine leaves","qty":6,"unit":"","section":"produce","key":"leafy-greens"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried thyme","qty":0.25,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Warm the olive oil in a skillet. Cook the onion, mushrooms, and turkey with garlic, thyme, a pinch of salt, and pepper until the turkey is done and the mushrooms have browned, about 8–10 minutes.","Spoon into lettuce leaves and eat right away."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":260,"protein":36,"satFat":1.8,"sodium":250},"leftovers":"The filling keeps 3 days. Pack leaves separately so they stay crisp.","protein":"turkey"},{"id":"l13","name":"White Fish with Vinegar-Herb Cabbage Slaw","category":"lunch","prep":10,"cook":12,"servings":1,"ingredients":[{"name":"haddock or cod fillet","qty":6,"unit":"oz","section":"meat","key":"haddock"},{"name":"cabbage, shredded","qty":2,"unit":"cups","section":"produce","key":"cabbage"},{"name":"olive oil","qty":1,"unit":"tbsp","section":"nuts","key":"olive-oil"},{"name":"unsweetened vinegar (apple cider or white)","qty":1,"unit":"tbsp","section":"pantry","key":"vinegar"},{"name":"fresh dill or dried dill","qty":0.5,"unit":"tsp","section":"pantry","key":"dill"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Toss the cabbage with 2 teaspoons olive oil, the vinegar, dill, a pinch of salt, and pepper. Let it sit while you cook the fish — it softens slightly.","Season the fish and cook in the remaining teaspoon of oil over medium heat, 4–5 minutes per side, until it flakes. Or bake at 400°F for about 12 minutes.","Serve the fish on the slaw with a squeeze of lemon."],"tags":["high-protein","high-fiber"],"nutrition":{"cal":260,"protein":38,"satFat":1.2,"sodium":260},"leftovers":"The slaw actually improves after an hour. Fish is best the day it is cooked, or cold the next day.","protein":"white-fish"},{"id":"l14","name":"Leftover Chicken & Broccoli Bowl","category":"lunch","prep":5,"cook":6,"servings":1,"ingredients":[{"name":"cooked skinless chicken, chopped","qty":5,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"broccoli florets","qty":2,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":1,"unit":"clove","section":"produce","key":"garlic"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"crushed red pepper","qty":1,"unit":"pinch","section":"pantry","key":"crushed-red-pepper"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Steam or skillet-sauté the broccoli with a splash of water until tender-crisp, about 4 minutes. Add the oil and garlic for the last minute.","Add the leftover chicken just to warm it. Finish with lemon, crushed red pepper, and black pepper. No extra salt needed if the chicken was already seasoned."],"tags":["high-protein","high-fiber","meal-prep"],"nutrition":{"cal":270,"protein":42,"satFat":1.5,"sodium":250},"leftovers":"This is the leftover recipe. Keep cooked chicken on hand for a 10-minute lunch.","protein":"chicken"},{"id":"l15","name":"Kale Salad with Salmon & Avocado","category":"lunch","prep":10,"cook":12,"servings":1,"ingredients":[{"name":"salmon fillet","qty":5,"unit":"oz","section":"meat","key":"salmon"},{"name":"kale, chopped, stems removed","qty":2,"unit":"cups","section":"produce","key":"kale"},{"name":"avocado","qty":0.25,"unit":"","section":"produce","key":"avocado"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"garlic, minced","qty":0.5,"unit":"clove","section":"produce","key":"garlic"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Bake or skillet-cook the salmon until it flakes, about 10–12 minutes.","Massage the kale with olive oil, lemon, garlic, and a pinch of salt for 1 minute until it darkens and softens.","Top with flaked salmon and a quarter of an avocado, sliced. A quarter is plenty here because the salmon already brings healthy fat."],"tags":["omega-3","high-protein","high-fiber"],"nutrition":{"cal":380,"protein":35,"satFat":3.5,"sodium":230},"leftovers":"Massaged kale holds up better than lettuce, so you can dress it ahead. Add avocado at the last minute.","protein":"salmon"},{"id":"l16","name":"Sheet-Pan Turkey, Peppers & Onions","category":"lunch","prep":8,"cook":20,"servings":2,"ingredients":[{"name":"turkey breast, cut into chunks","qty":10,"unit":"oz","section":"meat","key":"turkey-breast"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"paprika","qty":1,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"garlic powder","qty":0.5,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the turkey, peppers, and onion with oil and spices on a sheet pan.","Roast 18–20 minutes, stirring once, until the turkey is 165°F and the vegetables are browned at the edges.","Divide into 2 servings."],"tags":["high-protein","sheet-pan","meal-prep"],"nutrition":{"cal":270,"protein":40,"satFat":1.2,"sodium":240},"leftovers":"A reliable two-lunch batch. Keeps 3 days.","protein":"turkey"},{"id":"l17","name":"Lemon Haddock & Steamed Broccoli","category":"lunch","prep":5,"cook":15,"servings":1,"ingredients":[{"name":"haddock fillet","qty":6,"unit":"oz","section":"meat","key":"haddock"},{"name":"broccoli florets","qty":2,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":1,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Steam the broccoli until tender-crisp, about 5–6 minutes.","Meanwhile, cook the haddock in the olive oil over medium heat, 4–5 minutes per side, or bake at 400°F for about 12 minutes, with a pinch of salt and pepper.","Plate together with lemon juice and parsley. Simple and clean."],"tags":["high-protein","high-fiber"],"nutrition":{"cal":230,"protein":38,"satFat":0.6,"sodium":250},"leftovers":"Best the day you cook it. A very low-sat-fat lunch when you want something light.","protein":"white-fish"},{"id":"d01","name":"Sheet-Pan Salmon, Broccoli & Red Onion","category":"dinner","prep":8,"cook":18,"servings":2,"ingredients":[{"name":"salmon fillet","qty":12,"unit":"oz","section":"meat","key":"salmon"},{"name":"broccoli florets","qty":4,"unit":"cups","section":"produce","key":"broccoli"},{"name":"red onion, cut into wedges","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"fresh dill (or 1/2 tsp dried)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the broccoli and onion with 1 teaspoon oil, garlic, a pinch of salt, and pepper. Spread on a sheet pan and roast 8 minutes.","Add the salmon, brushed with the remaining oil, dill, and a little pepper. Roast 10 minutes more until the salmon flakes.","Finish with lemon and divide into 2 plates."],"tags":["omega-3","high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":380,"protein":40,"satFat":3.0,"sodium":230},"leftovers":"Excellent next-day lunch, cold or gently reheated. Fatty fish is a weekly staple here.","protein":"salmon"},{"id":"d02","name":"Garlic Herb Chicken Thighs with Brussels Sprouts","category":"dinner","prep":8,"cook":28,"servings":2,"ingredients":[{"name":"skinless chicken thighs","qty":12,"unit":"oz","section":"meat","key":"chicken-thigh"},{"name":"Brussels sprouts, halved","qty":4,"unit":"cups","section":"produce","key":"brussels-sprouts"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried rosemary","qty":0.5,"unit":"tsp","section":"pantry","key":"rosemary"},{"name":"dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the thighs and Brussels sprouts with oil, garlic, rosemary, thyme, a pinch of salt, and pepper. Spread on a sheet pan, chicken in the center.","Roast 25–28 minutes until the chicken is 165°F and the sprouts are browned and crisp at the edges.","Finish with lemon. This is a little over 25 minutes, but it is almost all hands-off oven time."],"tags":["high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":340,"protein":36,"satFat":3.0,"sodium":280},"leftovers":"Skinless thighs stay juicier than breast as leftovers. Keeps 3 days.","protein":"chicken"},{"id":"d03","name":"Lemon Dill Trout with Asparagus","category":"dinner","prep":5,"cook":15,"servings":2,"ingredients":[{"name":"rainbow trout fillets","qty":12,"unit":"oz","section":"meat","key":"trout"},{"name":"asparagus spears, trimmed","qty":1,"unit":"bunch","section":"produce","key":"asparagus"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"fresh dill (or 1/2 tsp dried)","qty":2,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 400°F. Arrange the trout and asparagus on a sheet pan. Drizzle with oil and season with garlic, dill, a pinch of salt, and pepper.","Roast 12–15 minutes until the fish flakes. Squeeze lemon over both and serve."],"tags":["omega-3","high-protein","sheet-pan"],"nutrition":{"cal":320,"protein":38,"satFat":2.8,"sodium":200},"leftovers":"Lovely cold the next day. Trout is a fatty fish — good for a couple of dinners a week.","protein":"trout"},{"id":"d04","name":"Shrimp & Cauliflower Rice Sauté","category":"dinner","prep":10,"cook":12,"servings":2,"ingredients":[{"name":"shrimp, peeled and deveined","qty":12,"unit":"oz","section":"meat","key":"shrimp"},{"name":"cauliflower, riced","qty":4,"unit":"cups","section":"produce","key":"cauliflower"},{"name":"onion, diced","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"paprika","qty":0.5,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"fresh parsley, chopped","qty":2,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"lime juice","qty":1,"unit":"tbsp","section":"produce","key":"lime"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm 1 teaspoon oil in a large skillet. Cook the onion 2 minutes, then add the cauliflower rice, garlic, and paprika. Cook 5–6 minutes until tender. Transfer to a bowl.","Add the remaining oil and the shrimp. Cook 1–2 minutes per side until just opaque. Skip extra salt if you can — shrimp is naturally salty.","Return the cauliflower, toss with lime and parsley, and divide into 2 bowls."],"tags":["high-protein"],"nutrition":{"cal":240,"protein":37,"satFat":0.8,"sodium":470},"leftovers":"The cauliflower rice keeps well; add freshly cooked shrimp if you can. Fine reheated once.","protein":"shrimp"},{"id":"d05","name":"Pork Tenderloin with Roasted Cabbage Wedges","category":"dinner","prep":8,"cook":25,"servings":2,"ingredients":[{"name":"pork tenderloin","qty":10,"unit":"oz","section":"meat","key":"pork-tenderloin"},{"name":"cabbage, cut into wedges","qty":0.5,"unit":"head","section":"produce","key":"cabbage"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"caraway seeds or dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"caraway"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"}],"steps":["Heat the oven to 425°F. Brush the cabbage wedges with 1 teaspoon oil, garlic, caraway or thyme, and a pinch of salt. Roast 10 minutes.","Season the pork and nestle it on the pan. Roast 15–18 minutes more, until the pork is 145°F and the cabbage is browned on the edges.","Rest the pork 5 minutes, slice, and serve with the wedges and a little lemon."],"tags":["high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":290,"protein":36,"satFat":2.0,"sodium":250},"leftovers":"Sliced pork and cabbage reheat well. A good Sunday roast for two dinners or a dinner plus lunch.","protein":"pork"},{"id":"d06","name":"Lean Beef, Mushrooms & Spinach Skillet","category":"dinner","prep":8,"cook":14,"servings":2,"ingredients":[{"name":"lean beef sirloin or loin, thinly sliced","qty":8,"unit":"oz","section":"meat","key":"lean-beef"},{"name":"mushrooms, sliced","qty":3,"unit":"cups","section":"produce","key":"mushrooms"},{"name":"fresh spinach","qty":4,"unit":"cups","section":"produce","key":"spinach"},{"name":"onion, sliced","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"}],"steps":["Warm 1 teaspoon oil in a large skillet over medium-high heat. Sear the beef quickly, 1–2 minutes per side, until just browned. Do not overcook. Transfer to a plate. This is a modest 4 ounces of lean beef per person.","Add the remaining oil, onion, and mushrooms. Cook 5–6 minutes until browned. Add garlic and thyme for 30 seconds.","Add the spinach to wilt, return the beef and any juices, and toss with pepper. Taste before adding any more salt."],"tags":["high-protein","occasional"],"nutrition":{"cal":280,"protein":32,"satFat":3.5,"sodium":260},"leftovers":"Eat within 2 days. Keep lean beef and bison to 1–2 meals a week, in modest portions.","protein":"beef"},{"id":"d07","name":"Bison & Pepper Skillet","category":"dinner","prep":8,"cook":12,"servings":2,"ingredients":[{"name":"ground bison","qty":8,"unit":"oz","section":"meat","key":"bison"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"ground cumin","qty":0.5,"unit":"tsp","section":"pantry","key":"cumin"},{"name":"chili powder (no added sugar)","qty":0.5,"unit":"tsp","section":"pantry","key":"chili-powder"},{"name":"paprika","qty":0.5,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm the oil in a skillet over medium-high heat. Cook the onion and peppers 4 minutes.","Add the bison, garlic, and spices. Cook, breaking it up, until browned and done, about 6–7 minutes. This is 4 ounces of bison per person — a modest, occasional dinner.","Taste and add pepper or cumin before reaching for more salt."],"tags":["high-protein","occasional"],"nutrition":{"cal":260,"protein":32,"satFat":2.5,"sodium":260},"leftovers":"Makes a good lunch the next day in cabbage leaves. Limit red meat to 1–2 times a week.","protein":"bison"},{"id":"d08","name":"Herb-Roasted Cod with Zucchini","category":"dinner","prep":8,"cook":18,"servings":2,"ingredients":[{"name":"cod fillets","qty":12,"unit":"oz","section":"meat","key":"cod"},{"name":"zucchini, sliced into half-moons","qty":2,"unit":"medium","section":"produce","key":"zucchini"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the zucchini with 1 teaspoon oil, garlic, oregano, and a pinch of salt. Roast 8 minutes.","Add the cod, brushed with the remaining oil and pepper. Roast 8–10 minutes until the fish flakes.","Finish with lemon and divide into 2 plates."],"tags":["high-protein","sheet-pan"],"nutrition":{"cal":220,"protein":36,"satFat":0.6,"sodium":240},"leftovers":"A very low-sat-fat dinner. The fish is best the day you cook it.","protein":"white-fish"},{"id":"d09","name":"Chicken & Mushroom Skillet","category":"dinner","prep":8,"cook":16,"servings":2,"ingredients":[{"name":"skinless chicken breast, sliced","qty":12,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"mushrooms, sliced","qty":4,"unit":"cups","section":"produce","key":"mushrooms"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried thyme","qty":0.75,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"fresh parsley, chopped","qty":2,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm 1 teaspoon oil in a large skillet over medium-high heat. Cook the chicken with a pinch of salt, pepper, and some of the thyme until cooked through, about 6–7 minutes. Set aside.","Add the remaining oil and the mushrooms. Let them sit and brown, 5–6 minutes, then add garlic and the rest of the thyme.","Return the chicken, toss with lemon and parsley, and serve."],"tags":["high-protein"],"nutrition":{"cal":300,"protein":44,"satFat":1.5,"sodium":260},"leftovers":"Very leftover-friendly. The mushrooms soak up the lemon and thyme overnight.","protein":"chicken"},{"id":"d10","name":"Turkey-Stuffed Bell Peppers","category":"dinner","prep":12,"cook":28,"servings":2,"ingredients":[{"name":"bell peppers, halved and seeded","qty":2,"unit":"large","section":"produce","key":"bell-pepper"},{"name":"ground turkey (lean)","qty":10,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"cauliflower, riced","qty":1,"unit":"cup","section":"produce","key":"cauliflower"},{"name":"onion, diced","qty":0.25,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"paprika","qty":0.5,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 400°F. Place the pepper halves cut-side up in a baking dish.","Cook the onion, turkey, cauliflower, garlic, and spices in the olive oil until the turkey is done, about 8 minutes. Spoon into the peppers.","Bake 20 minutes until the peppers are tender. A little over 30 minutes total, but the steps stay simple."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":300,"protein":38,"satFat":2.0,"sodium":280},"leftovers":"One of the best meal-prep dinners. Keeps 3 days and reheats in the oven or microwave.","protein":"turkey"},{"id":"d11","name":"Broiled Salmon with Garlic Kale","category":"dinner","prep":6,"cook":12,"servings":2,"ingredients":[{"name":"salmon fillets","qty":12,"unit":"oz","section":"meat","key":"salmon"},{"name":"kale, chopped, stems removed","qty":6,"unit":"cups","section":"produce","key":"kale"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the broiler. Brush the salmon with 1 teaspoon oil, a pinch of salt, and pepper. Broil 8–10 minutes until it flakes (or bake at 400°F for 12 minutes).","Meanwhile, sauté the garlic in the remaining oil 20 seconds, add the kale and a splash of water, and cook until wilted but still green, 3–4 minutes.","Finish the kale with lemon and serve under the salmon."],"tags":["omega-3","high-protein","high-fiber"],"nutrition":{"cal":390,"protein":40,"satFat":3.2,"sodium":240},"leftovers":"Salmon and kale both keep 1–2 days. A strong weekly staple for LDL-friendly omega-3s.","protein":"salmon"},{"id":"d12","name":"Sheet-Pan Chicken, Cauliflower & Broccoli","category":"dinner","prep":8,"cook":25,"servings":2,"ingredients":[{"name":"skinless chicken breast","qty":12,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"cauliflower florets","qty":3,"unit":"cups","section":"produce","key":"cauliflower"},{"name":"broccoli florets","qty":3,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":1,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"garlic powder","qty":0.5,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the chicken and vegetables with oil, smoked paprika, garlic powder, a pinch of salt, and pepper. Spread in a single layer.","Roast 22–25 minutes, until the chicken is 165°F and the vegetables are browned.","Squeeze lemon over the pan and divide into 2 servings."],"tags":["high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":320,"protein":44,"satFat":1.6,"sodium":270},"leftovers":"A classic two-night sheet pan. Keeps 3 days and packs well.","protein":"chicken"},{"id":"d13","name":"Garlic Shrimp over Sautéed Spinach","category":"dinner","prep":5,"cook":8,"servings":2,"ingredients":[{"name":"shrimp, peeled and deveined","qty":12,"unit":"oz","section":"meat","key":"shrimp"},{"name":"fresh spinach","qty":8,"unit":"cups","section":"produce","key":"spinach"},{"name":"garlic, minced","qty":4,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"crushed red pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"crushed-red-pepper"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm 1 teaspoon oil in a large skillet. Cook half the garlic 20 seconds, add the spinach in handfuls, and wilt. Divide onto 2 plates.","Add the remaining oil, garlic, shrimp, crushed red pepper, and black pepper. Cook 1–2 minutes per side until just opaque. No extra salt.","Spoon the shrimp over the spinach and finish with lemon. Dinner in 15 minutes."],"tags":["high-protein"],"nutrition":{"cal":230,"protein":38,"satFat":0.8,"sodium":480},"leftovers":"Best fresh. Leftover shrimp is fine cold the next day. Spinach wilts more on reheat.","protein":"shrimp"},{"id":"d14","name":"Trout with Green Beans & Almonds","category":"dinner","prep":6,"cook":14,"servings":2,"ingredients":[{"name":"rainbow trout fillets","qty":12,"unit":"oz","section":"meat","key":"trout"},{"name":"green beans, trimmed","qty":4,"unit":"cups","section":"produce","key":"green-beans"},{"name":"sliced almonds","qty":2,"unit":"tbsp","section":"nuts","key":"almonds"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Bake or skillet-cook the trout with 1 teaspoon oil, a pinch of salt, and pepper until it flakes, about 10–12 minutes.","Meanwhile, sauté the green beans and garlic in the remaining oil until tender-crisp, 6–8 minutes. Toast the almonds in a dry corner of the pan for the last minute — 1 tablespoon per person is a modest portion.","Plate the trout with the beans, almonds, and lemon. This is a sauté, not a fry — keep the oil to the measured teaspoons."],"tags":["omega-3","high-protein","high-fiber"],"nutrition":{"cal":360,"protein":38,"satFat":3.0,"sodium":210},"leftovers":"Green beans and trout keep 1–2 days. Add the almonds just before serving so they stay crisp.","protein":"trout"},{"id":"d15","name":"Pork Medallions with Mushrooms & Onions","category":"dinner","prep":8,"cook":16,"servings":2,"ingredients":[{"name":"pork tenderloin, sliced into medallions","qty":10,"unit":"oz","section":"meat","key":"pork-tenderloin"},{"name":"mushrooms, sliced","qty":3,"unit":"cups","section":"produce","key":"mushrooms"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried rosemary","qty":0.5,"unit":"tsp","section":"pantry","key":"rosemary"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"}],"steps":["Season the medallions with rosemary, a pinch of salt, and pepper. Warm 1 teaspoon oil in a skillet over medium-high heat and cook the pork 2–3 minutes per side until 145°F. Set aside.","Add the remaining oil, mushrooms, and onion. Cook 6–8 minutes until browned and soft. Add garlic for the last 30 seconds.","Return the pork and any juices to the pan, toss, and serve."],"tags":["high-protein"],"nutrition":{"cal":300,"protein":36,"satFat":2.2,"sodium":250},"leftovers":"Reheats gently. Don't push leftover pork past a couple of days.","protein":"pork"},{"id":"d16","name":"White Fish in Parchment with Vegetables","category":"dinner","prep":10,"cook":18,"servings":2,"ingredients":[{"name":"cod or haddock fillets","qty":12,"unit":"oz","section":"meat","key":"cod"},{"name":"zucchini, sliced","qty":1,"unit":"medium","section":"produce","key":"zucchini"},{"name":"bell pepper, sliced","qty":1,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, thinly sliced","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon, sliced, plus extra juice","qty":0.5,"unit":"","section":"produce","key":"lemon"},{"name":"dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"fresh parsley, chopped","qty":2,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 400°F. Cut two large sheets of parchment (foil works if you don't have parchment).","Divide the vegetables between the sheets, top with the fish, oil, thyme, lemon slices, a pinch of salt, and pepper. Fold and crimp into sealed packets.","Bake 16–18 minutes. Open carefully — the steam is hot — and finish with parsley. The fish steams in its own juices, so it stays moist with very little oil."],"tags":["high-protein"],"nutrition":{"cal":240,"protein":36,"satFat":0.8,"sodium":250},"leftovers":"Best the night you make it. Packets can be assembled a few hours ahead and kept in the fridge until dinner.","protein":"white-fish"},{"id":"d17","name":"Chicken Thighs with Cabbage","category":"dinner","prep":8,"cook":28,"servings":2,"ingredients":[{"name":"skinless chicken thighs","qty":12,"unit":"oz","section":"meat","key":"chicken-thigh"},{"name":"cabbage, chopped","qty":0.5,"unit":"head","section":"produce","key":"cabbage"},{"name":"onion, sliced","qty":0.5,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"paprika","qty":1,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"caraway seeds (optional)","qty":0.25,"unit":"tsp","section":"pantry","key":"caraway"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"}],"steps":["Heat the oven to 425°F, or use a large oven-safe skillet. Season the thighs with paprika, a pinch of salt, and pepper.","Brown the chicken in 1 teaspoon oil, 3 minutes per side. Add the remaining oil, cabbage, onion, garlic, and caraway. Toss, then roast or bake 20–22 minutes until the chicken is 165°F and the cabbage is tender and browned.","Hands-off after the first sear. Total time is about 30 minutes."],"tags":["high-protein","high-fiber","meal-prep"],"nutrition":{"cal":330,"protein":35,"satFat":3.0,"sodium":280},"leftovers":"Cabbage and thighs reheat beautifully. A solid leftover dinner or lunch.","protein":"chicken"},{"id":"d18","name":"Baked Haddock with Peppers & Onions","category":"dinner","prep":8,"cook":20,"servings":2,"ingredients":[{"name":"haddock fillets","qty":12,"unit":"oz","section":"meat","key":"haddock"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"paprika","qty":0.75,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":2,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the peppers and onion with 1 teaspoon oil, half the paprika, and a pinch of salt. Roast 10 minutes.","Add the haddock, brushed with the remaining oil, paprika, and pepper. Bake 10 minutes more until the fish flakes.","Finish with lemon and parsley."],"tags":["high-protein","sheet-pan"],"nutrition":{"cal":240,"protein":36,"satFat":0.6,"sodium":250},"leftovers":"Peppers and onions keep well; the fish is better the day you bake it.","protein":"white-fish"},{"id":"d19","name":"Seasoned Turkey Patties with Roasted Broccoli","category":"dinner","prep":10,"cook":18,"servings":2,"ingredients":[{"name":"ground turkey (lean)","qty":12,"unit":"oz","section":"meat","key":"ground-turkey"},{"name":"broccoli florets","qty":4,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic powder","qty":0.5,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"onion powder","qty":0.5,"unit":"tsp","section":"pantry","key":"onion-powder"},{"name":"smoked paprika","qty":0.5,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"lemon juice","qty":2,"unit":"tsp","section":"produce","key":"lemon"}],"steps":["Heat the oven to 425°F. Mix the turkey with the garlic powder, onion powder, paprika, oregano, salt, and pepper. Form 4 patties — no breadcrumbs needed if you handle them gently.","Toss the broccoli with 1 teaspoon oil and spread on a sheet pan with the patties, brushed with the remaining oil.","Roast 16–18 minutes, flipping the patties once, until the turkey is 165°F. Finish the broccoli with lemon."],"tags":["high-protein","high-fiber","sheet-pan","meal-prep"],"nutrition":{"cal":320,"protein":42,"satFat":2.2,"sodium":280},"leftovers":"Patties freeze well and make an easy lunch. No filler or processed meat — just seasoned turkey.","protein":"turkey"},{"id":"d20","name":"Salmon with Roasted Garlic Brussels Sprouts","category":"dinner","prep":8,"cook":20,"servings":2,"ingredients":[{"name":"salmon fillets","qty":12,"unit":"oz","section":"meat","key":"salmon"},{"name":"Brussels sprouts, halved","qty":4,"unit":"cups","section":"produce","key":"brussels-sprouts"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the Brussels sprouts with 1 teaspoon oil, garlic, a pinch of salt, and pepper. Roast 10 minutes.","Add the salmon, brushed with the remaining oil and pepper. Roast 10 minutes more until the salmon flakes and the sprouts are crisp-edged.","Finish with lemon."],"tags":["omega-3","high-protein","high-fiber","sheet-pan"],"nutrition":{"cal":400,"protein":40,"satFat":3.2,"sodium":240},"leftovers":"A repeat-worthy weekly staple. Brussels sprouts reheat especially well.","protein":"salmon"},{"id":"d21","name":"Lean Beef & Broccoli Sauté","category":"dinner","prep":10,"cook":12,"servings":2,"ingredients":[{"name":"lean beef sirloin or loin, thinly sliced","qty":8,"unit":"oz","section":"meat","key":"lean-beef"},{"name":"broccoli florets","qty":5,"unit":"cups","section":"produce","key":"broccoli"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"fresh ginger, minced (or 1/4 tsp ground)","qty":1,"unit":"tsp","section":"produce","key":"ginger"},{"name":"green onions, sliced","qty":2,"unit":"","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"}],"steps":["Warm 1 teaspoon oil in a large skillet over medium-high heat. Sear the beef quickly in a single layer, 1–2 minutes, until just browned. Set aside. This is 4 ounces of lean beef per person.","Add the remaining oil, broccoli, and a splash of water. Cover 3 minutes to steam, then uncover and add garlic and ginger for 1 minute.","Return the beef, toss with green onions and pepper, and serve. No bottled sauce — the garlic, ginger, and pepper do the work. This is a sauté, not a fry."],"tags":["high-protein","high-fiber","occasional"],"nutrition":{"cal":280,"protein":34,"satFat":3.5,"sodium":270},"leftovers":"Eat within 2 days. Keep this to 1–2 modest red-meat meals a week.","protein":"beef"},{"id":"d22","name":"Herb Chicken with Asparagus & Mushrooms","category":"dinner","prep":8,"cook":18,"servings":2,"ingredients":[{"name":"skinless chicken breast","qty":12,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"asparagus spears, trimmed","qty":1,"unit":"bunch","section":"produce","key":"asparagus"},{"name":"mushrooms, sliced","qty":2,"unit":"cups","section":"produce","key":"mushrooms"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried rosemary","qty":0.5,"unit":"tsp","section":"pantry","key":"rosemary"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Season the chicken with rosemary, a pinch of salt, and pepper, and place on a sheet pan with the mushrooms and asparagus. Drizzle with oil and scatter the garlic.","Roast 16–18 minutes until the chicken is 165°F. Finish with lemon and slice the chicken to serve."],"tags":["high-protein","sheet-pan"],"nutrition":{"cal":300,"protein":44,"satFat":1.5,"sodium":250},"leftovers":"Slices nicely for lunch the next day.","protein":"chicken"},{"id":"d23","name":"Sheet-Pan Shrimp, Zucchini & Peppers","category":"dinner","prep":8,"cook":12,"servings":2,"ingredients":[{"name":"shrimp, peeled and deveined","qty":12,"unit":"oz","section":"meat","key":"shrimp"},{"name":"zucchini, sliced","qty":2,"unit":"medium","section":"produce","key":"zucchini"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"paprika","qty":0.75,"unit":"tsp","section":"pantry","key":"paprika"},{"name":"lime juice","qty":1,"unit":"tbsp","section":"produce","key":"lime"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Heat the oven to 425°F. Toss the zucchini and peppers with 1 teaspoon oil, half the garlic, and some paprika. Roast 6 minutes.","Toss the shrimp with the remaining oil, garlic, paprika, and pepper. Add to the pan and roast 6 minutes more until just opaque.","Finish with lime. No extra salt — shrimp already has sodium."],"tags":["high-protein","sheet-pan"],"nutrition":{"cal":230,"protein":36,"satFat":0.7,"sodium":460},"leftovers":"Good cold over greens the next day. Don't reheat shrimp too long or it turns rubbery.","protein":"shrimp"},{"id":"d24","name":"Walnut-Herb Chicken with Green Beans","category":"dinner","prep":10,"cook":18,"servings":2,"ingredients":[{"name":"skinless chicken breast","qty":12,"unit":"oz","section":"meat","key":"chicken-breast"},{"name":"green beans, trimmed","qty":4,"unit":"cups","section":"produce","key":"green-beans"},{"name":"walnuts","qty":2,"unit":"tbsp","section":"nuts","key":"walnuts"},{"name":"fresh basil or parsley","qty":0.5,"unit":"cup","section":"produce","key":"fresh-herbs"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Mash or finely chop the walnuts with the herbs, garlic, 1 teaspoon oil, lemon, and a pinch of salt to make a rough, cheese-free herb paste. This is a modest walnut portion — about 1 tablespoon per person.","Cook the chicken in the remaining oil over medium heat until 165°F, about 6 minutes per side, or bake at 400°F for 18 minutes. Steam or sauté the green beans until tender-crisp.","Spread the herb paste over the sliced chicken and serve with the beans."],"tags":["high-protein","high-fiber"],"nutrition":{"cal":380,"protein":44,"satFat":2.2,"sodium":260},"leftovers":"The herb paste keeps 2 days. Spread it on leftover chicken just before eating so it stays bright.","protein":"chicken"},{"id":"d25","name":"Scallops with Garlic Spinach & Cauliflower","category":"dinner","prep":8,"cook":12,"servings":2,"ingredients":[{"name":"sea scallops (plain, dry-packed if possible)","qty":12,"unit":"oz","section":"meat","key":"scallops"},{"name":"fresh spinach","qty":4,"unit":"cups","section":"produce","key":"spinach"},{"name":"cauliflower florets","qty":3,"unit":"cups","section":"produce","key":"cauliflower"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":3,"unit":"cloves","section":"produce","key":"garlic"},{"name":"lemon juice","qty":1,"unit":"tbsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":2,"unit":"tbsp","section":"produce","key":"fresh-herbs"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Steam or roast the cauliflower until tender, about 8–10 minutes.","Pat the scallops very dry. Warm 1 teaspoon oil in a skillet over medium-high heat and cook the scallops 2 minutes per side until just opaque and browned. Do not crowd the pan. Set aside. Wet-packed scallops can be brined — skip extra salt either way.","Add the remaining oil, garlic, and spinach; wilt quickly. Plate the cauliflower and spinach, top with scallops, lemon, parsley, and pepper."],"tags":["high-protein"],"nutrition":{"cal":250,"protein":36,"satFat":0.6,"sodium":400},"leftovers":"Scallops are best the night you cook them. Use dry-packed if you can; they usually have less added sodium.","protein":"shellfish"},{"id":"d26","name":"Chicken Thighs, Peppers & Onions","category":"dinner","prep":8,"cook":20,"servings":2,"ingredients":[{"name":"skinless chicken thighs, cut into chunks","qty":12,"unit":"oz","section":"meat","key":"chicken-thigh"},{"name":"bell peppers, sliced","qty":2,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"onion, sliced","qty":1,"unit":"medium","section":"produce","key":"onion"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":1,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"dried oregano","qty":0.5,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"salt","qty":0.125,"unit":"tsp","section":"pantry","key":"salt"},{"name":"black pepper","qty":0.25,"unit":"tsp","section":"pantry","key":"black-pepper"}],"steps":["Warm the oil in a large skillet over medium-high heat. Brown the thighs with smoked paprika, oregano, a pinch of salt, and pepper, about 5 minutes.","Add the peppers, onion, and garlic. Cook, stirring now and then, 12–15 minutes until the chicken is 165°F and the vegetables are soft and browned in spots.","A simple skillet dinner with a lot of flavor and no sauce to measure."],"tags":["high-protein","meal-prep"],"nutrition":{"cal":330,"protein":35,"satFat":3.0,"sodium":270},"leftovers":"Even better the next day. Keeps 3 days and makes an easy lunch.","protein":"chicken"},{"id":"s01","name":"Almonds & Cucumber","category":"snack","prep":2,"cook":0,"servings":1,"ingredients":[{"name":"unsalted almonds","qty":1,"unit":"oz","section":"nuts","key":"almonds"},{"name":"cucumber, sliced","qty":0.5,"unit":"medium","section":"produce","key":"cucumber"},{"name":"lemon juice","qty":0.5,"unit":"tsp","section":"produce","key":"lemon"}],"steps":["Portion 1 ounce of almonds (about 23 almonds, or a small handful). Don't eat from the bag.","Slice the cucumber, add a little lemon if you like, and eat alongside the almonds."],"tags":["no-cook","portion-controlled"],"nutrition":{"cal":180,"protein":7,"satFat":1.1,"sodium":80},"leftovers":"Pre-portion almonds into 1-ounce containers for the week.","protein":"nuts"},{"id":"s02","name":"Cucumber Rounds with Peanut Butter","category":"snack","prep":3,"cook":0,"servings":1,"ingredients":[{"name":"cucumber, cut into rounds","qty":0.5,"unit":"medium","section":"produce","key":"cucumber"},{"name":"natural peanut butter (unsalted, no added sugar)","qty":1,"unit":"tbsp","section":"nuts","key":"peanut-butter"}],"steps":["Spread 1 tablespoon of natural peanut butter over cucumber rounds. One tablespoon is the portion — measure it.","Eat right away. Savory, not sweet, and surprisingly satisfying."],"tags":["no-cook","portion-controlled"],"nutrition":{"cal":110,"protein":5,"satFat":1.5,"sodium":50},"leftovers":"Assemble fresh so the cucumber stays crisp.","protein":"nuts"},{"id":"s03","name":"Lemon-Pepper Avocado","category":"snack","prep":3,"cook":0,"servings":1,"ingredients":[{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Halve an avocado and keep one half (wrap the rest with the pit in for later).","Season the cut side with lemon, pepper, and a tiny pinch of salt. Eat with a spoon."],"tags":["no-cook"],"nutrition":{"cal":130,"protein":2,"satFat":1.5,"sodium":80},"leftovers":"A half avocado is the right snack portion. The other half keeps until the next day with lemon and tight wrap.","protein":"nuts"},{"id":"s04","name":"Turkey & Cucumber Roll-Ups","category":"snack","prep":8,"cook":0,"servings":1,"ingredients":[{"name":"cooked turkey breast, sliced (not deli meat)","qty":3,"unit":"oz","section":"meat","key":"turkey-breast"},{"name":"cucumber, cut into sticks","qty":0.5,"unit":"medium","section":"produce","key":"cucumber"},{"name":"lemon juice","qty":0.5,"unit":"tsp","section":"produce","key":"lemon"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Use leftover roasted turkey breast, not packaged deli slices.","Wrap cucumber sticks in the turkey, add lemon and pepper, and eat."],"tags":["no-cook","high-protein","meal-prep"],"nutrition":{"cal":140,"protein":26,"satFat":0.5,"sodium":150},"leftovers":"Keep cooked turkey in the fridge for 3 days and roll these up in a minute.","protein":"turkey"},{"id":"s05","name":"Lemon Herb Shrimp","category":"snack","prep":3,"cook":6,"servings":1,"ingredients":[{"name":"shrimp, peeled and deveined","qty":4,"unit":"oz","section":"meat","key":"shrimp"},{"name":"olive oil","qty":0.5,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh parsley, chopped","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"garlic, minced","qty":0.5,"unit":"clove","section":"produce","key":"garlic"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Cook the shrimp in the oil with garlic and pepper, 1–2 minutes per side, until just opaque. No extra salt.","Toss with lemon and parsley. Eat warm or chilled, like a clean shrimp cocktail without sweet sauce."],"tags":["high-protein"],"nutrition":{"cal":130,"protein":24,"satFat":0.3,"sodium":320},"leftovers":"Make a batch and chill for 1–2 days. A high-protein snack with almost no saturated fat.","protein":"shrimp"},{"id":"s06","name":"Cinnamon Walnuts","category":"snack","prep":2,"cook":6,"servings":1,"ingredients":[{"name":"walnuts","qty":1,"unit":"oz","section":"nuts","key":"walnuts"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"}],"steps":["Toast 1 ounce of walnuts in a dry skillet over medium-low heat, 4–6 minutes, tossing often, until fragrant. Don't walk away — they burn quickly.","Toss with cinnamon. Let cool a minute. Stick to 1 ounce."],"tags":["portion-controlled"],"nutrition":{"cal":185,"protein":4,"satFat":1.7,"sodium":1},"leftovers":"Toast a few 1-ounce portions and store in small containers.","protein":"nuts"},{"id":"s07","name":"Plain Protein Shake","category":"snack","prep":3,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"water","qty":1,"unit":"cup","section":"drinks","key":"water"},{"name":"ice (optional)","qty":0.5,"unit":"cup","section":"drinks","key":"water"},{"name":"ground cinnamon (optional)","qty":0.125,"unit":"tsp","section":"pantry","key":"cinnamon"}],"steps":["Shake or blend the protein powder with water and ice. Add a pinch of cinnamon if you want a little aroma.","This will taste like unsweetened protein, not a milkshake. That is by design."],"tags":["no-cook","shake","high-protein"],"nutrition":{"cal":120,"protein":25,"satFat":0.3,"sodium":140},"leftovers":"Mix fresh. Handy after a workout or when dinner will be late.","protein":"protein-powder"},{"id":"s08","name":"Bell Pepper Strips with Herbed Oil","category":"snack","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"bell pepper, cut into strips","qty":1,"unit":"medium","section":"produce","key":"bell-pepper"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"dried oregano or Italian seasoning","qty":0.25,"unit":"tsp","section":"pantry","key":"oregano"},{"name":"lemon juice","qty":0.5,"unit":"tsp","section":"produce","key":"lemon"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Cut the pepper into strips.","Stir the oil with oregano, lemon, and a tiny pinch of salt. Dip or drizzle lightly — 1 teaspoon of oil is enough."],"tags":["no-cook","high-fiber"],"nutrition":{"cal":80,"protein":1,"satFat":0.6,"sodium":80},"leftovers":"Cut peppers keep 2–3 days in the fridge. Mix the oil when you eat.","protein":"nuts"},{"id":"s09","name":"Measured Mixed Nuts","category":"snack","prep":1,"cook":0,"servings":1,"ingredients":[{"name":"unsalted almonds","qty":0.4,"unit":"oz","section":"nuts","key":"almonds"},{"name":"walnuts","qty":0.3,"unit":"oz","section":"nuts","key":"walnuts"},{"name":"plain unsalted peanuts","qty":0.3,"unit":"oz","section":"nuts","key":"peanuts"}],"steps":["Combine 1 ounce total of unsalted almonds, walnuts, and peanuts. Measure on a scale if you have one; otherwise use a small handful that fits in your cupped palm.","This mix skips macadamias, which are higher in saturated fat. Eat slowly."],"tags":["no-cook","portion-controlled"],"nutrition":{"cal":170,"protein":6,"satFat":1.5,"sodium":5},"leftovers":"Pre-portion 1-ounce bags for the week so you never eat from a large jar.","protein":"nuts"},{"id":"s10","name":"Baked Kale Chips","category":"snack","prep":8,"cook":15,"servings":2,"ingredients":[{"name":"kale, stems removed, torn into pieces","qty":6,"unit":"cups","section":"produce","key":"kale"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic powder","qty":0.25,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Heat the oven to 300°F. Dry the kale well, then toss with oil, garlic powder, and a tiny pinch of salt. Spread in a single layer.","Bake 12–15 minutes until crisp but not browned. They go from done to burned quickly.","Cool and eat. This recipe is two modest servings."],"tags":["high-fiber"],"nutrition":{"cal":80,"protein":3,"satFat":0.6,"sodium":120},"leftovers":"Best the day you bake them. Store in a loosely covered bowl, not a sealed bag, or they soften.","protein":"nuts"},{"id":"s11","name":"Steamed Broccoli with Lemon-Herb Oil","category":"snack","prep":3,"cook":6,"servings":1,"ingredients":[{"name":"broccoli florets","qty":2,"unit":"cups","section":"produce","key":"broccoli"},{"name":"olive oil","qty":1,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"garlic powder","qty":0.125,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Steam the broccoli until tender-crisp, 5–6 minutes.","Toss with the oil, lemon, garlic powder, and pepper. Eat warm."],"tags":["high-fiber"],"nutrition":{"cal":90,"protein":4,"satFat":0.6,"sodium":90},"leftovers":"You can steam a larger batch and dress a single serving when you want it.","protein":"nuts"},{"id":"s12","name":"Cucumber Boats with Turkey-Avocado","category":"snack","prep":10,"cook":0,"servings":1,"ingredients":[{"name":"cucumber, halved and seeded","qty":1,"unit":"medium","section":"produce","key":"cucumber"},{"name":"cooked turkey breast, chopped (not deli meat)","qty":3,"unit":"oz","section":"meat","key":"turkey-breast"},{"name":"avocado","qty":0.25,"unit":"","section":"produce","key":"avocado"},{"name":"lemon juice","qty":1,"unit":"tsp","section":"produce","key":"lemon"},{"name":"fresh herbs (parsley, dill, or chives)","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"}],"steps":["Halve the cucumber lengthwise and scoop out the seeds to make two boats.","Mash the avocado with lemon, herbs, and pepper. Stir in the chopped leftover turkey and fill the boats."],"tags":["no-cook","high-protein"],"nutrition":{"cal":200,"protein":26,"satFat":1.5,"sodium":180},"leftovers":"Fill just before eating so the cucumber stays firm. The turkey mix keeps a day if you add the avocado fresh.","protein":"turkey"},{"id":"s13","name":"Garlic Roasted Mushrooms","category":"snack","prep":5,"cook":18,"servings":2,"ingredients":[{"name":"mushrooms, halved if large","qty":4,"unit":"cups","section":"produce","key":"mushrooms"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"garlic, minced","qty":2,"unit":"cloves","section":"produce","key":"garlic"},{"name":"dried thyme","qty":0.5,"unit":"tsp","section":"pantry","key":"thyme"},{"name":"black pepper","qty":1,"unit":"pinch","section":"pantry","key":"black-pepper"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Heat the oven to 425°F. Toss the mushrooms with oil, garlic, thyme, pepper, and a pinch of salt. Spread on a pan.","Roast 16–18 minutes until browned and the liquid has cooked off. This recipe is two servings — share or save half."],"tags":["high-fiber"],"nutrition":{"cal":80,"protein":4,"satFat":0.6,"sodium":120},"leftovers":"Good warm or cold the next day. A savory snack when you want something warm without much fat.","protein":"nuts"},{"id":"s14","name":"Thick Cinnamon Protein Pudding","category":"snack","prep":3,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"water","qty":4,"unit":"tbsp","section":"drinks","key":"water"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"natural almond butter (no added sugar or oils)","qty":1,"unit":"tsp","section":"nuts","key":"almond-butter"}],"steps":["Stir the protein powder with just enough water to make a thick pudding. Mix in cinnamon and the teaspoon of almond butter.","This is mild and spiced, not sweet. Eat with a spoon."],"tags":["no-cook","shake","high-protein"],"nutrition":{"cal":160,"protein":27,"satFat":1.0,"sodium":150},"leftovers":"Mix fresh. A useful mid-afternoon snack when you need protein, not a pile of nuts.","protein":"protein-powder"},{"id":"s15","name":"Roasted Spiced Brussels Sprouts","category":"snack","prep":6,"cook":20,"servings":2,"ingredients":[{"name":"Brussels sprouts, halved","qty":4,"unit":"cups","section":"produce","key":"brussels-sprouts"},{"name":"olive oil","qty":2,"unit":"tsp","section":"nuts","key":"olive-oil"},{"name":"smoked paprika","qty":0.5,"unit":"tsp","section":"pantry","key":"smoked-paprika"},{"name":"garlic powder","qty":0.25,"unit":"tsp","section":"pantry","key":"garlic-powder"},{"name":"salt","qty":1,"unit":"pinch","section":"pantry","key":"salt"}],"steps":["Heat the oven to 425°F. Toss the sprouts with oil, smoked paprika, garlic powder, and a pinch of salt.","Roast 18–20 minutes until browned and crisp at the edges. Two servings — they disappear fast, so plate your share."],"tags":["high-fiber"],"nutrition":{"cal":110,"protein":5,"satFat":0.7,"sodium":130},"leftovers":"Crispiest fresh from the oven; still good reheated in a hot skillet the next day.","protein":"nuts"},{"id":"s16","name":"Iced Tea & a Few Macadamias","category":"snack","prep":2,"cook":0,"servings":1,"ingredients":[{"name":"unsweetened iced tea","qty":1,"unit":"cup","section":"drinks","key":"tea"},{"name":"unsalted macadamia nuts","qty":0.5,"unit":"oz","section":"nuts","key":"macadamia"}],"steps":["Brew unsweetened tea and pour it over ice, or use unsweetened bottled tea with no added sugar.","Portion 1/2 ounce of macadamias — about 5 or 6 nuts. That smaller portion is on purpose: macadamias are higher in saturated fat than almonds or walnuts."],"tags":["no-cook","portion-controlled"],"nutrition":{"cal":100,"protein":1,"satFat":1.7,"sodium":5},"leftovers":"Keep a 1/2-ounce portion ready so you don't overpour from the jar.","protein":"nuts"},{"id":"e01","name":"Cinnamon Toasted Walnuts","category":"dessert","prep":2,"cook":6,"servings":1,"ingredients":[{"name":"walnuts","qty":1,"unit":"oz","section":"nuts","key":"walnuts"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"ground nutmeg (optional)","qty":1,"unit":"pinch","section":"pantry","key":"nutmeg"}],"steps":["Toast 1 ounce of walnuts in a dry skillet over medium-low heat until fragrant, 4–6 minutes.","Toss with cinnamon and a pinch of nutmeg. Let cool slightly.","Treat-style, not sweet. You get warmth and spice, not dessert-level sweetness. Stick to 1 ounce."],"tags":["treat-style","portion-controlled"],"nutrition":{"cal":185,"protein":4,"satFat":1.7,"sodium":1},"leftovers":"Toast portions ahead. This is a measured treat, not a bowl to graze from.","protein":"nuts","dessertNote":"Treat-style, not sweet. Toasty and spiced only."},{"id":"e02","name":"Avocado Cocoa Mousse","category":"dessert","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"avocado","qty":0.5,"unit":"","section":"produce","key":"avocado"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"unsweetened cocoa powder (optional)","qty":2,"unit":"tsp","section":"pantry","key":"cocoa"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"pure vanilla extract","qty":0.25,"unit":"tsp","section":"pantry","key":"vanilla"},{"name":"water","qty":3,"unit":"tbsp","section":"drinks","key":"water"}],"steps":["Mash or blend the avocado with protein powder, cinnamon, vanilla, and just enough water to make a thick mousse.","Add unsweetened cocoa if you want a chocolate note — it is optional and unsweetened, so the result is cocoa-forward and mild, not a sweet pudding.","Treat-style, not sweet. Chill 10 minutes if you like it colder."],"tags":["treat-style","no-cook","high-protein"],"nutrition":{"cal":250,"protein":27,"satFat":2.0,"sodium":160},"leftovers":"Best within a few hours; avocado can dull in color. Press plastic wrap onto the surface if you refrigerate it.","protein":"protein-powder","dessertNote":"Treat-style, not sweet. Cocoa-forward and mild. Skip the cocoa if you prefer."},{"id":"e03","name":"Peanut Butter Protein Bites","category":"dessert","prep":10,"cook":0,"servings":2,"ingredients":[{"name":"natural peanut butter (unsalted, no added sugar)","qty":2,"unit":"tbsp","section":"nuts","key":"peanut-butter"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"plain unsalted peanuts, chopped","qty":1,"unit":"tsp","section":"nuts","key":"peanuts"},{"name":"pure vanilla extract","qty":0.25,"unit":"tsp","section":"pantry","key":"vanilla"},{"name":"water, as needed","qty":2,"unit":"tsp","section":"drinks","key":"water"}],"steps":["Stir the peanut butter, protein powder, cinnamon, and vanilla. Add water a few drops at a time until the mixture holds together.","Form 4 small bites and press a few chopped peanuts on top. One serving is 2 bites.","Treat-style, not sweet. Nutty and dense, like a savory-leaning protein bite."],"tags":["treat-style","no-cook","high-protein","meal-prep"],"nutrition":{"cal":190,"protein":16,"satFat":2.0,"sodium":120},"leftovers":"Keeps 3–4 days in the fridge. Nutrition is for 2 of the 4 bites.","protein":"protein-powder","dessertNote":"Treat-style, not sweet. Nutty and dense. Serving is 2 bites."},{"id":"e04","name":"Warm Spiced Almonds","category":"dessert","prep":2,"cook":6,"servings":1,"ingredients":[{"name":"unsalted almonds","qty":1,"unit":"oz","section":"nuts","key":"almonds"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"cayenne or smoked paprika (optional)","qty":1,"unit":"pinch","section":"pantry","key":"cayenne"}],"steps":["Toast 1 ounce of almonds in a dry skillet until fragrant, 5–6 minutes.","Toss with cinnamon and, if you like, a tiny pinch of cayenne or smoked paprika for a warm finish.","Treat-style, not sweet. Eat them warm, and stick to the ounce."],"tags":["treat-style","portion-controlled"],"nutrition":{"cal":165,"protein":6,"satFat":1.1,"sodium":5},"leftovers":"Best warm. You can toast a few portions and rewarm briefly.","protein":"nuts","dessertNote":"Treat-style, not sweet. Warm spice, no sugar."},{"id":"e05","name":"No-Bake Cinnamon Nut Stacks","category":"dessert","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"natural almond butter (no added sugar or oils)","qty":1,"unit":"tbsp","section":"nuts","key":"almond-butter"},{"name":"walnuts, chopped","qty":1,"unit":"tbsp","section":"nuts","key":"walnuts"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"tbsp","section":"pantry","key":"protein-powder"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"pure vanilla extract","qty":0.125,"unit":"tsp","section":"pantry","key":"vanilla"}],"steps":["Stir the almond butter, protein powder, cinnamon, and vanilla into a thick paste. Fold in the chopped walnuts.","Press into two small stacks or one small patty. Eat with a fork.","Treat-style, not sweet. More nut shop than bakery."],"tags":["treat-style","no-cook"],"nutrition":{"cal":190,"protein":10,"satFat":1.5,"sodium":80},"leftovers":"Can be chilled for an hour to firm up. Eat the same day.","protein":"nuts","dessertNote":"Treat-style, not sweet. A small nut-and-spice bite."},{"id":"e06","name":"Vanilla-Cinnamon Protein Pudding","category":"dessert","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"water","qty":0.3,"unit":"cup","section":"drinks","key":"water"},{"name":"pure vanilla extract","qty":0.25,"unit":"tsp","section":"pantry","key":"vanilla"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"walnuts, chopped","qty":1,"unit":"tsp","section":"nuts","key":"walnuts"}],"steps":["Stir the protein powder with just enough water to make a thick pudding. Mix in vanilla and cinnamon.","Top with a small sprinkle of walnuts.","Treat-style, not sweet. Mild, spiced, and high in protein — closer to a seasoned pudding than a dessert."],"tags":["treat-style","no-cook","high-protein"],"nutrition":{"cal":150,"protein":26,"satFat":0.6,"sodium":150},"leftovers":"Mix fresh. A better nightly treat if you want protein without another handful of nuts.","protein":"protein-powder","dessertNote":"Treat-style, not sweet. Mild and spiced."},{"id":"e07","name":"Espresso Walnut Bites","category":"dessert","prep":8,"cook":0,"servings":1,"ingredients":[{"name":"walnuts, finely chopped","qty":1,"unit":"oz","section":"nuts","key":"walnuts"},{"name":"strong black coffee, cooled","qty":1,"unit":"tbsp","section":"drinks","key":"coffee"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"tbsp","section":"pantry","key":"protein-powder"},{"name":"ground cinnamon","qty":0.125,"unit":"tsp","section":"pantry","key":"cinnamon"}],"steps":["Stir the chopped walnuts with protein powder, cinnamon, and just enough cooled coffee to hold the mix together.","Press into 3 small bites. Chill 10 minutes if you want them firmer.","Treat-style, not sweet. Coffee and walnut are the whole flavor."],"tags":["treat-style","no-cook"],"nutrition":{"cal":210,"protein":10,"satFat":1.7,"sodium":70},"leftovers":"Keep a day in the fridge. Use leftover morning coffee.","protein":"nuts","dessertNote":"Treat-style, not sweet. Coffee-and-walnut flavor only."},{"id":"e08","name":"Frozen Cocoa-Peanut Butter Bites","category":"dessert","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"natural peanut butter (unsalted, no added sugar)","qty":1,"unit":"tbsp","section":"nuts","key":"peanut-butter"},{"name":"unsweetened cocoa powder (optional)","qty":1,"unit":"tsp","section":"pantry","key":"cocoa"},{"name":"ground cinnamon","qty":0.125,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":1,"unit":"tsp","section":"pantry","key":"protein-powder"}],"steps":["Stir the peanut butter with cinnamon, protein powder, and optional unsweetened cocoa. Form two small mounds on a parchment-lined plate.","Freeze about 30 minutes, until firm. Active time is only a few minutes.","Treat-style, not sweet. The freezer gives them a candy-like bite without any sweetener. Skip the cocoa if you don't keep it around."],"tags":["treat-style","no-cook","portion-controlled"],"nutrition":{"cal":110,"protein":6,"satFat":1.5,"sodium":50},"leftovers":"Keep frozen and eat straight from the freezer. Don't leave them out or they soften.","protein":"nuts","dessertNote":"Treat-style, not sweet. Optional unsweetened cocoa only."},{"id":"e09","name":"Mint Cocoa Almond Mash","category":"dessert","prep":5,"cook":0,"servings":1,"ingredients":[{"name":"natural almond butter (no added sugar or oils)","qty":1,"unit":"tbsp","section":"nuts","key":"almond-butter"},{"name":"unsweetened cocoa powder (optional)","qty":1,"unit":"tsp","section":"pantry","key":"cocoa"},{"name":"fresh mint leaves, finely chopped","qty":1,"unit":"tsp","section":"produce","key":"fresh-herbs"},{"name":"pure vanilla extract","qty":1,"unit":"drop","section":"pantry","key":"vanilla"}],"steps":["Stir the almond butter with optional cocoa, chopped fresh mint, and a drop of vanilla.","Eat with a spoon, slowly.","Treat-style, not sweet. Fresh mint is the lift; there is no mint candy flavor here."],"tags":["treat-style","no-cook","portion-controlled"],"nutrition":{"cal":110,"protein":3,"satFat":1.0,"sodium":40},"leftovers":"Mix fresh so the mint stays bright. One tablespoon of almond butter is the whole serving.","protein":"nuts","dessertNote":"Treat-style, not sweet. Fresh mint, optional unsweetened cocoa."},{"id":"e10","name":"Warm Walnut-Cinnamon Skillet Crumble","category":"dessert","prep":3,"cook":4,"servings":1,"ingredients":[{"name":"walnuts, chopped","qty":1,"unit":"oz","section":"nuts","key":"walnuts"},{"name":"clean unsweetened protein powder (Previnex or similar)","qty":0.5,"unit":"scoop","section":"pantry","key":"protein-powder"},{"name":"water","qty":2,"unit":"tbsp","section":"drinks","key":"water"},{"name":"ground cinnamon","qty":0.25,"unit":"tsp","section":"pantry","key":"cinnamon"},{"name":"ground nutmeg (optional)","qty":1,"unit":"pinch","section":"pantry","key":"nutmeg"}],"steps":["Stir the protein powder with a little water and cinnamon to make a thick dollop. Spoon into a small bowl.","Warm the chopped walnuts in a dry skillet with the remaining cinnamon and a pinch of nutmeg, 2–3 minutes, until fragrant.","Scatter the warm walnuts over the pudding. Treat-style, not sweet — a warm crumble without a sugary filling."],"tags":["treat-style","high-protein"],"nutrition":{"cal":245,"protein":16,"satFat":1.9,"sodium":80},"leftovers":"Toast the walnuts fresh. The pudding can be mixed while the pan heats.","protein":"protein-powder","dessertNote":"Treat-style, not sweet. Warm spice over a mild protein pudding."}];</script>
+  <script>/* Heart-Healthy Meals — client app. Recipe data is injected as window.RECIPES. */
+(function () {
+  "use strict";
+
+  const RECIPES = window.RECIPES;
+  const BY_ID = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
+  const STORAGE_KEY = "hhm-v1";
+  const DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+  const DAY_LABELS = { mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday", sun: "Sunday" };
+  const DAY_SHORT = { mon: "Mon", tue: "Tue", wed: "Wed", thu: "Thu", fri: "Fri", sat: "Sat", sun: "Sun" };
+  const MEALS = ["breakfast", "lunch", "dinner", "snack", "dessert"];
+  const MEAL_LABELS = { breakfast: "Breakfast", lunch: "Lunch", dinner: "Dinner", snack: "Snack", dessert: "Dessert" };
+  const SECTION_ORDER = ["meat", "produce", "nuts", "pantry", "drinks"];
+  const SECTION_LABELS = {
+    meat: "Meat & Seafood",
+    produce: "Produce",
+    nuts: "Nuts & Oils",
+    pantry: "Pantry / Spices",
+    drinks: "Drinks",
+  };
+  const PROTEIN_LABELS = {
+    chicken: "Chicken",
+    turkey: "Turkey",
+    salmon: "Salmon",
+    trout: "Trout",
+    "white-fish": "White fish",
+    shrimp: "Shrimp",
+    shellfish: "Shellfish",
+    beef: "Lean beef",
+    bison: "Bison",
+    pork: "Pork",
+    "protein-powder": "Protein powder",
+    nuts: "Nuts / nut butter",
+  };
+  const SEASONING_KEYS = new Set([
+    "salt", "black-pepper", "cinnamon", "smoked-paprika", "paprika", "oregano", "thyme",
+    "rosemary", "cumin", "turmeric", "garlic-powder", "onion-powder", "mustard-powder",
+    "crushed-red-pepper", "dill", "chili-powder", "caraway", "nutmeg", "cayenne", "vanilla",
+    "vinegar", "lemon", "lime", "water", "coffee", "tea",
+  ]);
+  const SPICE_RACK_KEYS = new Set([
+    "salt", "black-pepper", "cinnamon", "smoked-paprika", "paprika", "oregano", "thyme",
+    "rosemary", "cumin", "turmeric", "garlic-powder", "onion-powder", "mustard-powder",
+    "crushed-red-pepper", "dill", "chili-powder", "caraway", "nutmeg", "cayenne",
+  ]);
+  const SKIP_SHOP = new Set(["water"]);
+  const TARGETS = { proteinMin: 90, satFatWarn: 15, satFatHigh: 20, sodiumWarn: 1500, sodiumHigh: 2300 };
+  const WATER_GOAL = 8;
+
+  const PANTRY_CATALOG = [
+    { group: "Proteins", items: [
+      ["chicken-breast", "Chicken breast"],
+      ["chicken-thigh", "Chicken thighs (skinless)"],
+      ["turkey-breast", "Turkey breast"],
+      ["ground-turkey", "Ground turkey"],
+      ["salmon", "Salmon"],
+      ["trout", "Rainbow trout"],
+      ["cod", "Cod"],
+      ["haddock", "Haddock"],
+      ["shrimp", "Shrimp"],
+      ["scallops", "Scallops"],
+      ["lean-beef", "Lean beef"],
+      ["bison", "Bison"],
+      ["pork-tenderloin", "Pork tenderloin"],
+      ["protein-powder", "Protein powder (Previnex or similar)"],
+    ]},
+    { group: "Vegetables", items: [
+      ["brussels-sprouts", "Brussels sprouts"],
+      ["broccoli", "Broccoli"],
+      ["cauliflower", "Cauliflower"],
+      ["spinach", "Spinach"],
+      ["kale", "Kale"],
+      ["leafy-greens", "Mixed leafy greens / lettuce"],
+      ["asparagus", "Asparagus"],
+      ["green-beans", "Green beans"],
+      ["zucchini", "Zucchini"],
+      ["cucumber", "Cucumber"],
+      ["bell-pepper", "Bell peppers"],
+      ["onion", "Onions"],
+      ["garlic", "Garlic"],
+      ["mushrooms", "Mushrooms"],
+      ["cabbage", "Cabbage"],
+    ]},
+    { group: "Fats & extras", items: [
+      ["olive-oil", "Olive oil"],
+      ["avocado", "Avocado"],
+      ["almonds", "Almonds"],
+      ["walnuts", "Walnuts"],
+      ["macadamia", "Macadamia nuts"],
+      ["peanuts", "Peanuts"],
+      ["almond-butter", "Natural almond butter"],
+      ["peanut-butter", "Natural peanut butter"],
+      ["cocoa", "Unsweetened cocoa powder"],
+      ["fresh-herbs", "Fresh herbs"],
+      ["ginger", "Fresh ginger"],
+    ]},
+  ];
+
+  function esc(s) {
+    return String(s ?? "").replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+    }[c]));
+  }
+
+  function emptyPlan() {
+    const plan = {};
+    DAYS.forEach((d) => {
+      plan[d] = {};
+      MEALS.forEach((m) => { plan[d][m] = null; });
+    });
+    return plan;
+  }
+
+  function defaultState() {
+    return {
+      favorites: [],
+      plan: emptyPlan(),
+      shopChecked: {},
+      shopCustom: [],
+      pantry: {},
+      haveSeasonings: true,
+      water: {},
+      welcomeDismissed: false,
+    };
+  }
+
+  function loadState() {
+    const base = defaultState();
+    try {
+      const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      const merged = { ...base, ...raw };
+      merged.plan = emptyPlan();
+      if (raw.plan) {
+        DAYS.forEach((d) => {
+          MEALS.forEach((m) => {
+            const slot = raw.plan[d] && raw.plan[d][m];
+            if (slot && slot.id && BY_ID[slot.id]) merged.plan[d][m] = { id: slot.id, servings: slot.servings || 1 };
+          });
+        });
+      }
+      merged.favorites = (raw.favorites || []).filter((id) => BY_ID[id]);
+      merged.shopCustom = Array.isArray(raw.shopCustom) ? raw.shopCustom : [];
+      merged.shopChecked = raw.shopChecked && typeof raw.shopChecked === "object" ? raw.shopChecked : {};
+      merged.pantry = raw.pantry && typeof raw.pantry === "object" ? raw.pantry : {};
+      merged.water = raw.water && typeof raw.water === "object" ? raw.water : {};
+      return merged;
+    } catch (e) {
+      return base;
+    }
+  }
+
+  function saveState() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore quota */ }
+  }
+
+  let state = loadState();
+  let ui = {
+    view: "recipes",
+    category: "all",
+    query: "",
+    protein: "",
+    time: "",
+    tag: "",
+    favOnly: false,
+    detailId: null,
+    detailServings: 1,
+    picker: null,
+    cook: null,
+    cookStep: 0,
+    wakeLock: null,
+    matchMode: "now",
+    drag: null,
+  };
+
+  function totalTime(r) { return (r.prep || 0) + (r.cook || 0); }
+
+  function formatTime(r) {
+    const t = totalTime(r);
+    if (r.cook && r.prep) return `${t} min (${r.prep} prep + ${r.cook} cook)`;
+    if (r.cook) return `${t} min`;
+    return `${t} min · no cook`;
+  }
+
+  function toFrac(n) {
+    if (n == null || Number.isNaN(n)) return "";
+    const sign = n < 0 ? "-" : "";
+    n = Math.abs(n);
+    const whole = Math.floor(n + 1e-9);
+    const rem = n - whole;
+    const table = [
+      [0, ""], [1 / 8, "⅛"], [1 / 6, "⅙"], [1 / 5, "⅕"], [1 / 4, "¼"], [1 / 3, "⅓"],
+      [3 / 8, "⅜"], [2 / 5, "⅖"], [1 / 2, "½"], [3 / 5, "⅗"], [5 / 8, "⅝"], [2 / 3, "⅔"],
+      [3 / 4, "¾"], [4 / 5, "⅘"], [5 / 6, "⅚"], [7 / 8, "⅞"],
+    ];
+    let best = "", bestDiff = 0.04;
+    if (rem < 0.04) return sign + String(whole || "0").replace(/^0$/, "0");
+    if (1 - rem < 0.04) return sign + String(whole + 1);
+    table.forEach(([v, s]) => {
+      const d = Math.abs(rem - v);
+      if (d < bestDiff) { bestDiff = d; best = s; }
+    });
+    if (!best) {
+      const rounded = Math.round(n * 100) / 100;
+      return sign + String(rounded);
+    }
+    return sign + (whole ? whole + best : best);
+  }
+
+  function pluralUnit(qty, unit) {
+    if (!unit) return "";
+    const u = unit;
+    const plural = qty > 1.04;
+    if (!plural) {
+      if (u === "cups") return "cup";
+      if (u === "cloves") return "clove";
+      if (u === "leaves") return "leaf";
+      if (u === "scoops") return "scoop";
+      if (u === "pinches") return "pinch";
+      return u;
+    }
+    if (u === "cup") return "cups";
+    if (u === "clove") return "cloves";
+    if (u === "leaf") return "leaves";
+    if (u === "scoop") return "scoops";
+    if (u === "pinch") return "pinches";
+    return u;
+  }
+
+  function formatQty(qty, unit) {
+    const q = toFrac(qty);
+    const u = pluralUnit(qty, unit);
+    return u ? `${q} ${u}` : q;
+  }
+
+  function todayKey() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${y}-${m}-${day}`;
+  }
+
+  function todayDow() {
+    return ["sun", "mon", "tue", "wed", "thu", "fri", "sat"][new Date().getDay()];
+  }
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function isFav(id) { return state.favorites.includes(id); }
+
+  function toggleFav(id, ev) {
+    if (ev) ev.stopPropagation();
+    if (isFav(id)) state.favorites = state.favorites.filter((x) => x !== id);
+    else state.favorites.push(id);
+    saveState();
+    render();
+  }
+
+  function scaledNutrition(r, servings) {
+    const f = servings / r.servings;
+    return {
+      cal: Math.round(r.nutrition.cal * f),
+      protein: Math.round(r.nutrition.protein * f),
+      satFat: Math.round(r.nutrition.satFat * f * 10) / 10,
+      sodium: Math.round(r.nutrition.sodium * f),
+    };
+  }
+
+  function dayTotals(day) {
+    const t = { cal: 0, protein: 0, satFat: 0, sodium: 0, count: 0 };
+    MEALS.forEach((m) => {
+      const slot = state.plan[day][m];
+      if (!slot || !BY_ID[slot.id]) return;
+      const n = scaledNutrition(BY_ID[slot.id], slot.servings);
+      t.cal += n.cal; t.protein += n.protein; t.satFat += n.satFat; t.sodium += n.sodium; t.count++;
+    });
+    t.satFat = Math.round(t.satFat * 10) / 10;
+    return t;
+  }
+
+  function toneSat(v) { return v > TARGETS.satFatHigh ? "alert" : v > TARGETS.satFatWarn ? "warn" : "ok"; }
+  function toneNa(v) { return v > TARGETS.sodiumHigh ? "alert" : v > TARGETS.sodiumWarn ? "warn" : "ok"; }
+  function tonePro(v) { return v >= TARGETS.proteinMin ? "ok" : "warn"; }
+
+  function filteredRecipes() {
+    const q = ui.query.trim().toLowerCase();
+    return RECIPES.filter((r) => {
+      if (ui.category !== "all" && r.category !== ui.category) return false;
+      if (ui.favOnly && !isFav(r.id)) return false;
+      if (ui.protein && r.protein !== ui.protein) return false;
+      if (ui.time && totalTime(r) > Number(ui.time)) return false;
+      if (ui.tag && !r.tags.includes(ui.tag)) return false;
+      if (q) {
+        const blob = [r.name, r.category, r.protein, r.leftovers, r.dessertNote, ...(r.tags || []), ...(r.steps || []), ...r.ingredients.map((i) => i.name)].join(" ").toLowerCase();
+        if (!blob.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  function setSlot(day, meal, recipeId, servings) {
+    if (!recipeId) state.plan[day][meal] = null;
+    else {
+      const r = BY_ID[recipeId];
+      state.plan[day][meal] = { id: recipeId, servings: servings || 1 };
+    }
+    saveState();
+  }
+
+  function autoFillWeek() {
+    const used = new Set();
+    const plan = emptyPlan();
+    const fatty = (r) => r.protein === "salmon" || r.protein === "trout";
+    const red = (r) => r.protein === "beef" || r.protein === "bison";
+
+    function pick(cat, pred) {
+      let pool = RECIPES.filter((r) => r.category === cat && !used.has(r.id) && (!pred || pred(r)));
+      if (!pool.length) pool = RECIPES.filter((r) => r.category === cat && !used.has(r.id));
+      if (!pool.length) pool = RECIPES.filter((r) => r.category === cat);
+      if (!pool.length) return null;
+      const r = pool[Math.floor(Math.random() * pool.length)];
+      used.add(r.id);
+      return r;
+    }
+
+    const fishDays = shuffle(DAYS).slice(0, 3);
+    const leftoverDays = DAYS.filter((d) => !fishDays.includes(d));
+    const redCount = Math.random() < 0.55 ? 2 : 1;
+    const redDays = shuffle(leftoverDays).slice(0, redCount);
+    const shakeDays = new Set(shuffle(DAYS).slice(0, 2));
+    const dessertDays = new Set(shuffle(DAYS).slice(0, 2));
+    const prevDinner = { protein: null };
+
+    DAYS.forEach((day) => {
+      const bPred = shakeDays.has(day)
+        ? (r) => r.protein === "protein-powder"
+        : (r) => r.protein !== "protein-powder";
+      const breakfast = pick("breakfast", bPred);
+
+      let lunchPred = (r) => !red(r) && !fatty(r);
+      let dinnerPred = (r) => !red(r) && !fatty(r) && r.protein !== prevDinner.protein;
+
+      if (fishDays.includes(day)) {
+        dinnerPred = (r) => fatty(r);
+        lunchPred = (r) => !red(r) && !fatty(r);
+      } else if (redDays.includes(day)) {
+        dinnerPred = (r) => red(r);
+        lunchPred = (r) => !red(r) && !fatty(r);
+      }
+
+      let dinner = pick("dinner", dinnerPred);
+      let lunch = pick("lunch", lunchPred);
+
+      if (lunch && dinner && lunch.protein === dinner.protein) {
+        const alt = pick("lunch", (r) => r.protein !== dinner.protein && !red(r));
+        if (alt) lunch = alt;
+      }
+
+      const snack = pick("snack");
+      const dessert = dessertDays.has(day) ? pick("dessert") : null;
+
+      const put = (meal, rec) => {
+        if (rec) plan[day][meal] = { id: rec.id, servings: 1 };
+      };
+      put("breakfast", breakfast);
+      put("lunch", lunch);
+      put("dinner", dinner);
+      put("snack", snack);
+      put("dessert", dessert);
+      prevDinner.protein = dinner ? dinner.protein : null;
+    });
+
+    state.plan = plan;
+    state.shopChecked = {};
+    saveState();
+  }
+
+  function tspOf(ing, scale) {
+    const q = ing.qty * scale;
+    const u = (ing.unit || "").toLowerCase();
+    if (u === "tsp") return q;
+    if (u === "tbsp") return q * 3;
+    if (u === "cup" || u === "cups") return q * 48;
+    return null;
+  }
+
+  function shoppingList() {
+    const buy = new Map();
+    const spices = new Set();
+    function add(key, name, qty, unit, section) {
+      const k = key + "|" + (unit || "") + "|" + section;
+      const cur = buy.get(k);
+      if (cur) cur.qty += qty;
+      else buy.set(k, { key, name, qty, unit: unit || "", section });
+    }
+
+    DAYS.forEach((d) => {
+      MEALS.forEach((m) => {
+        const slot = state.plan[d][m];
+        if (!slot || !BY_ID[slot.id]) return;
+        const r = BY_ID[slot.id];
+        const scale = slot.servings / r.servings;
+        r.ingredients.forEach((ing) => {
+          if (SKIP_SHOP.has(ing.key)) return;
+          if (SPICE_RACK_KEYS.has(ing.key)) {
+            spices.add(ing.name.replace(/,.*$/, "").replace(/\s*\(.*?\)\s*/g, "").trim());
+            return;
+          }
+          add(ing.key, ing.name, ing.qty * scale, ing.unit, ing.section);
+        });
+      });
+    });
+
+    state.shopCustom.forEach((c) => {
+      add("custom-" + c.id, c.name, c.qty || 1, c.unit || "", c.section || "pantry");
+    });
+
+    const groups = {};
+    SECTION_ORDER.forEach((s) => { groups[s] = []; });
+    buy.forEach((item) => {
+      const sec = groups[item.section] ? item.section : "pantry";
+      groups[sec].push(item);
+    });
+    SECTION_ORDER.forEach((s) => {
+      groups[s].sort((a, b) => a.name.localeCompare(b.name));
+    });
+    return { groups, spices: [...spices].sort() };
+  }
+
+  function shopKey(item) {
+    return item.key + "|" + item.unit + "|" + item.section + "|" + item.name;
+  }
+
+  function listMatches() {
+    const have = new Set(Object.keys(state.pantry).filter((k) => state.pantry[k]));
+    function missingKeys(r) {
+      const miss = [];
+      r.ingredients.forEach((ing) => {
+        if (SKIP_SHOP.has(ing.key)) return;
+        if (state.haveSeasonings && SEASONING_KEYS.has(ing.key)) return;
+        if (!have.has(ing.key)) miss.push(ing.key);
+      });
+      return [...new Set(miss)];
+    }
+    const now = [];
+    const almost = [];
+    RECIPES.forEach((r) => {
+      const miss = missingKeys(r);
+      if (miss.length === 0) now.push(r);
+      else if (miss.length === 1) almost.push({ r, miss });
+    });
+    return { now, almost };
+  }
+
+  /* ---------- render ---------- */
+  function render() {
+    document.querySelectorAll("nav.tabs button").forEach((b) => {
+      b.setAttribute("aria-selected", b.dataset.view === ui.view ? "true" : "false");
+    });
+    document.querySelectorAll("main > .view").forEach((v) => {
+      v.classList.toggle("on", v.id === "view-" + ui.view);
+    });
+    const welcome = document.getElementById("welcome");
+    if (welcome) welcome.hidden = !!state.welcomeDismissed;
+
+    if (ui.view === "recipes") renderRecipes();
+    if (ui.view === "plan") renderPlan();
+    if (ui.view === "shop") renderShop();
+    if (ui.view === "hand") renderHand();
+    renderDetail();
+    renderCook();
+    renderWater();
+  }
+
+  function nutLine(n) {
+    return `<span>${n.cal} cal</span><span>${n.protein}g protein</span><span>${n.satFat}g sat fat</span><span>${n.sodium}mg sodium</span>`;
+  }
+
+  function tagHtml(r) {
+    return r.tags.map((t) => `<span class="tag ${esc(t)}">${esc(t.replace(/-/g, " "))}</span>`).join("");
+  }
+
+  function cardHtml(r) {
+    const heart = isFav(r.id) ? "♥" : "♡";
+    return `<button type="button" class="card" data-open="${esc(r.id)}" draggable="true">
+      <div class="top">
+        <h3>${esc(r.name)}</h3>
+        <button type="button" class="fav ${isFav(r.id) ? "on" : ""}" data-fav="${esc(r.id)}" aria-label="${isFav(r.id) ? "Remove from favorites" : "Add to favorites"}">${heart}</button>
+      </div>
+      <div class="meta"><span>${esc(MEAL_LABELS[r.category])}</span><span>${totalTime(r)} min</span><span>${esc(PROTEIN_LABELS[r.protein] || r.protein)}</span><span>${r.servings} serving${r.servings > 1 ? "s" : ""}</span></div>
+      <div class="macros">${nutLine(r.nutrition)}</div>
+      <div class="tags">${tagHtml(r)}</div>
+    </button>`;
+  }
+
+  function renderRecipes() {
+    const list = filteredRecipes();
+    document.getElementById("recipe-count").textContent = `${list.length} recipe${list.length === 1 ? "" : "s"}`;
+    document.querySelectorAll(".subtabs .chip").forEach((c) => c.classList.toggle("on", c.dataset.cat === ui.category));
+    document.getElementById("filter-protein").value = ui.protein;
+    document.getElementById("filter-time").value = ui.time;
+    document.getElementById("filter-tag").value = ui.tag;
+    document.getElementById("filter-fav").classList.toggle("on", ui.favOnly);
+    document.getElementById("recipe-search").value = ui.query;
+    const grid = document.getElementById("recipe-grid");
+    grid.innerHTML = list.length ? list.map(cardHtml).join("") : `<p class="empty">No recipes match those filters. Clear a filter or try another search.</p>`;
+  }
+
+  function renderPlan() {
+    const today = todayDow();
+    const root = document.getElementById("week");
+    root.innerHTML = DAYS.map((d) => {
+      const t = dayTotals(d);
+      const slots = MEALS.map((m) => {
+        const slot = state.plan[d][m];
+        const r = slot && BY_ID[slot.id];
+        if (!r) {
+          return `<div class="slot" data-day="${d}" data-meal="${m}">
+            <div class="label">${esc(MEAL_LABELS[m])}</div>
+            <button type="button" class="ghost-slot" data-pick="${d}:${m}">Add a recipe</button>
+          </div>`;
+        }
+        return `<div class="slot filled" data-day="${d}" data-meal="${m}" draggable="true">
+          <div class="row">
+            <div>
+              <div class="label">${esc(MEAL_LABELS[m])}</div>
+              <div class="name">${esc(r.name)}</div>
+              <div class="meta" style="margin-top:2px">${totalTime(r)} min · ${esc(formatQty(slot.servings, slot.servings === 1 ? "serving" : "servings"))}</div>
+            </div>
+            <div>
+              <button type="button" class="tiny" data-open="${esc(r.id)}" title="Open">ⓘ</button>
+              <button type="button" class="tiny" data-pick="${d}:${m}" title="Change">↔</button>
+              <button type="button" class="tiny" data-clear="${d}:${m}" title="Remove">×</button>
+            </div>
+          </div>
+        </div>`;
+      }).join("");
+      const totals = t.count ? `<div class="totals">
+        ${t.cal} cal
+        · protein <b class="${tonePro(t.protein)}">${t.protein}g</b>
+        · sat fat <b class="${toneSat(t.satFat)}">${t.satFat}g</b>
+        · sodium <b class="${toneNa(t.sodium)}">${t.sodium}mg</b>
+      </div>` : `<div class="totals">No meals planned</div>`;
+      return `<article class="day ${d === today ? "today" : ""}">
+        <h3><span>${esc(DAY_SHORT[d])}${d === today ? " · today" : ""}</span></h3>
+        ${slots}${totals}
+      </article>`;
+    }).join("");
+  }
+
+  function renderWater() {
+    const key = todayKey();
+    const n = state.water[key] || 0;
+    const el = document.getElementById("water-track");
+    if (!el) return;
+    const drops = Array.from({ length: WATER_GOAL }, (_, i) =>
+      `<button type="button" class="drop ${i < n ? "on" : ""}" data-water="${i + 1}" aria-label="${i + 1} of ${WATER_GOAL} glasses">${i < n ? "●" : "○"}</button>`
+    ).join("");
+    el.innerHTML = `<span>Water today</span>${drops}<span>${n}/${WATER_GOAL}</span>`;
+  }
+
+  function renderShop() {
+    const { groups, spices } = shoppingList();
+    const hasPlan = DAYS.some((d) => MEALS.some((m) => state.plan[d][m]));
+    const box = document.getElementById("shop-list");
+    if (!hasPlan && !state.shopCustom.length) {
+      box.innerHTML = `<p class="empty">Plan a week first, and the shopping list will build itself from those recipes. You can also add items by hand below.</p>`;
+      return;
+    }
+    let html = "";
+    SECTION_ORDER.forEach((sec) => {
+      const items = groups[sec] || [];
+      if (!items.length) return;
+      html += `<div class="section"><h3>${esc(SECTION_LABELS[sec])}</h3>`;
+      items.forEach((item) => {
+        const k = shopKey(item);
+        const checked = !!state.shopChecked[k];
+        const qty = item.key.startsWith("custom-") && !item.unit ? "" : formatQty(item.qty, item.unit);
+        html += `<div class="shop-item ${checked ? "checked" : ""}">
+          <input type="checkbox" id="s-${esc(k)}" data-shop="${esc(k)}" ${checked ? "checked" : ""}>
+          <label for="s-${esc(k)}">${qty ? `<strong>${esc(qty)}</strong> ` : ""}${esc(item.name)}</label>
+          ${item.key.startsWith("custom-") ? `<button type="button" class="tiny" data-del-custom="${esc(item.key.slice(7))}">×</button>` : ""}
+        </div>`;
+      });
+      html += `</div>`;
+    });
+    if (spices.length) {
+      const k = "spices|rack|pantry";
+      const checked = !!state.shopChecked[k];
+      html += `<div class="section"><h3>Spice rack</h3>
+        <div class="shop-item ${checked ? "checked" : ""}">
+          <input type="checkbox" id="s-${esc(k)}" data-shop="${esc(k)}" ${checked ? "checked" : ""}>
+          <label for="s-${esc(k)}">Check that you have: ${esc(spices.join(", "))} <em>(salt, if you use it, stays in moderation)</em></label>
+        </div></div>`;
+    }
+    box.innerHTML = html || `<p class="empty">Nothing to buy yet.</p>`;
+  }
+
+  function shopText() {
+    const { groups, spices } = shoppingList();
+    const lines = ["Heart-Healthy Meals — shopping list", ""];
+    SECTION_ORDER.forEach((sec) => {
+      const items = groups[sec] || [];
+      if (!items.length) return;
+      lines.push(SECTION_LABELS[sec].toUpperCase());
+      items.forEach((item) => {
+        const mark = state.shopChecked[shopKey(item)] ? "[x]" : "[ ]";
+        const qty = item.key.startsWith("custom-") && !item.unit ? "" : formatQty(item.qty, item.unit) + " ";
+        lines.push(`${mark} ${qty}${item.name}`);
+      });
+      lines.push("");
+    });
+    if (spices.length) {
+      lines.push("SPICE RACK");
+      lines.push(`${state.shopChecked["spices|rack|pantry"] ? "[x]" : "[ ]"} ${spices.join(", ")}`);
+      lines.push("");
+    }
+    return lines.join("\n").trim();
+  }
+
+  function renderHand() {
+    const cat = document.getElementById("pantry-groups");
+    cat.innerHTML = PANTRY_CATALOG.map((g) => {
+      const checks = g.items.map(([key, label]) => {
+        const on = !!state.pantry[key];
+        return `<label><input type="checkbox" data-pantry="${esc(key)}" ${on ? "checked" : ""}> ${esc(label)}</label>`;
+      }).join("");
+      return `<div class="group"><h3>${esc(g.group)}</h3><div class="checks">${checks}</div></div>`;
+    }).join("");
+    document.getElementById("have-seasonings").checked = !!state.haveSeasonings;
+    const { now, almost } = listMatches();
+    const grid = document.getElementById("match-grid");
+    const head = document.getElementById("match-head");
+    if (ui.matchMode === "almost") {
+      head.textContent = `${almost.length} recipe${almost.length === 1 ? "" : "s"} missing just one ingredient`;
+      grid.innerHTML = almost.length
+        ? almost.map(({ r, miss }) => {
+            const label = pantryLabel(miss[0]);
+            return cardHtml(r).replace("</div>\n      <div class=\"tags\">", `</div><div class="meta">Missing: ${esc(label)}</div><div class="tags">`);
+          }).join("")
+        : `<p class="empty">No almost-matches. Tick a few more ingredients, or look at “I can make now.”</p>`;
+      // simpler missing note prepended after the fact:
+      grid.innerHTML = almost.length
+        ? almost.map(({ r, miss }) => `<div>${cardHtml(r)}<p class="est" style="margin:4px 4px 12px">Missing: ${esc(pantryLabel(miss[0]))}</p></div>`).join("")
+        : `<p class="empty">No almost-matches. Tick a few more ingredients, or look at “I can make now.”</p>`;
+    } else {
+      head.textContent = `${now.length} recipe${now.length === 1 ? "" : "s"} you can make now`;
+      grid.innerHTML = now.length ? now.map(cardHtml).join("") : `<p class="empty">Tick the foods you have on hand. Recipes that only need those foods — plus basic seasonings, if you checked that box — will show up here.</p>`;
+    }
+    document.getElementById("match-now").classList.toggle("on", ui.matchMode === "now");
+    document.getElementById("match-almost").classList.toggle("on", ui.matchMode === "almost");
+  }
+
+  function pantryLabel(key) {
+    for (const g of PANTRY_CATALOG) {
+      const hit = g.items.find(([k]) => k === key);
+      if (hit) return hit[1];
+    }
+    return key;
+  }
+
+  function renderDetail() {
+    const overlay = document.getElementById("detail");
+    const r = ui.detailId && BY_ID[ui.detailId];
+    if (!r) { overlay.classList.remove("on"); overlay.setAttribute("aria-hidden", "true"); return; }
+    overlay.classList.add("on");
+    overlay.setAttribute("aria-hidden", "false");
+    const serv = ui.detailServings;
+    const n = scaledNutrition(r, serv);
+    const scale = serv / r.servings;
+    const ings = r.ingredients.map((i) =>
+      `<li><span class="qty">${esc(formatQty(i.qty * scale, i.unit))}</span><span>${esc(i.name)}</span></li>`
+    ).join("");
+    const steps = r.steps.map((s) => `<li>${esc(s)}</li>`).join("");
+    const dessert = r.dessertNote ? `<div class="callout warn">${esc(r.dessertNote)}</div>` : "";
+    document.getElementById("detail-body").innerHTML = `
+      <header class="mh">
+        <div>
+          <div class="meta">${esc(MEAL_LABELS[r.category])} · ${esc(formatTime(r))} · ${esc(PROTEIN_LABELS[r.protein] || r.protein)}</div>
+          <h2>${esc(r.name)}</h2>
+        </div>
+        <button type="button" class="icon-btn" data-close-detail aria-label="Close">×</button>
+      </header>
+      <div class="tags">${tagHtml(r)}</div>
+      ${dessert}
+      <div class="actions">
+        <div class="servings">
+          <button type="button" data-serv="-1" aria-label="Fewer servings">−</button>
+          <span>${esc(formatQty(serv, serv === 1 ? "serving" : "servings"))}</span>
+          <button type="button" data-serv="1" aria-label="More servings">+</button>
+        </div>
+        <button type="button" class="btn secondary fav ${isFav(r.id) ? "on" : ""}" data-fav="${esc(r.id)}">${isFav(r.id) ? "♥ Favorited" : "♡ Favorite"}</button>
+        <button type="button" class="btn secondary" data-add-plan="${esc(r.id)}">Add to plan</button>
+        <button type="button" class="btn" data-cook="${esc(r.id)}">Cook mode</button>
+      </div>
+      <div class="macros">${nutLine(n)}</div>
+      <p class="est">Nutrition is an estimate per the servings shown, not a lab analysis. Sodium assumes modest added salt.</p>
+      <h3>Ingredients</h3>
+      <ul class="ingredients">${ings}</ul>
+      <h3>Steps</h3>
+      <ol class="steps">${steps}</ol>
+      <div class="note"><strong>Leftovers.</strong> ${esc(r.leftovers)}</div>
+    `;
+  }
+
+  function renderCook() {
+    const el = document.getElementById("cook");
+    const rec = ui.cook && BY_ID[ui.cook.id];
+    if (!rec) {
+      el.classList.remove("on");
+      releaseWake();
+      return;
+    }
+    el.classList.add("on");
+    const step = rec.steps[ui.cookStep] || "";
+    const n = rec.steps.length;
+    document.getElementById("cook-title").textContent = rec.name;
+    document.getElementById("cook-progress").textContent = `Step ${ui.cookStep + 1} of ${n} · ${formatQty(ui.cook.servings, ui.cook.servings === 1 ? "serving" : "servings")}`;
+    document.getElementById("cook-step").textContent = step;
+    document.getElementById("cook-prev").disabled = ui.cookStep <= 0;
+    document.getElementById("cook-next").textContent = ui.cookStep >= n - 1 ? "Done" : "Next";
+    const wake = document.getElementById("cook-wake");
+    wake.textContent = ui.wakeLock ? "Screen will stay on while this is open." : ("wakeLock" in navigator ? "Couldn't keep the screen on — check your browser settings." : "This browser can't keep the screen awake; lock-screen timeout still applies.");
+  }
+
+  async function requestWake() {
+    releaseWake();
+    try {
+      if ("wakeLock" in navigator) {
+        ui.wakeLock = await navigator.wakeLock.request("screen");
+        ui.wakeLock.addEventListener("release", () => { ui.wakeLock = null; renderCook(); });
+      }
+    } catch (e) { ui.wakeLock = null; }
+  }
+  function releaseWake() {
+    if (ui.wakeLock) {
+      try { ui.wakeLock.release(); } catch (e) {}
+      ui.wakeLock = null;
+    }
+  }
+
+  function openDetail(id, servings) {
+    const r = BY_ID[id];
+    if (!r) return;
+    ui.detailId = id;
+    ui.detailServings = servings || r.servings;
+    render();
+  }
+
+  function closeDetail() {
+    ui.detailId = null;
+    render();
+  }
+
+  function openCook(id, servings) {
+    const r = BY_ID[id];
+    if (!r) return;
+    ui.cook = { id, servings: servings || ui.detailServings || r.servings };
+    ui.cookStep = 0;
+    requestWake();
+    render();
+  }
+
+  function openPicker(day, meal) {
+    ui.picker = { day, meal, q: "" };
+    const r = document.getElementById("picker");
+    r.classList.add("on");
+    r.setAttribute("aria-hidden", "false");
+    document.getElementById("picker-title").textContent = `Choose ${MEAL_LABELS[meal]} · ${DAY_LABELS[day]}`;
+    document.getElementById("picker-search").value = "";
+    renderPicker();
+    setTimeout(() => document.getElementById("picker-search").focus(), 50);
+  }
+
+  function closePicker() {
+    ui.picker = null;
+    const r = document.getElementById("picker");
+    r.classList.remove("on");
+    r.setAttribute("aria-hidden", "true");
+  }
+
+  function renderPicker() {
+    if (!ui.picker) return;
+    const q = (ui.picker.q || "").toLowerCase();
+    const list = RECIPES.filter((r) => r.category === ui.picker.meal && (!q || r.name.toLowerCase().includes(q) || r.tags.join(" ").includes(q) || r.protein.includes(q)));
+    document.getElementById("picker-list").innerHTML = list.length
+      ? list.map((r) => `<button type="button" class="card" data-assign="${esc(r.id)}">
+          <h3>${esc(r.name)}</h3>
+          <div class="meta">${totalTime(r)} min · ${esc(PROTEIN_LABELS[r.protein] || r.protein)}</div>
+          <div class="macros">${nutLine(r.nutrition)}</div>
+        </button>`).join("")
+      : `<p class="empty">No matching ${ui.picker.meal} recipes.</p>`;
+  }
+
+  function setView(view) {
+    ui.view = view;
+    if (view !== "recipes") closeDetail();
+    closePicker();
+    window.scrollTo(0, 0);
+    render();
+  }
+
+  /* ---------- events ---------- */
+  function onClick(ev) {
+    if (ev.target.id === "detail") { closeDetail(); return; }
+    if (ev.target.id === "picker") { closePicker(); return; }
+    const t = ev.target.closest("[data-view], [data-cat], [data-open], [data-fav], [data-pick], [data-clear], [data-close-detail], [data-serv], [data-add-plan], [data-cook], [data-assign], [data-del-custom], [data-water], [data-close-picker], #filter-fav, #auto-fill, #clear-plan, #copy-shop, #print-shop, #share-shop, #clear-checks, #add-custom, #dismiss-welcome, #match-now, #match-almost, #cook-prev, #cook-next, #cook-close");
+    if (!t) return;
+
+    if (t.dataset.view) { setView(t.dataset.view); return; }
+    if (t.dataset.cat) { ui.category = t.dataset.cat; renderRecipes(); return; }
+    if (t.id === "filter-fav") { ui.favOnly = !ui.favOnly; renderRecipes(); return; }
+    if (t.dataset.open) { openDetail(t.dataset.open); return; }
+    if (t.dataset.fav) { toggleFav(t.dataset.fav, ev); return; }
+    if (t.dataset.pick) { const [d, m] = t.dataset.pick.split(":"); openPicker(d, m); return; }
+    if (t.dataset.clear) {
+      const [d, m] = t.dataset.clear.split(":");
+      setSlot(d, m, null);
+      render();
+      return;
+    }
+    if (t.hasAttribute("data-close-detail")) { closeDetail(); return; }
+    if (t.dataset.serv) {
+      const r = BY_ID[ui.detailId];
+      ui.detailServings = Math.max(1, Math.min(12, Math.round((ui.detailServings + Number(t.dataset.serv)) * 2) / 2 || 1));
+      if (r && ui.detailServings < 1) ui.detailServings = 1;
+      renderDetail();
+      return;
+    }
+    if (t.dataset.addPlan) {
+      const rec = BY_ID[t.dataset.addPlan];
+      const meal = rec.category;
+      const day = DAYS.find((d) => !state.plan[d][meal]) || todayDow();
+      setSlot(day, meal, rec.id, ui.detailServings || 1);
+      closeDetail();
+      setView("plan");
+      return;
+    }
+    if (t.dataset.cook) { openCook(t.dataset.cook, ui.detailServings); return; }
+    if (t.dataset.assign) {
+      setSlot(ui.picker.day, ui.picker.meal, t.dataset.assign, 1);
+      closePicker();
+      render();
+      return;
+    }
+    if (t.hasAttribute("data-close-picker")) { closePicker(); return; }
+    if (t.dataset.delCustom) {
+      state.shopCustom = state.shopCustom.filter((c) => c.id !== t.dataset.delCustom);
+      saveState();
+      renderShop();
+      return;
+    }
+    if (t.dataset.water) {
+      const key = todayKey();
+      const v = Number(t.dataset.water);
+      const cur = state.water[key] || 0;
+      state.water[key] = cur === v ? v - 1 : v;
+      saveState();
+      renderWater();
+      return;
+    }
+    if (t.id === "auto-fill") {
+      autoFillWeek();
+      render();
+      return;
+    }
+    if (t.id === "clear-plan") {
+      state.plan = emptyPlan();
+      state.shopChecked = {};
+      saveState();
+      render();
+      return;
+    }
+    if (t.id === "copy-shop") {
+      const text = shopText();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => flash("copy-shop", "Copied")).catch(() => fallbackCopy(text));
+      } else fallbackCopy(text);
+      return;
+    }
+    if (t.id === "print-shop") { window.print(); return; }
+    if (t.id === "share-shop") {
+      const text = shopText();
+      if (navigator.share) navigator.share({ title: "Shopping list", text }).catch(() => {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(text).then(() => flash("share-shop", "Copied"));
+      return;
+    }
+    if (t.id === "clear-checks") { state.shopChecked = {}; saveState(); renderShop(); return; }
+    if (t.id === "add-custom") {
+      const name = document.getElementById("custom-name").value.trim();
+      const section = document.getElementById("custom-section").value;
+      if (!name) return;
+      state.shopCustom.push({ id: String(Date.now()), name, section, qty: 1, unit: "" });
+      document.getElementById("custom-name").value = "";
+      saveState();
+      renderShop();
+      return;
+    }
+    if (t.id === "dismiss-welcome") { state.welcomeDismissed = true; saveState(); render(); return; }
+    if (t.id === "match-now") { ui.matchMode = "now"; renderHand(); return; }
+    if (t.id === "match-almost") { ui.matchMode = "almost"; renderHand(); return; }
+    if (t.id === "cook-prev") { ui.cookStep = Math.max(0, ui.cookStep - 1); renderCook(); return; }
+    if (t.id === "cook-next") {
+      const rec = BY_ID[ui.cook.id];
+      if (ui.cookStep >= rec.steps.length - 1) { ui.cook = null; releaseWake(); render(); }
+      else { ui.cookStep += 1; renderCook(); }
+      return;
+    }
+    if (t.id === "cook-close") { ui.cook = null; releaseWake(); render(); return; }
+  }
+
+  function flash(id, label) {
+    const b = document.getElementById(id);
+    if (!b) return;
+    const old = b.textContent;
+    b.textContent = label;
+    setTimeout(() => { b.textContent = old; }, 1400);
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); flash("copy-shop", "Copied"); } catch (e) {}
+    ta.remove();
+  }
+
+  function onChange(ev) {
+    const t = ev.target;
+    if (t.id === "recipe-search") { ui.query = t.value; renderRecipes(); return; }
+    if (t.id === "filter-protein") { ui.protein = t.value; renderRecipes(); return; }
+    if (t.id === "filter-time") { ui.time = t.value; renderRecipes(); return; }
+    if (t.id === "filter-tag") { ui.tag = t.value; renderRecipes(); return; }
+    if (t.id === "picker-search" && ui.picker) { ui.picker.q = t.value; renderPicker(); return; }
+    if (t.id === "have-seasonings") { state.haveSeasonings = t.checked; saveState(); renderHand(); return; }
+    if (t.dataset.shop) {
+      state.shopChecked[t.dataset.shop] = t.checked;
+      saveState();
+      const row = t.closest(".shop-item");
+      if (row) row.classList.toggle("checked", t.checked);
+    }
+    if (t.dataset.pantry) {
+      state.pantry[t.dataset.pantry] = t.checked;
+      saveState();
+      renderHand();
+    }
+  }
+
+  /* drag and drop */
+  function onDragStart(ev) {
+    const card = ev.target.closest(".card[data-open], .slot.filled");
+    if (!card) return;
+    if (card.dataset.open) {
+      const r = BY_ID[card.dataset.open];
+      ui.drag = { id: card.dataset.open, meal: r.category };
+    } else if (card.dataset.day) {
+      const slot = state.plan[card.dataset.day][card.dataset.meal];
+      if (!slot) return;
+      ui.drag = { id: slot.id, meal: card.dataset.meal, fromDay: card.dataset.day, fromMeal: card.dataset.meal, servings: slot.servings };
+    } else return;
+    ev.dataTransfer.setData("text/plain", ui.drag.id);
+    ev.dataTransfer.effectAllowed = "move";
+  }
+  function onDragOver(ev) {
+    const slot = ev.target.closest(".slot");
+    if (!slot || !ui.drag) return;
+    if (ui.drag.meal && slot.dataset.meal !== ui.drag.meal) return;
+    ev.preventDefault();
+    slot.classList.add("dragover");
+  }
+  function onDragLeave(ev) {
+    const slot = ev.target.closest(".slot");
+    if (slot) slot.classList.remove("dragover");
+  }
+  function onDrop(ev) {
+    const slot = ev.target.closest(".slot");
+    document.querySelectorAll(".slot.dragover").forEach((s) => s.classList.remove("dragover"));
+    if (!slot || !ui.drag) return;
+    ev.preventDefault();
+    const day = slot.dataset.day, meal = slot.dataset.meal;
+    if (ui.drag.meal && meal !== ui.drag.meal) return;
+    const existing = state.plan[day][meal];
+    setSlot(day, meal, ui.drag.id, ui.drag.servings || 1);
+    if (ui.drag.fromDay && (ui.drag.fromDay !== day || ui.drag.fromMeal !== meal)) {
+      if (existing) setSlot(ui.drag.fromDay, ui.drag.fromMeal, existing.id, existing.servings);
+      else setSlot(ui.drag.fromDay, ui.drag.fromMeal, null);
+    }
+    ui.drag = null;
+    render();
+  }
+
+  document.addEventListener("click", onClick);
+  document.addEventListener("change", onChange);
+  document.addEventListener("input", (ev) => {
+    if (ev.target.id === "recipe-search" || ev.target.id === "picker-search") onChange(ev);
+  });
+  document.addEventListener("dragstart", onDragStart);
+  document.addEventListener("dragover", onDragOver);
+  document.addEventListener("dragleave", onDragLeave);
+  document.addEventListener("drop", onDrop);
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") {
+      if (ui.cook) { ui.cook = null; releaseWake(); render(); }
+      else if (ui.picker) closePicker();
+      else if (ui.detailId) closeDetail();
+    }
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && ui.cook) requestWake();
+  });
+
+  // Expose a few functions for a headless check in Node if needed
+  window.HHM = { autoFillWeek, shoppingList, filteredRecipes, formatQty, toFrac, scaledNutrition, dayTotals, listMatches, loadState, state, RECIPES };
+
+  render();
+})();
+</script>
+</body>
+</html>
